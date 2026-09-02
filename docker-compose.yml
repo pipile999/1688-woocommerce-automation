@@ -1,0 +1,8 @@
+services:
+  importer:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./cache:/app/cache
+    command: ["python", "-m", "app.main", "--help"]
