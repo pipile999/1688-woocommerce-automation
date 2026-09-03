@@ -1,0 +1,111 @@
+{
+  "source_count": 13,
+  "unique_count": 13,
+  "duplicate_count": 0,
+  "entries": [
+    {
+      "number": 1,
+      "canonical": "002.webp",
+      "duplicates": [],
+      "sha256": "965827a14e8d19e34b0856b35dfca6f167f3b42c0e5ec672ff61907dfcd18969",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 2,
+      "canonical": "003.webp",
+      "duplicates": [],
+      "sha256": "bd2da894a3c818e7d0eb367420b6fe51783b5c4852ee7e24f50e5802af8190e9",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 3,
+      "canonical": "004.webp",
+      "duplicates": [],
+      "sha256": "093b7bc7a3c401c8efa2d17bcdce7061898be133e3bf5f53c419b70312d6b21e",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 4,
+      "canonical": "005.webp",
+      "duplicates": [],
+      "sha256": "c421e3b37c60ef5f4b98b91c6c793b0e3af8d3ae6c148ecb88e8c57b88cde4d8",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 5,
+      "canonical": "006.webp",
+      "duplicates": [],
+      "sha256": "69c5817f036905c36e5c56ba04087a738b75fcc0f441244971e659ac861fc7c5",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 6,
+      "canonical": "007.webp",
+      "duplicates": [],
+      "sha256": "355dd79ea3500994820e0a6f0b4e2e18ed34b4c09bc82bf20bd5ff492bc5b3ca",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 7,
+      "canonical": "008.webp",
+      "duplicates": [],
+      "sha256": "1103f6b60d047a623a0555fef025ccfb33414bb56f35666b235aee6ea467d5eb",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 8,
+      "canonical": "009.webp",
+      "duplicates": [],
+      "sha256": "3cdfbc37207938c5bd789fc252df40c76dce8f934a76a3af44ca386b4be9d655",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 9,
+      "canonical": "010.webp",
+      "duplicates": [],
+      "sha256": "868e70538b7cc5c82d6286e6b46f026f3ef755c8d4badc7f0ea51685126ca00d",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 10,
+      "canonical": "011.webp",
+      "duplicates": [],
+      "sha256": "fd8fa8588a616138bcec914440ba384e34c16c81940a6710a1d6d1ee6f0e0c8c",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 11,
+      "canonical": "012.webp",
+      "duplicates": [],
+      "sha256": "a685c86030272c4d1800639b73e000b4728438200d151f54c94e2923d4c80f43",
+      "width": 1800,
+      "height": 1800
+    },
+    {
+      "number": 12,
+      "canonical": "013.webp",
+      "duplicates": [],
+      "sha256": "61e461b336498de31553a7d82fcb02d722d55e485453a002b6650038d67ea747",
+      "width": 1800,
+      "height": 1748
+    },
+    {
+      "number": 13,
+      "canonical": "015.webp",
+      "duplicates": [],
+      "sha256": "a29db5b934e5e96d80e6a7afa4c4e6a24186a57d2aaff5049e9b9b12b0bc4b23",
+      "width": 1800,
+      "height": 1800
+    }
+  ]
+}

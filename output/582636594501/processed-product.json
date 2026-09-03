@@ -1172,41 +1172,41 @@
     "https://cbu01.alicdn.com/img/ibank/2019/987/011/10297110789_956991703.jpg"
   ],
   "processing": {
-    "source_image_count": 31,
+    "source_count": 31,
     "sha_unique_count": 25,
     "sha_duplicate_count": 6,
     "deleted_count": 12,
-    "deleted_images": {
-      "001.jpg": "supplier logo and large marketing text",
-      "014.jpg": "company promotion, contact handle, and large text",
-      "016.jpg": "store recommendations and advertising",
-      "017.jpg": "large promotional and specification text",
-      "018.jpg": "large specification text",
-      "019.jpg": "large specification text",
-      "020.jpg": "large specification text",
-      "021.jpg": "large product-analysis text",
-      "028.jpg": "large tooth-comparison text",
-      "029.jpg": "large annotation text",
-      "030.jpg": "large annotation text",
-      "031.jpg": "large annotation text"
-    },
     "inpainted_count": 10,
-    "inpainted_images": [
-      "002.jpg",
-      "003.jpg",
-      "005.jpg",
-      "006.jpg",
-      "007.jpg",
-      "008.jpg",
-      "009.jpg",
-      "010.jpg",
-      "011.jpg",
-      "012.jpg"
-    ],
-    "final_image_count": 13,
+    "final_kept_count": 13,
     "format": "WebP",
     "longest_edge_px": 1800,
     "quality": 83,
-    "exif_removed": true
+    "exif_removed": true,
+    "audit_file": "image-audit.json",
+    "model_execution": {
+      "paddleocr": {
+        "executed": true,
+        "paddleocr_version": "3.7.0",
+        "paddlepaddle_version": "3.2.0",
+        "detection_model": "PP-OCRv5_mobile_det",
+        "recognition_model": "PP-OCRv5_mobile_rec",
+        "device": "cpu"
+      },
+      "openclip": {
+        "executed": true,
+        "open_clip_torch_version": "3.3.0",
+        "torch_version": "2.14.0+cpu",
+        "model": "ViT-B-32",
+        "pretrained": "laion2b_s34b_b79k",
+        "device": "cpu"
+      },
+      "inpainting": {
+        "executed": true,
+        "engine": "LaMa FP32 ONNX",
+        "model": "Carve/LaMa-ONNX lama_fp32.onnx",
+        "onnxruntime_version": "1.29.0",
+        "device": "cpu"
+      }
+    }
   }
 }

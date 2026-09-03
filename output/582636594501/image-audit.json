@@ -1,0 +1,5031 @@
+{
+  "offer_id": "582636594501",
+  "created_at": "2026-09-03T09:18:08.293701+00:00",
+  "execution": {
+    "paddleocr": {
+      "executed": true,
+      "paddleocr_version": "3.7.0",
+      "paddlepaddle_version": "3.2.0",
+      "detection_model": "PP-OCRv5_mobile_det",
+      "recognition_model": "PP-OCRv5_mobile_rec",
+      "device": "cpu"
+    },
+    "openclip": {
+      "executed": true,
+      "open_clip_torch_version": "3.3.0",
+      "torch_version": "2.14.0+cpu",
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "device": "cpu"
+    },
+    "inpainting": {
+      "executed": true,
+      "engine": "LaMa FP32 ONNX",
+      "model": "Carve/LaMa-ONNX lama_fp32.onnx",
+      "onnxruntime_version": "1.29.0",
+      "device": "cpu"
+    }
+  },
+  "summary": {
+    "source_count": 31,
+    "sha_unique_count": 25,
+    "sha_duplicate_count": 6,
+    "deleted_count": 12,
+    "inpainted_count": 10,
+    "final_kept_count": 13
+  },
+  "records": [
+    {
+      "filename": "001.jpg",
+      "sha256": "c43cd4c70531f2ddf5c0f3b847a82f0b6a58e439747da6b357afa27474d142f8",
+      "duplicate_filenames": [],
+      "width": 1000,
+      "height": 1000,
+      "ocr_text": [
+        "Z.C.Y.J",
+        "征程煙具",
+        "锌合金材料",
+        "支持",
+        "定制LOGO",
+        "多种颜色尺寸可供选择"
+      ],
+      "text_coverage": 0.129618,
+      "ocr_detections": [
+        {
+          "text": "Z.C.Y.J",
+          "score": 0.922715,
+          "polygon": [
+            [
+              60,
+              38
+            ],
+            [
+              226,
+              44
+            ],
+            [
+              225,
+              86
+            ],
+            [
+              58,
+              80
+            ]
+          ]
+        },
+        {
+          "text": "征程煙具",
+          "score": 0.954094,
+          "polygon": [
+            [
+              53,
+              97
+            ],
+            [
+              232,
+              97
+            ],
+            [
+              232,
+              139
+            ],
+            [
+              53,
+              139
+            ]
+          ]
+        },
+        {
+          "text": "锌合金材料",
+          "score": 0.999068,
+          "polygon": [
+            [
+              582,
+              806
+            ],
+            [
+              879,
+              809
+            ],
+            [
+              879,
+              873
+            ],
+            [
+              582,
+              871
+            ]
+          ]
+        },
+        {
+          "text": "支持",
+          "score": 0.999985,
+          "polygon": [
+            [
+              70,
+              836
+            ],
+            [
+              196,
+              836
+            ],
+            [
+              196,
+              904
+            ],
+            [
+              70,
+              904
+            ]
+          ]
+        },
+        {
+          "text": "定制LOGO",
+          "score": 0.973597,
+          "polygon": [
+            [
+              6,
+              914
+            ],
+            [
+              283,
+              914
+            ],
+            [
+              283,
+              978
+            ],
+            [
+              6,
+              978
+            ]
+          ]
+        },
+        {
+          "text": "多种颜色尺寸可供选择",
+          "score": 0.999745,
+          "polygon": [
+            [
+              382,
+              910
+            ],
+            [
+              968,
+              910
+            ],
+            [
+              968,
+              972
+            ],
+            [
+              382,
+              972
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.91179,
+        "scores": {
+          "product_photo": 0.91179,
+          "product_infographic": 0.000194,
+          "advertisement": 0.079807,
+          "factory_or_company": 0.000655,
+          "certificate_or_document": 0.007536,
+          "qr_or_contact_card": 1.8e-05
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR text coverage is at least 12%",
+      "decision_reason": "PaddleOCR text coverage is at least 12%",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "002.jpg",
+      "sha256": "170bf8eb01fb939b540a21b2a4b07489a6a2e96832de332c4ab7654ba311d014",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047077,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.999001,
+          "polygon": [
+            [
+              429,
+              674
+            ],
+            [
+              729,
+              674
+            ],
+            [
+              729,
+              698
+            ],
+            [
+              429,
+              698
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.993924,
+          "polygon": [
+            [
+              365,
+              708
+            ],
+            [
+              731,
+              708
+            ],
+            [
+              731,
+              732
+            ],
+            [
+              365,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.997669,
+        "scores": {
+          "product_photo": 0.997669,
+          "product_infographic": 9e-06,
+          "advertisement": 0.001327,
+          "factory_or_company": 0.000653,
+          "certificate_or_document": 0.000339,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/002-mask.png",
+      "output_file": "processed_images/002.webp"
+    },
+    {
+      "filename": "003.jpg",
+      "sha256": "94a53a3715a4a48fdd4f925e04358196c2335d29a45bf7aa72fc995e69d67347",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047077,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.999001,
+          "polygon": [
+            [
+              429,
+              674
+            ],
+            [
+              729,
+              674
+            ],
+            [
+              729,
+              698
+            ],
+            [
+              429,
+              698
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.993924,
+          "polygon": [
+            [
+              365,
+              708
+            ],
+            [
+              731,
+              708
+            ],
+            [
+              731,
+              732
+            ],
+            [
+              365,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998536,
+        "scores": {
+          "product_photo": 0.998536,
+          "product_infographic": 7e-06,
+          "advertisement": 0.000427,
+          "factory_or_company": 0.000833,
+          "certificate_or_document": 0.000197,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/003-mask.png",
+      "output_file": "processed_images/003.webp"
+    },
+    {
+      "filename": "004.jpg",
+      "sha256": "ceef147085d637a325a760bbd3a3fe5753339b5fb31b6b6a9f687995c2444e99",
+      "duplicate_filenames": [],
+      "width": 1000,
+      "height": 1000,
+      "ocr_text": [],
+      "text_coverage": 0.0,
+      "ocr_detections": [],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.99977,
+        "scores": {
+          "product_photo": 0.99977,
+          "product_infographic": 1.6e-05,
+          "advertisement": 5.6e-05,
+          "factory_or_company": 0.000152,
+          "certificate_or_document": 2e-06,
+          "qr_or_contact_card": 3e-06
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "clean product photo; no OCR text detected",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": "processed_images/004.webp"
+    },
+    {
+      "filename": "005.jpg",
+      "sha256": "b8461611817e18cd1be5035e779361f11abd36772aa0172611fbcb7f73d01eab",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.048375,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.999208,
+          "polygon": [
+            [
+              427,
+              670
+            ],
+            [
+              730,
+              673
+            ],
+            [
+              729,
+              700
+            ],
+            [
+              427,
+              698
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.994217,
+          "polygon": [
+            [
+              365,
+              708
+            ],
+            [
+              730,
+              708
+            ],
+            [
+              730,
+              732
+            ],
+            [
+              365,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998815,
+        "scores": {
+          "product_photo": 0.998815,
+          "product_infographic": 1.2e-05,
+          "advertisement": 1.3e-05,
+          "factory_or_company": 0.001029,
+          "certificate_or_document": 0.000113,
+          "qr_or_contact_card": 1.8e-05
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/005-mask.png",
+      "output_file": "processed_images/005.webp"
+    },
+    {
+      "filename": "006.jpg",
+      "sha256": "cce3c4bac9f1184679204437ff58fb509806d5bc9edcd164f989650f22a45739",
+      "duplicate_filenames": [
+        "023.jpg"
+      ],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.050228,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.999209,
+          "polygon": [
+            [
+              427,
+              671
+            ],
+            [
+              731,
+              671
+            ],
+            [
+              731,
+              698
+            ],
+            [
+              427,
+              698
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.980461,
+          "polygon": [
+            [
+              363,
+              705
+            ],
+            [
+              732,
+              706
+            ],
+            [
+              732,
+              734
+            ],
+            [
+              363,
+              733
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999794,
+        "scores": {
+          "product_photo": 0.999794,
+          "product_infographic": 1e-06,
+          "advertisement": 7e-06,
+          "factory_or_company": 2.1e-05,
+          "certificate_or_document": 0.000177,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/006-mask.png",
+      "output_file": "processed_images/006.webp"
+    },
+    {
+      "filename": "007.jpg",
+      "sha256": "693fb7e0f4544a71cbbb0d31a58fef6b4b2addbec78a44058f5353238d8f078f",
+      "duplicate_filenames": [
+        "022.jpg"
+      ],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047568,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.998979,
+          "polygon": [
+            [
+              429,
+              673
+            ],
+            [
+              729,
+              673
+            ],
+            [
+              729,
+              697
+            ],
+            [
+              429,
+              697
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.994882,
+          "polygon": [
+            [
+              366,
+              708
+            ],
+            [
+              731,
+              708
+            ],
+            [
+              731,
+              732
+            ],
+            [
+              366,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999169,
+        "scores": {
+          "product_photo": 0.999169,
+          "product_infographic": 1e-06,
+          "advertisement": 3.7e-05,
+          "factory_or_company": 0.000259,
+          "certificate_or_document": 0.000534,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/007-mask.png",
+      "output_file": "processed_images/007.webp"
+    },
+    {
+      "filename": "008.jpg",
+      "sha256": "a353ccf762aa6b72d67dcac41e932b928e23485fc1b6746fe0f87366cbe0cab5",
+      "duplicate_filenames": [
+        "024.jpg"
+      ],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047758,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.998956,
+          "polygon": [
+            [
+              429,
+              673
+            ],
+            [
+              729,
+              673
+            ],
+            [
+              729,
+              697
+            ],
+            [
+              429,
+              697
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.994879,
+          "polygon": [
+            [
+              365,
+              707
+            ],
+            [
+              731,
+              707
+            ],
+            [
+              731,
+              732
+            ],
+            [
+              365,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999486,
+        "scores": {
+          "product_photo": 0.999486,
+          "product_infographic": 0.0,
+          "advertisement": 5.9e-05,
+          "factory_or_company": 7e-05,
+          "certificate_or_document": 0.000384,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/008-mask.png",
+      "output_file": "processed_images/008.webp"
+    },
+    {
+      "filename": "009.jpg",
+      "sha256": "2281369c02d468abcb7d11706409555bb1d55421ae8e17e030292bcd25a25838",
+      "duplicate_filenames": [
+        "025.jpg"
+      ],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.049077,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.998925,
+          "polygon": [
+            [
+              428,
+              671
+            ],
+            [
+              731,
+              671
+            ],
+            [
+              731,
+              698
+            ],
+            [
+              428,
+              698
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.994879,
+          "polygon": [
+            [
+              365,
+              707
+            ],
+            [
+              731,
+              707
+            ],
+            [
+              731,
+              732
+            ],
+            [
+              365,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998741,
+        "scores": {
+          "product_photo": 0.998741,
+          "product_infographic": 2e-06,
+          "advertisement": 0.000175,
+          "factory_or_company": 0.000287,
+          "certificate_or_document": 0.000793,
+          "qr_or_contact_card": 2e-06
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/009-mask.png",
+      "output_file": "processed_images/009.webp"
+    },
+    {
+      "filename": "010.jpg",
+      "sha256": "1ec00f94e504a1c8495a2c0714ca830f1e9059eab1e32857547abe4b3c36b535",
+      "duplicate_filenames": [
+        "026.jpg"
+      ],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.050165,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.998938,
+          "polygon": [
+            [
+              428,
+              671
+            ],
+            [
+              731,
+              671
+            ],
+            [
+              731,
+              698
+            ],
+            [
+              428,
+              698
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.980461,
+          "polygon": [
+            [
+              363,
+              705
+            ],
+            [
+              732,
+              706
+            ],
+            [
+              732,
+              734
+            ],
+            [
+              363,
+              733
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999281,
+        "scores": {
+          "product_photo": 0.999281,
+          "product_infographic": 3e-06,
+          "advertisement": 3e-05,
+          "factory_or_company": 0.000189,
+          "certificate_or_document": 0.000496,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/010-mask.png",
+      "output_file": "processed_images/010.webp"
+    },
+    {
+      "filename": "011.jpg",
+      "sha256": "98396ab3915ca81875495eca3cedfdfc4ebcc806191a69fb62f160593227f8e1",
+      "duplicate_filenames": [
+        "027.jpg"
+      ],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.051369,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.998857,
+          "polygon": [
+            [
+              427,
+              669
+            ],
+            [
+              731,
+              669
+            ],
+            [
+              731,
+              697
+            ],
+            [
+              427,
+              697
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.980461,
+          "polygon": [
+            [
+              363,
+              705
+            ],
+            [
+              732,
+              706
+            ],
+            [
+              732,
+              734
+            ],
+            [
+              363,
+              733
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999461,
+        "scores": {
+          "product_photo": 0.999461,
+          "product_infographic": 1.3e-05,
+          "advertisement": 5.5e-05,
+          "factory_or_company": 8.8e-05,
+          "certificate_or_document": 0.000383,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/011-mask.png",
+      "output_file": "processed_images/011.webp"
+    },
+    {
+      "filename": "012.jpg",
+      "sha256": "ceb88e1aaccac1a76050eeed7476fa6df135e5f803d123a073441eb54061dd1c",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.04664,
+      "ocr_detections": [
+        {
+          "text": "苍南县龙港征程电子商务商行",
+          "score": 0.998863,
+          "polygon": [
+            [
+              429,
+              674
+            ],
+            [
+              729,
+              674
+            ],
+            [
+              729,
+              697
+            ],
+            [
+              429,
+              697
+            ]
+          ]
+        },
+        {
+          "text": "shop15i4936k5u504.1688.com",
+          "score": 0.99628,
+          "polygon": [
+            [
+              369,
+              708
+            ],
+            [
+              729,
+              708
+            ],
+            [
+              729,
+              732
+            ],
+            [
+              369,
+              732
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.993041,
+        "scores": {
+          "product_photo": 0.993041,
+          "product_infographic": 2.7e-05,
+          "advertisement": 0.005688,
+          "factory_or_company": 5.4e-05,
+          "certificate_or_document": 0.001083,
+          "qr_or_contact_card": 0.000106
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "small peripheral text/watermark; LaMa inpainting required",
+      "needs_inpainting": true,
+      "inpainting_executed": true,
+      "mask_file": "image_audit/ai_masks/012-mask.png",
+      "output_file": "processed_images/012.webp"
+    },
+    {
+      "filename": "013.jpg",
+      "sha256": "6114cfba23565c94a2711c2f6bbdf07726ebd29465e1cb6a06767238c9f4dfd6",
+      "duplicate_filenames": [],
+      "width": 517,
+      "height": 502,
+      "ocr_text": [],
+      "text_coverage": 0.0,
+      "ocr_detections": [],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999972,
+        "scores": {
+          "product_photo": 0.999972,
+          "product_infographic": 3e-06,
+          "advertisement": 1.5e-05,
+          "factory_or_company": 5e-06,
+          "certificate_or_document": 6e-06,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "clean product photo; no OCR text detected",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": "processed_images/013.webp"
+    },
+    {
+      "filename": "014.jpg",
+      "sha256": "d3d800a51fc7a422bab1ae793b3f3ce17b4828fcbd63f3daeaf80ec94aba7cec",
+      "duplicate_filenames": [],
+      "width": 1440,
+      "height": 1919,
+      "ocr_text": [
+        "久是前列担当",
+        "印记",
+        "温都讯3月3日晚至4",
+        "省委常委、市委书记陈伟",
+        "市党政代表团在金华学",
+        "书时专注投入而误",
+        "察，寻访红色印记，感受",
+        "故事，一句“真理",
+        "脉动，与金华市委书记陈",
+        "甜”令大家十分",
+        "交流深化两地全方",
+        "驱“一块铺板",
+        "，携手推动更高质量发",
+        "当书桌又当床",
+        "指引黎明前",
+        "市领导姚高员、陈作荣等",
+        "历，让大家",
+        "考察。金华市领导邢志",
+        "新使命，我",
+        "东玲玲、宋志恒等一同考",
+        "悟中坚定理",
+        "为中践行初",
+        "这是一次追溯真理、坚定",
+        "这是一",
+        "之行。走进义乌城西街",
+        "理念之行。东",
+        "水塘村，置身首个中文全",
+        "水之奇，也无资",
+        "《共产党宣言》诞生地陈",
+        "视文化产业书",
+        "故居，市党政代表团一行",
+        "生有”的发展",
+        "红色经典。望道先生译",
+        "街香港街、",
+        "功能现代",
+        "表团一行",
+        "为争创先",
+        "温都讯昨天，我市举行",
+        "工作、默默奉献的妇女工作",
+        "百年辉煌巾帼红数智未来",
+        "社会主义",
+        "者致以崇高敬意。他指出，",
+        "力量”纪念“三八”国际妇",
+        "扣锚定“五大新坐标”开",
+        "今年是中国共产党成立100",
+        "节111周年主题活动。",
+        "“十个新局面”聚焦“明",
+        "周年、“十四五”开局之年，",
+        "先、强执行、开新局”工作主",
+        "市委书记陈伟俊作出",
+        "也是温州争创社",
+        "对标对表打造新时",
+        "示，代表市委、市政府向",
+        "代化先行市",
+        "“重要窗口",
+        "市广大妇女同胞送上节",
+        "市各级妇",
+        "祝福，向各条战线上辛勤",
+        "举习近平",
+        "@温州",
+        "插花",
+        "温州市总工"
+      ],
+      "text_coverage": 0.178577,
+      "ocr_detections": [
+        {
+          "text": "久是前列担当",
+          "score": 0.762942,
+          "polygon": [
+            [
+              161,
+              0
+            ],
+            [
+              682,
+              46
+            ],
+            [
+              666,
+              162
+            ],
+            [
+              145,
+              89
+            ]
+          ]
+        },
+        {
+          "text": "印记",
+          "score": 0.984391,
+          "polygon": [
+            [
+              560,
+              0
+            ],
+            [
+              784,
+              11
+            ],
+            [
+              777,
+              74
+            ],
+            [
+              553,
+              50
+            ]
+          ]
+        },
+        {
+          "text": "温都讯3月3日晚至4",
+          "score": 0.997821,
+          "polygon": [
+            [
+              11,
+              29
+            ],
+            [
+              243,
+              95
+            ],
+            [
+              235,
+              123
+            ],
+            [
+              3,
+              57
+            ]
+          ]
+        },
+        {
+          "text": "省委常委、市委书记陈伟",
+          "score": 0.992764,
+          "polygon": [
+            [
+              3,
+              59
+            ],
+            [
+              241,
+              124
+            ],
+            [
+              234,
+              148
+            ],
+            [
+              0,
+              83
+            ]
+          ]
+        },
+        {
+          "text": "市党政代表团在金华学",
+          "score": 0.994513,
+          "polygon": [
+            [
+              5,
+              88
+            ],
+            [
+              238,
+              151
+            ],
+            [
+              231,
+              176
+            ],
+            [
+              0,
+              113
+            ]
+          ]
+        },
+        {
+          "text": "书时专注投入而误",
+          "score": 0.984402,
+          "polygon": [
+            [
+              272,
+              104
+            ],
+            [
+              428,
+              143
+            ],
+            [
+              421,
+              170
+            ],
+            [
+              265,
+              131
+            ]
+          ]
+        },
+        {
+          "text": "察，寻访红色印记，感受",
+          "score": 0.982459,
+          "polygon": [
+            [
+              6,
+              119
+            ],
+            [
+              236,
+              181
+            ],
+            [
+              230,
+              204
+            ],
+            [
+              0,
+              142
+            ]
+          ]
+        },
+        {
+          "text": "故事，一句“真理",
+          "score": 0.940841,
+          "polygon": [
+            [
+              268,
+              133
+            ],
+            [
+              411,
+              170
+            ],
+            [
+              404,
+              195
+            ],
+            [
+              261,
+              158
+            ]
+          ]
+        },
+        {
+          "text": "脉动，与金华市委书记陈",
+          "score": 0.987072,
+          "polygon": [
+            [
+              5,
+              147
+            ],
+            [
+              237,
+              208
+            ],
+            [
+              231,
+              232
+            ],
+            [
+              0,
+              171
+            ]
+          ]
+        },
+        {
+          "text": "甜”令大家十分",
+          "score": 0.933405,
+          "polygon": [
+            [
+              267,
+              159
+            ],
+            [
+              395,
+              193
+            ],
+            [
+              388,
+              218
+            ],
+            [
+              260,
+              184
+            ]
+          ]
+        },
+        {
+          "text": "交流深化两地全方",
+          "score": 0.997424,
+          "polygon": [
+            [
+              51,
+              188
+            ],
+            [
+              234,
+              235
+            ],
+            [
+              228,
+              257
+            ],
+            [
+              45,
+              209
+            ]
+          ]
+        },
+        {
+          "text": "驱“一块铺板",
+          "score": 0.96022,
+          "polygon": [
+            [
+              264,
+              188
+            ],
+            [
+              387,
+              218
+            ],
+            [
+              381,
+              243
+            ],
+            [
+              258,
+              213
+            ]
+          ]
+        },
+        {
+          "text": "，携手推动更高质量发",
+          "score": 0.957031,
+          "polygon": [
+            [
+              31,
+              210
+            ],
+            [
+              235,
+              262
+            ],
+            [
+              229,
+              286
+            ],
+            [
+              25,
+              234
+            ]
+          ]
+        },
+        {
+          "text": "当书桌又当床",
+          "score": 0.970481,
+          "polygon": [
+            [
+              265,
+              216
+            ],
+            [
+              379,
+              242
+            ],
+            [
+              373,
+              268
+            ],
+            [
+              259,
+              241
+            ]
+          ]
+        },
+        {
+          "text": "指引黎明前",
+          "score": 0.997733,
+          "polygon": [
+            [
+              263,
+              243
+            ],
+            [
+              373,
+              268
+            ],
+            [
+              367,
+              293
+            ],
+            [
+              257,
+              267
+            ]
+          ]
+        },
+        {
+          "text": "市领导姚高员、陈作荣等",
+          "score": 0.990758,
+          "polygon": [
+            [
+              5,
+              263
+            ],
+            [
+              234,
+              313
+            ],
+            [
+              228,
+              337
+            ],
+            [
+              0,
+              287
+            ]
+          ]
+        },
+        {
+          "text": "历，让大家",
+          "score": 0.953254,
+          "polygon": [
+            [
+              264,
+              269
+            ],
+            [
+              362,
+              292
+            ],
+            [
+              356,
+              318
+            ],
+            [
+              258,
+              294
+            ]
+          ]
+        },
+        {
+          "text": "考察。金华市领导邢志",
+          "score": 0.997358,
+          "polygon": [
+            [
+              6,
+              292
+            ],
+            [
+              235,
+              339
+            ],
+            [
+              229,
+              364
+            ],
+            [
+              0,
+              317
+            ]
+          ]
+        },
+        {
+          "text": "新使命，我",
+          "score": 0.957775,
+          "polygon": [
+            [
+              263,
+              296
+            ],
+            [
+              356,
+              316
+            ],
+            [
+              350,
+              341
+            ],
+            [
+              257,
+              321
+            ]
+          ]
+        },
+        {
+          "text": "东玲玲、宋志恒等一同考",
+          "score": 0.99165,
+          "polygon": [
+            [
+              3,
+              321
+            ],
+            [
+              233,
+              366
+            ],
+            [
+              228,
+              391
+            ],
+            [
+              0,
+              345
+            ]
+          ]
+        },
+        {
+          "text": "悟中坚定理",
+          "score": 0.99664,
+          "polygon": [
+            [
+              263,
+              321
+            ],
+            [
+              357,
+              343
+            ],
+            [
+              351,
+              368
+            ],
+            [
+              257,
+              345
+            ]
+          ]
+        },
+        {
+          "text": "为中践行初",
+          "score": 0.9989,
+          "polygon": [
+            [
+              264,
+              347
+            ],
+            [
+              361,
+              373
+            ],
+            [
+              354,
+              397
+            ],
+            [
+              257,
+              371
+            ]
+          ]
+        },
+        {
+          "text": "这是一次追溯真理、坚定",
+          "score": 0.989253,
+          "polygon": [
+            [
+              2,
+              378
+            ],
+            [
+              233,
+              421
+            ],
+            [
+              229,
+              445
+            ],
+            [
+              0,
+              401
+            ]
+          ]
+        },
+        {
+          "text": "这是一",
+          "score": 0.991551,
+          "polygon": [
+            [
+              298,
+              382
+            ],
+            [
+              371,
+              398
+            ],
+            [
+              365,
+              424
+            ],
+            [
+              292,
+              408
+            ]
+          ]
+        },
+        {
+          "text": "之行。走进义乌城西街",
+          "score": 0.980065,
+          "polygon": [
+            [
+              6,
+              405
+            ],
+            [
+              232,
+              448
+            ],
+            [
+              228,
+              471
+            ],
+            [
+              2,
+              428
+            ]
+          ]
+        },
+        {
+          "text": "理念之行。东",
+          "score": 0.994228,
+          "polygon": [
+            [
+              261,
+              399
+            ],
+            [
+              385,
+              427
+            ],
+            [
+              379,
+              455
+            ],
+            [
+              255,
+              427
+            ]
+          ]
+        },
+        {
+          "text": "水塘村，置身首个中文全",
+          "score": 0.992117,
+          "polygon": [
+            [
+              3,
+              430
+            ],
+            [
+              231,
+              475
+            ],
+            [
+              227,
+              499
+            ],
+            [
+              0,
+              454
+            ]
+          ]
+        },
+        {
+          "text": "水之奇，也无资",
+          "score": 0.990927,
+          "polygon": [
+            [
+              262,
+              428
+            ],
+            [
+              388,
+              454
+            ],
+            [
+              382,
+              479
+            ],
+            [
+              256,
+              453
+            ]
+          ]
+        },
+        {
+          "text": "《共产党宣言》诞生地陈",
+          "score": 0.994487,
+          "polygon": [
+            [
+              4,
+              458
+            ],
+            [
+              228,
+              502
+            ],
+            [
+              223,
+              527
+            ],
+            [
+              0,
+              483
+            ]
+          ]
+        },
+        {
+          "text": "视文化产业书",
+          "score": 0.997858,
+          "polygon": [
+            [
+              260,
+              455
+            ],
+            [
+              377,
+              478
+            ],
+            [
+              373,
+              503
+            ],
+            [
+              256,
+              480
+            ]
+          ]
+        },
+        {
+          "text": "故居，市党政代表团一行",
+          "score": 0.976219,
+          "polygon": [
+            [
+              2,
+              487
+            ],
+            [
+              227,
+              530
+            ],
+            [
+              223,
+              554
+            ],
+            [
+              0,
+              511
+            ]
+          ]
+        },
+        {
+          "text": "生有”的发展",
+          "score": 0.949346,
+          "polygon": [
+            [
+              259,
+              481
+            ],
+            [
+              362,
+              502
+            ],
+            [
+              358,
+              527
+            ],
+            [
+              254,
+              506
+            ]
+          ]
+        },
+        {
+          "text": "红色经典。望道先生译",
+          "score": 0.991747,
+          "polygon": [
+            [
+              2,
+              514
+            ],
+            [
+              228,
+              557
+            ],
+            [
+              223,
+              584
+            ],
+            [
+              0,
+              541
+            ]
+          ]
+        },
+        {
+          "text": "街香港街、",
+          "score": 0.978459,
+          "polygon": [
+            [
+              257,
+              509
+            ],
+            [
+              354,
+              528
+            ],
+            [
+              349,
+              553
+            ],
+            [
+              253,
+              534
+            ]
+          ]
+        },
+        {
+          "text": "功能现代",
+          "score": 0.998195,
+          "polygon": [
+            [
+              256,
+              537
+            ],
+            [
+              337,
+              551
+            ],
+            [
+              333,
+              576
+            ],
+            [
+              252,
+              561
+            ]
+          ]
+        },
+        {
+          "text": "表团一行",
+          "score": 0.88608,
+          "polygon": [
+            [
+              254,
+              561
+            ],
+            [
+              330,
+              576
+            ],
+            [
+              325,
+              602
+            ],
+            [
+              249,
+              587
+            ]
+          ]
+        },
+        {
+          "text": "为争创先",
+          "score": 0.996624,
+          "polygon": [
+            [
+              279,
+              741
+            ],
+            [
+              570,
+              763
+            ],
+            [
+              563,
+              848
+            ],
+            [
+              272,
+              826
+            ]
+          ]
+        },
+        {
+          "text": "温都讯昨天，我市举行",
+          "score": 0.983478,
+          "polygon": [
+            [
+              28,
+              847
+            ],
+            [
+              240,
+              861
+            ],
+            [
+              239,
+              885
+            ],
+            [
+              27,
+              871
+            ]
+          ]
+        },
+        {
+          "text": "工作、默默奉献的妇女工作",
+          "score": 0.994344,
+          "polygon": [
+            [
+              272,
+              862
+            ],
+            [
+              501,
+              874
+            ],
+            [
+              500,
+              898
+            ],
+            [
+              271,
+              886
+            ]
+          ]
+        },
+        {
+          "text": "百年辉煌巾帼红数智未来",
+          "score": 0.991159,
+          "polygon": [
+            [
+              0,
+              875
+            ],
+            [
+              240,
+              888
+            ],
+            [
+              239,
+              912
+            ],
+            [
+              0,
+              899
+            ]
+          ]
+        },
+        {
+          "text": "社会主义",
+          "score": 0.997414,
+          "polygon": [
+            [
+              526,
+              876
+            ],
+            [
+              610,
+              881
+            ],
+            [
+              609,
+              903
+            ],
+            [
+              525,
+              898
+            ]
+          ]
+        },
+        {
+          "text": "者致以崇高敬意。他指出，",
+          "score": 0.991321,
+          "polygon": [
+            [
+              271,
+              887
+            ],
+            [
+              496,
+              899
+            ],
+            [
+              495,
+              924
+            ],
+            [
+              270,
+              912
+            ]
+          ]
+        },
+        {
+          "text": "力量”纪念“三八”国际妇",
+          "score": 0.956778,
+          "polygon": [
+            [
+              0,
+              903
+            ],
+            [
+              241,
+              913
+            ],
+            [
+              240,
+              940
+            ],
+            [
+              0,
+              930
+            ]
+          ]
+        },
+        {
+          "text": "扣锚定“五大新坐标”开",
+          "score": 0.948275,
+          "polygon": [
+            [
+              524,
+              900
+            ],
+            [
+              715,
+              908
+            ],
+            [
+              714,
+              932
+            ],
+            [
+              523,
+              924
+            ]
+          ]
+        },
+        {
+          "text": "今年是中国共产党成立100",
+          "score": 0.997133,
+          "polygon": [
+            [
+              269,
+              916
+            ],
+            [
+              499,
+              925
+            ],
+            [
+              498,
+              948
+            ],
+            [
+              268,
+              939
+            ]
+          ]
+        },
+        {
+          "text": "节111周年主题活动。",
+          "score": 0.998807,
+          "polygon": [
+            [
+              0,
+              932
+            ],
+            [
+              200,
+              940
+            ],
+            [
+              199,
+              967
+            ],
+            [
+              0,
+              959
+            ]
+          ]
+        },
+        {
+          "text": "“十个新局面”聚焦“明",
+          "score": 0.820863,
+          "polygon": [
+            [
+              527,
+              926
+            ],
+            [
+              721,
+              935
+            ],
+            [
+              720,
+              956
+            ],
+            [
+              526,
+              947
+            ]
+          ]
+        },
+        {
+          "text": "周年、“十四五”开局之年，",
+          "score": 0.962053,
+          "polygon": [
+            [
+              268,
+              942
+            ],
+            [
+              495,
+              950
+            ],
+            [
+              494,
+              974
+            ],
+            [
+              267,
+              966
+            ]
+          ]
+        },
+        {
+          "text": "先、强执行、开新局”工作主",
+          "score": 0.952567,
+          "polygon": [
+            [
+              522,
+              951
+            ],
+            [
+              721,
+              957
+            ],
+            [
+              721,
+              980
+            ],
+            [
+              522,
+              974
+            ]
+          ]
+        },
+        {
+          "text": "市委书记陈伟俊作出",
+          "score": 0.998911,
+          "polygon": [
+            [
+              27,
+              964
+            ],
+            [
+              236,
+              969
+            ],
+            [
+              236,
+              994
+            ],
+            [
+              27,
+              989
+            ]
+          ]
+        },
+        {
+          "text": "也是温州争创社",
+          "score": 0.992455,
+          "polygon": [
+            [
+              266,
+              969
+            ],
+            [
+              421,
+              973
+            ],
+            [
+              421,
+              998
+            ],
+            [
+              266,
+              994
+            ]
+          ]
+        },
+        {
+          "text": "对标对表打造新时",
+          "score": 0.983212,
+          "polygon": [
+            [
+              586,
+              978
+            ],
+            [
+              723,
+              978
+            ],
+            [
+              723,
+              1002
+            ],
+            [
+              586,
+              1002
+            ]
+          ]
+        },
+        {
+          "text": "示，代表市委、市政府向",
+          "score": 0.991644,
+          "polygon": [
+            [
+              0,
+              994
+            ],
+            [
+              235,
+              997
+            ],
+            [
+              235,
+              1021
+            ],
+            [
+              0,
+              1018
+            ]
+          ]
+        },
+        {
+          "text": "代化先行市",
+          "score": 0.997138,
+          "polygon": [
+            [
+              265,
+              996
+            ],
+            [
+              381,
+              1000
+            ],
+            [
+              380,
+              1025
+            ],
+            [
+              264,
+              1021
+            ]
+          ]
+        },
+        {
+          "text": "“重要窗口",
+          "score": 0.951863,
+          "polygon": [
+            [
+              632,
+              1004
+            ],
+            [
+              709,
+              1004
+            ],
+            [
+              709,
+              1025
+            ],
+            [
+              632,
+              1025
+            ]
+          ]
+        },
+        {
+          "text": "市广大妇女同胞送上节",
+          "score": 0.998387,
+          "polygon": [
+            [
+              1,
+              1023
+            ],
+            [
+              233,
+              1023
+            ],
+            [
+              233,
+              1047
+            ],
+            [
+              1,
+              1047
+            ]
+          ]
+        },
+        {
+          "text": "市各级妇",
+          "score": 0.987999,
+          "polygon": [
+            [
+              265,
+              1024
+            ],
+            [
+              357,
+              1024
+            ],
+            [
+              357,
+              1049
+            ],
+            [
+              265,
+              1049
+            ]
+          ]
+        },
+        {
+          "text": "祝福，向各条战线上辛勤",
+          "score": 0.990372,
+          "polygon": [
+            [
+              0,
+              1054
+            ],
+            [
+              236,
+              1051
+            ],
+            [
+              236,
+              1075
+            ],
+            [
+              0,
+              1078
+            ]
+          ]
+        },
+        {
+          "text": "举习近平",
+          "score": 0.985634,
+          "polygon": [
+            [
+              263,
+              1050
+            ],
+            [
+              352,
+              1050
+            ],
+            [
+              352,
+              1075
+            ],
+            [
+              263,
+              1075
+            ]
+          ]
+        },
+        {
+          "text": "@温州",
+          "score": 0.984239,
+          "polygon": [
+            [
+              89,
+              1121
+            ],
+            [
+              359,
+              1100
+            ],
+            [
+              366,
+              1195
+            ],
+            [
+              96,
+              1215
+            ]
+          ]
+        },
+        {
+          "text": "插花",
+          "score": 0.993999,
+          "polygon": [
+            [
+              369,
+              1682
+            ],
+            [
+              420,
+              1674
+            ],
+            [
+              424,
+              1702
+            ],
+            [
+              373,
+              1710
+            ]
+          ]
+        },
+        {
+          "text": "温州市总工",
+          "score": 0.997714,
+          "polygon": [
+            [
+              85,
+              1851
+            ],
+            [
+              461,
+              1782
+            ],
+            [
+              477,
+              1871
+            ],
+            [
+              101,
+              1919
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.692438,
+        "scores": {
+          "product_photo": 0.692438,
+          "product_infographic": 6.8e-05,
+          "advertisement": 0.21535,
+          "factory_or_company": 0.014249,
+          "certificate_or_document": 0.073834,
+          "qr_or_contact_card": 0.004061
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR text coverage is at least 12%",
+      "decision_reason": "PaddleOCR text coverage is at least 12%",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "015.jpg",
+      "sha256": "30591dbc14a267feea1caabcec12fe663f488dfe06b7ce143b8f57b765fcdc48",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 750,
+      "ocr_text": [],
+      "text_coverage": 0.0,
+      "ocr_detections": [],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999998,
+        "scores": {
+          "product_photo": 0.999998,
+          "product_infographic": 0.0,
+          "advertisement": 0.0,
+          "factory_or_company": 1e-06,
+          "certificate_or_document": 1e-06,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": true,
+      "delete": false,
+      "delete_reason": null,
+      "decision_reason": "clean product photo; no OCR text detected",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": "processed_images/015.webp"
+    },
+    {
+      "filename": "016.jpg",
+      "sha256": "41bf419113524e610bf00e7b7a17be913d422c5385cb5d108f7fad1880b8a4df",
+      "duplicate_filenames": [],
+      "width": 790,
+      "height": 1232,
+      "ocr_text": [
+        "店铺推荐",
+        "爆款推荐",
+        "大量现货批发工厂直销",
+        "新款四层锌合金独眼：",
+        "欧美货源50mm-4层批发点纹锌合金卡通",
+        "￥10.6",
+        "￥12",
+        "Z.C.Y.J",
+        "征程烟具",
+        "支持",
+        "铝合金材料",
+        "定制LOGO",
+        "多种颜色尺寸可供选择",
+        "厂家批发橡皮漆40m",
+        "批发平板铝合金磨烟",
+        "平板50/55/63mm2",
+        "￥13.5",
+        "￥15.2",
+        "￥14.7",
+        "ZHENG CHENG",
+        "厂家批发四层平板梅平板锌合金点纹纳米热卖新品夜光漆磨烟",
+        "￥10.2",
+        "￥9.2"
+      ],
+      "text_coverage": 0.188702,
+      "ocr_detections": [
+        {
+          "text": "店铺推荐",
+          "score": 0.999469,
+          "polygon": [
+            [
+              308,
+              43
+            ],
+            [
+              480,
+              43
+            ],
+            [
+              480,
+              89
+            ],
+            [
+              308,
+              89
+            ]
+          ]
+        },
+        {
+          "text": "爆款推荐",
+          "score": 0.995345,
+          "polygon": [
+            [
+              35,
+              130
+            ],
+            [
+              94,
+              129
+            ],
+            [
+              94,
+              148
+            ],
+            [
+              36,
+              149
+            ]
+          ]
+        },
+        {
+          "text": "大量现货批发工厂直销",
+          "score": 0.99962,
+          "polygon": [
+            [
+              33,
+              335
+            ],
+            [
+              263,
+              335
+            ],
+            [
+              263,
+              363
+            ],
+            [
+              33,
+              363
+            ]
+          ]
+        },
+        {
+          "text": "新款四层锌合金独眼：",
+          "score": 0.957477,
+          "polygon": [
+            [
+              31,
+              379
+            ],
+            [
+              293,
+              379
+            ],
+            [
+              293,
+              403
+            ],
+            [
+              31,
+              403
+            ]
+          ]
+        },
+        {
+          "text": "欧美货源50mm-4层批发点纹锌合金卡通",
+          "score": 0.997654,
+          "polygon": [
+            [
+              282,
+              380
+            ],
+            [
+              778,
+              380
+            ],
+            [
+              778,
+              404
+            ],
+            [
+              282,
+              404
+            ]
+          ]
+        },
+        {
+          "text": "￥10.6",
+          "score": 0.932777,
+          "polygon": [
+            [
+              26,
+              416
+            ],
+            [
+              130,
+              416
+            ],
+            [
+              130,
+              456
+            ],
+            [
+              26,
+              456
+            ]
+          ]
+        },
+        {
+          "text": "￥12",
+          "score": 0.955611,
+          "polygon": [
+            [
+              280,
+              417
+            ],
+            [
+              356,
+              414
+            ],
+            [
+              357,
+              454
+            ],
+            [
+              281,
+              456
+            ]
+          ]
+        },
+        {
+          "text": "Z.C.Y.J",
+          "score": 0.925455,
+          "polygon": [
+            [
+              298,
+              501
+            ],
+            [
+              350,
+              504
+            ],
+            [
+              349,
+              522
+            ],
+            [
+              297,
+              519
+            ]
+          ]
+        },
+        {
+          "text": "征程烟具",
+          "score": 0.994379,
+          "polygon": [
+            [
+              296,
+              519
+            ],
+            [
+              352,
+              519
+            ],
+            [
+              352,
+              536
+            ],
+            [
+              296,
+              536
+            ]
+          ]
+        },
+        {
+          "text": "支持",
+          "score": 0.999693,
+          "polygon": [
+            [
+              300,
+              691
+            ],
+            [
+              335,
+              691
+            ],
+            [
+              335,
+              711
+            ],
+            [
+              300,
+              711
+            ]
+          ]
+        },
+        {
+          "text": "铝合金材料",
+          "score": 0.99607,
+          "polygon": [
+            [
+              423,
+              685
+            ],
+            [
+              495,
+              685
+            ],
+            [
+              495,
+              703
+            ],
+            [
+              423,
+              703
+            ]
+          ]
+        },
+        {
+          "text": "定制LOGO",
+          "score": 0.99732,
+          "polygon": [
+            [
+              287,
+              710
+            ],
+            [
+              355,
+              710
+            ],
+            [
+              355,
+              728
+            ],
+            [
+              287,
+              728
+            ]
+          ]
+        },
+        {
+          "text": "多种颜色尺寸可供选择",
+          "score": 0.998963,
+          "polygon": [
+            [
+              375,
+              708
+            ],
+            [
+              516,
+              708
+            ],
+            [
+              516,
+              725
+            ],
+            [
+              375,
+              725
+            ]
+          ]
+        },
+        {
+          "text": "厂家批发橡皮漆40m",
+          "score": 0.998642,
+          "polygon": [
+            [
+              30,
+              746
+            ],
+            [
+              274,
+              746
+            ],
+            [
+              274,
+              773
+            ],
+            [
+              30,
+              773
+            ]
+          ]
+        },
+        {
+          "text": "批发平板铝合金磨烟",
+          "score": 0.996535,
+          "polygon": [
+            [
+              283,
+              748
+            ],
+            [
+              526,
+              748
+            ],
+            [
+              526,
+              772
+            ],
+            [
+              283,
+              772
+            ]
+          ]
+        },
+        {
+          "text": "平板50/55/63mm2",
+          "score": 0.995621,
+          "polygon": [
+            [
+              518,
+              748
+            ],
+            [
+              779,
+              748
+            ],
+            [
+              779,
+              772
+            ],
+            [
+              518,
+              772
+            ]
+          ]
+        },
+        {
+          "text": "￥13.5",
+          "score": 0.945927,
+          "polygon": [
+            [
+              26,
+              784
+            ],
+            [
+              129,
+              784
+            ],
+            [
+              129,
+              825
+            ],
+            [
+              26,
+              825
+            ]
+          ]
+        },
+        {
+          "text": "￥15.2",
+          "score": 0.958646,
+          "polygon": [
+            [
+              281,
+              784
+            ],
+            [
+              386,
+              784
+            ],
+            [
+              386,
+              824
+            ],
+            [
+              281,
+              824
+            ]
+          ]
+        },
+        {
+          "text": "￥14.7",
+          "score": 0.954872,
+          "polygon": [
+            [
+              537,
+              784
+            ],
+            [
+              641,
+              784
+            ],
+            [
+              641,
+              824
+            ],
+            [
+              537,
+              824
+            ]
+          ]
+        },
+        {
+          "text": "ZHENG CHENG",
+          "score": 0.92514,
+          "polygon": [
+            [
+              298,
+              911
+            ],
+            [
+              354,
+              911
+            ],
+            [
+              354,
+              921
+            ],
+            [
+              298,
+              921
+            ]
+          ]
+        },
+        {
+          "text": "厂家批发四层平板梅平板锌合金点纹纳米热卖新品夜光漆磨烟",
+          "score": 0.99558,
+          "polygon": [
+            [
+              29,
+              1112
+            ],
+            [
+              779,
+              1112
+            ],
+            [
+              779,
+              1143
+            ],
+            [
+              29,
+              1143
+            ]
+          ]
+        },
+        {
+          "text": "￥10.2",
+          "score": 0.948923,
+          "polygon": [
+            [
+              280,
+              1154
+            ],
+            [
+              385,
+              1152
+            ],
+            [
+              385,
+              1189
+            ],
+            [
+              281,
+              1192
+            ]
+          ]
+        },
+        {
+          "text": "￥9.2",
+          "score": 0.955851,
+          "polygon": [
+            [
+              537,
+              1152
+            ],
+            [
+              623,
+              1152
+            ],
+            [
+              623,
+              1192
+            ],
+            [
+              537,
+              1192
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.773261,
+        "scores": {
+          "product_photo": 0.773261,
+          "product_infographic": 0.009713,
+          "advertisement": 0.21528,
+          "factory_or_company": 0.000275,
+          "certificate_or_document": 0.001469,
+          "qr_or_contact_card": 3e-06
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR text coverage is at least 12%",
+      "decision_reason": "PaddleOCR text coverage is at least 12%",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "017.jpg",
+      "sha256": "15b1a55f5ec22197bbffe98f9a5d82f4b19925ac5370785bfedc2c0f3aa1a2c3",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 648,
+      "ocr_text": [
+        "平板梅花纹磨烟器",
+        "FLAT PLUM PATTERNSMOKER",
+        "采用锌合金金属材料制作",
+        "六种规格，六种颜色",
+        "请您对我们服务态度放心，选我们，不会让您失望"
+      ],
+      "text_coverage": 0.129644,
+      "ocr_detections": [
+        {
+          "text": "平板梅花纹磨烟器",
+          "score": 0.963784,
+          "polygon": [
+            [
+              173,
+              59
+            ],
+            [
+              605,
+              59
+            ],
+            [
+              605,
+              117
+            ],
+            [
+              173,
+              117
+            ]
+          ]
+        },
+        {
+          "text": "FLAT PLUM PATTERNSMOKER",
+          "score": 0.963379,
+          "polygon": [
+            [
+              264,
+              125
+            ],
+            [
+              519,
+              125
+            ],
+            [
+              519,
+              139
+            ],
+            [
+              264,
+              139
+            ]
+          ]
+        },
+        {
+          "text": "采用锌合金金属材料制作",
+          "score": 0.999121,
+          "polygon": [
+            [
+              291,
+              146
+            ],
+            [
+              492,
+              146
+            ],
+            [
+              492,
+              166
+            ],
+            [
+              291,
+              166
+            ]
+          ]
+        },
+        {
+          "text": "六种规格，六种颜色",
+          "score": 0.995921,
+          "polygon": [
+            [
+              316,
+              173
+            ],
+            [
+              480,
+              173
+            ],
+            [
+              480,
+              193
+            ],
+            [
+              316,
+              193
+            ]
+          ]
+        },
+        {
+          "text": "请您对我们服务态度放心，选我们，不会让您失望",
+          "score": 0.976679,
+          "polygon": [
+            [
+              211,
+              200
+            ],
+            [
+              605,
+              200
+            ],
+            [
+              605,
+              218
+            ],
+            [
+              211,
+              218
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.997828,
+        "scores": {
+          "product_photo": 0.997828,
+          "product_infographic": 0.000532,
+          "advertisement": 0.001204,
+          "factory_or_company": 8.5e-05,
+          "certificate_or_document": 0.00035,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR text coverage is at least 12%",
+      "decision_reason": "PaddleOCR text coverage is at least 12%",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "018.jpg",
+      "sha256": "22fee39ce5a20a32447f9b49b12363289f30649595c4822500c49c43f0395782",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 933,
+      "ocr_text": [
+        "产品参数",
+        "PRODUCT PARAMETERS",
+        "名称：点纹磨烟器40MM",
+        "材质：锌合金",
+        "36mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：80g（不含包装）",
+        "规格：Φ40*36",
+        "产地：温州",
+        "40mm",
+        "名称：点纹磨烟器50MM",
+        "材质：锌合金",
+        "40mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：108g（不含包装）",
+        "规格：Φ50*40",
+        "产地：温州",
+        "50mm"
+      ],
+      "text_coverage": 0.178882,
+      "ocr_detections": [
+        {
+          "text": "产品参数",
+          "score": 0.998195,
+          "polygon": [
+            [
+              331,
+              0
+            ],
+            [
+              441,
+              0
+            ],
+            [
+              441,
+              32
+            ],
+            [
+              330,
+              30
+            ]
+          ]
+        },
+        {
+          "text": "PRODUCT PARAMETERS",
+          "score": 0.986647,
+          "polygon": [
+            [
+              288,
+              29
+            ],
+            [
+              487,
+              29
+            ],
+            [
+              487,
+              43
+            ],
+            [
+              288,
+              43
+            ]
+          ]
+        },
+        {
+          "text": "名称：点纹磨烟器40MM",
+          "score": 0.983844,
+          "polygon": [
+            [
+              463,
+              182
+            ],
+            [
+              702,
+              182
+            ],
+            [
+              702,
+              203
+            ],
+            [
+              463,
+              203
+            ]
+          ]
+        },
+        {
+          "text": "材质：锌合金",
+          "score": 0.998796,
+          "polygon": [
+            [
+              460,
+              222
+            ],
+            [
+              605,
+              222
+            ],
+            [
+              605,
+              249
+            ],
+            [
+              460,
+              249
+            ]
+          ]
+        },
+        {
+          "text": "36mm",
+          "score": 0.997777,
+          "polygon": [
+            [
+              20,
+              257
+            ],
+            [
+              76,
+              260
+            ],
+            [
+              75,
+              285
+            ],
+            [
+              19,
+              282
+            ]
+          ]
+        },
+        {
+          "text": "颜色：红绿蓝黑银枪",
+          "score": 0.990109,
+          "polygon": [
+            [
+              461,
+              266
+            ],
+            [
+              676,
+              266
+            ],
+            [
+              676,
+              291
+            ],
+            [
+              461,
+              291
+            ]
+          ]
+        },
+        {
+          "text": "重量：80g（不含包装）",
+          "score": 0.977373,
+          "polygon": [
+            [
+              458,
+              309
+            ],
+            [
+              687,
+              307
+            ],
+            [
+              687,
+              334
+            ],
+            [
+              459,
+              336
+            ]
+          ]
+        },
+        {
+          "text": "规格：Φ40*36",
+          "score": 0.939763,
+          "polygon": [
+            [
+              459,
+              350
+            ],
+            [
+              623,
+              350
+            ],
+            [
+              623,
+              378
+            ],
+            [
+              459,
+              378
+            ]
+          ]
+        },
+        {
+          "text": "产地：温州",
+          "score": 0.994681,
+          "polygon": [
+            [
+              458,
+              391
+            ],
+            [
+              582,
+              393
+            ],
+            [
+              581,
+              422
+            ],
+            [
+              457,
+              420
+            ]
+          ]
+        },
+        {
+          "text": "40mm",
+          "score": 0.998711,
+          "polygon": [
+            [
+              207,
+              449
+            ],
+            [
+              263,
+              449
+            ],
+            [
+              263,
+              475
+            ],
+            [
+              207,
+              475
+            ]
+          ]
+        },
+        {
+          "text": "名称：点纹磨烟器50MM",
+          "score": 0.986558,
+          "polygon": [
+            [
+              462,
+              612
+            ],
+            [
+              703,
+              612
+            ],
+            [
+              703,
+              636
+            ],
+            [
+              462,
+              636
+            ]
+          ]
+        },
+        {
+          "text": "材质：锌合金",
+          "score": 0.998992,
+          "polygon": [
+            [
+              459,
+              652
+            ],
+            [
+              606,
+              655
+            ],
+            [
+              606,
+              682
+            ],
+            [
+              458,
+              680
+            ]
+          ]
+        },
+        {
+          "text": "40mm",
+          "score": 0.99855,
+          "polygon": [
+            [
+              22,
+              702
+            ],
+            [
+              74,
+              702
+            ],
+            [
+              74,
+              725
+            ],
+            [
+              22,
+              725
+            ]
+          ]
+        },
+        {
+          "text": "颜色：红绿蓝黑银枪",
+          "score": 0.993216,
+          "polygon": [
+            [
+              461,
+              698
+            ],
+            [
+              676,
+              698
+            ],
+            [
+              676,
+              722
+            ],
+            [
+              461,
+              722
+            ]
+          ]
+        },
+        {
+          "text": "重量：108g（不含包装）",
+          "score": 0.98325,
+          "polygon": [
+            [
+              458,
+              741
+            ],
+            [
+              700,
+              739
+            ],
+            [
+              700,
+              766
+            ],
+            [
+              459,
+              768
+            ]
+          ]
+        },
+        {
+          "text": "规格：Φ50*40",
+          "score": 0.947481,
+          "polygon": [
+            [
+              459,
+              782
+            ],
+            [
+              623,
+              782
+            ],
+            [
+              623,
+              810
+            ],
+            [
+              459,
+              810
+            ]
+          ]
+        },
+        {
+          "text": "产地：温州",
+          "score": 0.994744,
+          "polygon": [
+            [
+              459,
+              823
+            ],
+            [
+              583,
+              823
+            ],
+            [
+              583,
+              855
+            ],
+            [
+              459,
+              855
+            ]
+          ]
+        },
+        {
+          "text": "50mm",
+          "score": 0.998814,
+          "polygon": [
+            [
+              229,
+              891
+            ],
+            [
+              285,
+              891
+            ],
+            [
+              285,
+              917
+            ],
+            [
+              229,
+              917
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.831455,
+        "scores": {
+          "product_photo": 0.831455,
+          "product_infographic": 0.163733,
+          "advertisement": 0.000975,
+          "factory_or_company": 2.4e-05,
+          "certificate_or_document": 0.003814,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR identified infographic marker: PRODUCT PARAMETERS",
+      "decision_reason": "PaddleOCR identified infographic marker: PRODUCT PARAMETERS",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "019.jpg",
+      "sha256": "e94d912004b1833aa37f9d33d55714d58ad66d5fb584b4f7c777ddf5ad2a25a6",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 905,
+      "ocr_text": [
+        "名称：点纹磨烟器55MM",
+        "材质：锌合金",
+        "40mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：143g（不含包装）",
+        "规格：Φ55*40",
+        "产地：温州",
+        "55mm",
+        "名称：点纹磨烟器63MM",
+        "材质：锌合金",
+        "41mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：180g（不含包装）",
+        "规格：Φ63x41",
+        "产地：温州",
+        "63mm"
+      ],
+      "text_coverage": 0.169015,
+      "ocr_detections": [
+        {
+          "text": "名称：点纹磨烟器55MM",
+          "score": 0.993344,
+          "polygon": [
+            [
+              463,
+              120
+            ],
+            [
+              702,
+              120
+            ],
+            [
+              702,
+              141
+            ],
+            [
+              463,
+              141
+            ]
+          ]
+        },
+        {
+          "text": "材质：锌合金",
+          "score": 0.998861,
+          "polygon": [
+            [
+              459,
+              158
+            ],
+            [
+              606,
+              161
+            ],
+            [
+              606,
+              188
+            ],
+            [
+              458,
+              186
+            ]
+          ]
+        },
+        {
+          "text": "40mm",
+          "score": 0.998006,
+          "polygon": [
+            [
+              4,
+              198
+            ],
+            [
+              59,
+              200
+            ],
+            [
+              58,
+              227
+            ],
+            [
+              3,
+              224
+            ]
+          ]
+        },
+        {
+          "text": "颜色：红绿蓝黑银枪",
+          "score": 0.995504,
+          "polygon": [
+            [
+              461,
+              204
+            ],
+            [
+              675,
+              204
+            ],
+            [
+              675,
+              228
+            ],
+            [
+              461,
+              228
+            ]
+          ]
+        },
+        {
+          "text": "重量：143g（不含包装）",
+          "score": 0.984136,
+          "polygon": [
+            [
+              461,
+              247
+            ],
+            [
+              699,
+              247
+            ],
+            [
+              699,
+              272
+            ],
+            [
+              461,
+              272
+            ]
+          ]
+        },
+        {
+          "text": "规格：Φ55*40",
+          "score": 0.928586,
+          "polygon": [
+            [
+              459,
+              288
+            ],
+            [
+              623,
+              288
+            ],
+            [
+              623,
+              316
+            ],
+            [
+              459,
+              316
+            ]
+          ]
+        },
+        {
+          "text": "产地：温州",
+          "score": 0.992433,
+          "polygon": [
+            [
+              458,
+              329
+            ],
+            [
+              582,
+              331
+            ],
+            [
+              581,
+              360
+            ],
+            [
+              457,
+              357
+            ]
+          ]
+        },
+        {
+          "text": "55mm",
+          "score": 0.998646,
+          "polygon": [
+            [
+              214,
+              390
+            ],
+            [
+              267,
+              392
+            ],
+            [
+              266,
+              415
+            ],
+            [
+              213,
+              413
+            ]
+          ]
+        },
+        {
+          "text": "名称：点纹磨烟器63MM",
+          "score": 0.99241,
+          "polygon": [
+            [
+              462,
+              539
+            ],
+            [
+              703,
+              539
+            ],
+            [
+              703,
+              564
+            ],
+            [
+              462,
+              564
+            ]
+          ]
+        },
+        {
+          "text": "材质：锌合金",
+          "score": 0.998894,
+          "polygon": [
+            [
+              459,
+              579
+            ],
+            [
+              606,
+              581
+            ],
+            [
+              606,
+              609
+            ],
+            [
+              458,
+              607
+            ]
+          ]
+        },
+        {
+          "text": "41mm",
+          "score": 0.998042,
+          "polygon": [
+            [
+              0,
+              627
+            ],
+            [
+              56,
+              630
+            ],
+            [
+              55,
+              656
+            ],
+            [
+              0,
+              653
+            ]
+          ]
+        },
+        {
+          "text": "颜色：红绿蓝黑银枪",
+          "score": 0.99577,
+          "polygon": [
+            [
+              461,
+              625
+            ],
+            [
+              675,
+              625
+            ],
+            [
+              675,
+              649
+            ],
+            [
+              461,
+              649
+            ]
+          ]
+        },
+        {
+          "text": "重量：180g（不含包装）",
+          "score": 0.97069,
+          "polygon": [
+            [
+              458,
+              668
+            ],
+            [
+              701,
+              666
+            ],
+            [
+              701,
+              693
+            ],
+            [
+              459,
+              695
+            ]
+          ]
+        },
+        {
+          "text": "规格：Φ63x41",
+          "score": 0.928272,
+          "polygon": [
+            [
+              459,
+              709
+            ],
+            [
+              622,
+              709
+            ],
+            [
+              622,
+              737
+            ],
+            [
+              459,
+              737
+            ]
+          ]
+        },
+        {
+          "text": "产地：温州",
+          "score": 0.99379,
+          "polygon": [
+            [
+              458,
+              749
+            ],
+            [
+              582,
+              753
+            ],
+            [
+              581,
+              781
+            ],
+            [
+              457,
+              777
+            ]
+          ]
+        },
+        {
+          "text": "63mm",
+          "score": 0.99886,
+          "polygon": [
+            [
+              212,
+              820
+            ],
+            [
+              264,
+              820
+            ],
+            [
+              264,
+              843
+            ],
+            [
+              212,
+              843
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.583295,
+        "scores": {
+          "product_photo": 0.583295,
+          "product_infographic": 0.39987,
+          "advertisement": 0.000372,
+          "factory_or_company": 3e-05,
+          "certificate_or_document": 0.016432,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR text coverage is at least 12%",
+      "decision_reason": "PaddleOCR text coverage is at least 12%",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "020.jpg",
+      "sha256": "43d80ad35b723f82200e4acd3fdbb3414c0725debd0026e6c2fc26becef407a6",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 1286,
+      "ocr_text": [
+        "常规颜色图：红绿蓝银枪",
+        "精致外观",
+        "Delicate appearance",
+        "锌合金材质，点纹纹路",
+        "六种颜色可供选择",
+        "磨烟区",
+        "Delicate appearance",
+        "需要磨碎东西放置，转动",
+        "盖子即可磨碎东西",
+        "过滤网",
+        "Delicate appearance",
+        "中层成品放置区域",
+        "过滤网会将细致过滤",
+        "让最终磨碎均匀",
+        "烟沫网",
+        "Delicate appearance",
+        "太细的过滤下来",
+        "置落在此处"
+      ],
+      "text_coverage": 0.087261,
+      "ocr_detections": [
+        {
+          "text": "常规颜色图：红绿蓝银枪",
+          "score": 0.980982,
+          "polygon": [
+            [
+              152,
+              319
+            ],
+            [
+              586,
+              322
+            ],
+            [
+              586,
+              360
+            ],
+            [
+              152,
+              358
+            ]
+          ]
+        },
+        {
+          "text": "精致外观",
+          "score": 0.970157,
+          "polygon": [
+            [
+              552,
+              606
+            ],
+            [
+              655,
+              606
+            ],
+            [
+              655,
+              635
+            ],
+            [
+              552,
+              635
+            ]
+          ]
+        },
+        {
+          "text": "Delicate appearance",
+          "score": 0.988506,
+          "polygon": [
+            [
+              552,
+              634
+            ],
+            [
+              667,
+              636
+            ],
+            [
+              666,
+              654
+            ],
+            [
+              551,
+              652
+            ]
+          ]
+        },
+        {
+          "text": "锌合金材质，点纹纹路",
+          "score": 0.998693,
+          "polygon": [
+            [
+              552,
+              652
+            ],
+            [
+              721,
+              652
+            ],
+            [
+              721,
+              673
+            ],
+            [
+              552,
+              673
+            ]
+          ]
+        },
+        {
+          "text": "六种颜色可供选择",
+          "score": 0.999458,
+          "polygon": [
+            [
+              552,
+              668
+            ],
+            [
+              688,
+              670
+            ],
+            [
+              688,
+              691
+            ],
+            [
+              551,
+              689
+            ]
+          ]
+        },
+        {
+          "text": "磨烟区",
+          "score": 0.991122,
+          "polygon": [
+            [
+              553,
+              746
+            ],
+            [
+              629,
+              746
+            ],
+            [
+              629,
+              777
+            ],
+            [
+              553,
+              777
+            ]
+          ]
+        },
+        {
+          "text": "Delicate appearance",
+          "score": 0.962173,
+          "polygon": [
+            [
+              553,
+              776
+            ],
+            [
+              667,
+              778
+            ],
+            [
+              666,
+              796
+            ],
+            [
+              552,
+              794
+            ]
+          ]
+        },
+        {
+          "text": "需要磨碎东西放置，转动",
+          "score": 0.998406,
+          "polygon": [
+            [
+              551,
+              794
+            ],
+            [
+              737,
+              794
+            ],
+            [
+              737,
+              814
+            ],
+            [
+              551,
+              814
+            ]
+          ]
+        },
+        {
+          "text": "盖子即可磨碎东西",
+          "score": 0.998056,
+          "polygon": [
+            [
+              552,
+              810
+            ],
+            [
+              688,
+              812
+            ],
+            [
+              688,
+              833
+            ],
+            [
+              551,
+              831
+            ]
+          ]
+        },
+        {
+          "text": "过滤网",
+          "score": 0.99774,
+          "polygon": [
+            [
+              551,
+              883
+            ],
+            [
+              630,
+              883
+            ],
+            [
+              630,
+              912
+            ],
+            [
+              551,
+              912
+            ]
+          ]
+        },
+        {
+          "text": "Delicate appearance",
+          "score": 0.992001,
+          "polygon": [
+            [
+              553,
+              911
+            ],
+            [
+              667,
+              913
+            ],
+            [
+              666,
+              931
+            ],
+            [
+              552,
+              929
+            ]
+          ]
+        },
+        {
+          "text": "中层成品放置区域",
+          "score": 0.99971,
+          "polygon": [
+            [
+              552,
+              929
+            ],
+            [
+              689,
+              929
+            ],
+            [
+              689,
+              949
+            ],
+            [
+              552,
+              949
+            ]
+          ]
+        },
+        {
+          "text": "过滤网会将细致过滤",
+          "score": 0.999504,
+          "polygon": [
+            [
+              552,
+              947
+            ],
+            [
+              704,
+              947
+            ],
+            [
+              704,
+              969
+            ],
+            [
+              552,
+              969
+            ]
+          ]
+        },
+        {
+          "text": "让最终磨碎均匀",
+          "score": 0.996367,
+          "polygon": [
+            [
+              552,
+              964
+            ],
+            [
+              672,
+              964
+            ],
+            [
+              672,
+              986
+            ],
+            [
+              552,
+              986
+            ]
+          ]
+        },
+        {
+          "text": "烟沫网",
+          "score": 0.989811,
+          "polygon": [
+            [
+              550,
+              1014
+            ],
+            [
+              629,
+              1014
+            ],
+            [
+              629,
+              1043
+            ],
+            [
+              550,
+              1043
+            ]
+          ]
+        },
+        {
+          "text": "Delicate appearance",
+          "score": 0.964336,
+          "polygon": [
+            [
+              553,
+              1042
+            ],
+            [
+              668,
+              1045
+            ],
+            [
+              667,
+              1063
+            ],
+            [
+              552,
+              1060
+            ]
+          ]
+        },
+        {
+          "text": "太细的过滤下来",
+          "score": 0.99968,
+          "polygon": [
+            [
+              552,
+              1061
+            ],
+            [
+              673,
+              1061
+            ],
+            [
+              673,
+              1081
+            ],
+            [
+              552,
+              1081
+            ]
+          ]
+        },
+        {
+          "text": "置落在此处",
+          "score": 0.999659,
+          "polygon": [
+            [
+              552,
+              1078
+            ],
+            [
+              640,
+              1078
+            ],
+            [
+              640,
+              1099
+            ],
+            [
+              552,
+              1099
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999052,
+        "scores": {
+          "product_photo": 0.999052,
+          "product_infographic": 0.000599,
+          "advertisement": 0.000209,
+          "factory_or_company": 2.9e-05,
+          "certificate_or_document": 0.000103,
+          "qr_or_contact_card": 7e-06
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR detected text in the central product area",
+      "decision_reason": "PaddleOCR detected text in the central product area",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "021.jpg",
+      "sha256": "444c92ab7ce7efb56cd3c94dce0a2c73c47f3528e99adc5ac6366ec8de7586bc",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 818,
+      "ocr_text": [
+        "品解析",
+        "PRODUCT ANALYSIS"
+      ],
+      "text_coverage": 0.013335,
+      "ocr_detections": [
+        {
+          "text": "品解析",
+          "score": 0.999568,
+          "polygon": [
+            [
+              349,
+              2
+            ],
+            [
+              437,
+              2
+            ],
+            [
+              437,
+              34
+            ],
+            [
+              349,
+              34
+            ]
+          ]
+        },
+        {
+          "text": "PRODUCT ANALYSIS",
+          "score": 0.980088,
+          "polygon": [
+            [
+              301,
+              31
+            ],
+            [
+              470,
+              31
+            ],
+            [
+              470,
+              45
+            ],
+            [
+              301,
+              45
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998056,
+        "scores": {
+          "product_photo": 0.998056,
+          "product_infographic": 0.000368,
+          "advertisement": 0.000123,
+          "factory_or_company": 0.001421,
+          "certificate_or_document": 2.5e-05,
+          "qr_or_contact_card": 7e-06
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR identified infographic marker: PRODUCT ANALYSIS",
+      "decision_reason": "PaddleOCR identified infographic marker: PRODUCT ANALYSIS",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "028.jpg",
+      "sha256": "147858b507a0adde4e3ba0bc640d1e4cd6926af73112da44212dd9d7d328d528",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 691,
+      "ocr_text": [
+        "同尺寸不同齿解析",
+        "DIFFERENT TOOTH RESOLUTION OF THE",
+        "50MM",
+        "55MM"
+      ],
+      "text_coverage": 0.056453,
+      "ocr_detections": [
+        {
+          "text": "同尺寸不同齿解析",
+          "score": 0.99974,
+          "polygon": [
+            [
+              291,
+              2
+            ],
+            [
+              501,
+              2
+            ],
+            [
+              501,
+              32
+            ],
+            [
+              291,
+              32
+            ]
+          ]
+        },
+        {
+          "text": "DIFFERENT TOOTH RESOLUTION OF THE",
+          "score": 0.976336,
+          "polygon": [
+            [
+              216,
+              31
+            ],
+            [
+              557,
+              31
+            ],
+            [
+              557,
+              45
+            ],
+            [
+              216,
+              45
+            ]
+          ]
+        },
+        {
+          "text": "50MM",
+          "score": 0.967725,
+          "polygon": [
+            [
+              127,
+              123
+            ],
+            [
+              227,
+              123
+            ],
+            [
+              227,
+              159
+            ],
+            [
+              127,
+              159
+            ]
+          ]
+        },
+        {
+          "text": "55MM",
+          "score": 0.994436,
+          "polygon": [
+            [
+              530,
+              123
+            ],
+            [
+              633,
+              119
+            ],
+            [
+              634,
+              159
+            ],
+            [
+              532,
+              162
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998111,
+        "scores": {
+          "product_photo": 0.998111,
+          "product_infographic": 0.00079,
+          "advertisement": 1.8e-05,
+          "factory_or_company": 0.001056,
+          "certificate_or_document": 1e-05,
+          "qr_or_contact_card": 1.5e-05
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR identified infographic marker: DIFFERENT TOOTH",
+      "decision_reason": "PaddleOCR identified infographic marker: DIFFERENT TOOTH",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "029.jpg",
+      "sha256": "28447095a1bcaab26e4d2ab1d05ce8a26ca3b97652c4f0d5a74bdad37e06625e",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 914,
+      "ocr_text": [
+        "细节展示",
+        "SHOW DETAILS",
+        "40MM齿",
+        "50MM齿-1"
+      ],
+      "text_coverage": 0.034993,
+      "ocr_detections": [
+        {
+          "text": "细节展示",
+          "score": 0.998337,
+          "polygon": [
+            [
+              329,
+              4
+            ],
+            [
+              437,
+              4
+            ],
+            [
+              437,
+              32
+            ],
+            [
+              329,
+              32
+            ]
+          ]
+        },
+        {
+          "text": "SHOW DETAILS",
+          "score": 0.987468,
+          "polygon": [
+            [
+              320,
+              32
+            ],
+            [
+              445,
+              32
+            ],
+            [
+              445,
+              45
+            ],
+            [
+              320,
+              45
+            ]
+          ]
+        },
+        {
+          "text": "40MM齿",
+          "score": 0.990634,
+          "polygon": [
+            [
+              352,
+              135
+            ],
+            [
+              478,
+              135
+            ],
+            [
+              478,
+              169
+            ],
+            [
+              352,
+              169
+            ]
+          ]
+        },
+        {
+          "text": "50MM齿-1",
+          "score": 0.992563,
+          "polygon": [
+            [
+              347,
+              578
+            ],
+            [
+              515,
+              578
+            ],
+            [
+              515,
+              612
+            ],
+            [
+              347,
+              612
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.990133,
+        "scores": {
+          "product_photo": 0.990133,
+          "product_infographic": 0.009288,
+          "advertisement": 0.000413,
+          "factory_or_company": 0.000126,
+          "certificate_or_document": 1.1e-05,
+          "qr_or_contact_card": 2.8e-05
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR identified infographic marker: SHOW DETAILS",
+      "decision_reason": "PaddleOCR identified infographic marker: SHOW DETAILS",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "030.jpg",
+      "sha256": "99a73bc00034c458418f3e25ab50e00673b2c135d2bce82946b2f80879948e3a",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 775,
+      "ocr_text": [
+        "50MM齿-2",
+        "55MM齿-1"
+      ],
+      "text_coverage": 0.033316,
+      "ocr_detections": [
+        {
+          "text": "50MM齿-2",
+          "score": 0.992826,
+          "polygon": [
+            [
+              346,
+              48
+            ],
+            [
+              518,
+              48
+            ],
+            [
+              518,
+              83
+            ],
+            [
+              346,
+              83
+            ]
+          ]
+        },
+        {
+          "text": "55MM齿-1",
+          "score": 0.992718,
+          "polygon": [
+            [
+              344,
+              457
+            ],
+            [
+              514,
+              457
+            ],
+            [
+              514,
+              491
+            ],
+            [
+              344,
+              491
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.995232,
+        "scores": {
+          "product_photo": 0.995232,
+          "product_infographic": 0.004005,
+          "advertisement": 0.000265,
+          "factory_or_company": 0.000419,
+          "certificate_or_document": 6.4e-05,
+          "qr_or_contact_card": 1.5e-05
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR detected text in the central product area",
+      "decision_reason": "PaddleOCR detected text in the central product area",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    },
+    {
+      "filename": "031.jpg",
+      "sha256": "9fa21d70fadc14d0601db200ea04509dd680d380c9461d34968cfdbbe2047fe6",
+      "duplicate_filenames": [],
+      "width": 750,
+      "height": 794,
+      "ocr_text": [
+        "55MM齿-2",
+        "63MM齿"
+      ],
+      "text_coverage": 0.027429,
+      "ocr_detections": [
+        {
+          "text": "55MM齿-2",
+          "score": 0.989996,
+          "polygon": [
+            [
+              358,
+              46
+            ],
+            [
+              527,
+              46
+            ],
+            [
+              527,
+              76
+            ],
+            [
+              358,
+              76
+            ]
+          ]
+        },
+        {
+          "text": "63MM齿",
+          "score": 0.996596,
+          "polygon": [
+            [
+              346,
+              439
+            ],
+            [
+              475,
+              439
+            ],
+            [
+              475,
+              474
+            ],
+            [
+              346,
+              474
+            ]
+          ]
+        }
+      ],
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.996642,
+        "scores": {
+          "product_photo": 0.996642,
+          "product_infographic": 0.002642,
+          "advertisement": 0.000535,
+          "factory_or_company": 0.000118,
+          "certificate_or_document": 3.9e-05,
+          "qr_or_contact_card": 2.4e-05
+        }
+      },
+      "keep": false,
+      "delete": true,
+      "delete_reason": "PaddleOCR detected text in the central product area",
+      "decision_reason": "PaddleOCR detected text in the central product area",
+      "needs_inpainting": false,
+      "inpainting_executed": false,
+      "mask_file": null,
+      "output_file": null
+    }
+  ]
+}
