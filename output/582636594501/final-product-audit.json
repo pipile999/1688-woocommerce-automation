@@ -76,8 +76,6 @@
       }
     }
   ],
-  "sku_count_after": 1,
-  "sku_count_before": 50,
   "gallery_images": [
     10281,
     10282,
@@ -226,10 +224,22 @@
     }
   ],
   "verification": {
-    "mapped_variations": 1,
+    "mapped_variations": 50,
     "prices_preserved": "No variation price fields were submitted in any update request.",
-    "correct_mappings": 0,
-    "sku_count_unchanged": false,
-    "unmapped_color": "Random Floral Pattern (no reliable image bound)"
-  }
+    "correct_mappings": 45,
+    "sku_count_unchanged": true,
+    "unmapped_color": "Random Floral Pattern (no dedicated image; WARNING)"
+  },
+  "sku_count_before": 50,
+  "sku_count_after": 50,
+  "sku_count_unchanged": true,
+  "mapped_variations": 50,
+  "variation_image_audit_summary": {
+    "pass_count": 45,
+    "warning_count": 5,
+    "fail_count": 0,
+    "successfully_bound_color_count": 9,
+    "random_floral_pattern": "No dedicated image; WARNING"
+  },
+  "variation_image_audit_file": "output/582636594501/variation-image-audit.json"
 }
