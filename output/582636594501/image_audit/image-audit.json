@@ -1,0 +1,797 @@
+{
+  "offer_id": "582636594501",
+  "created_at": "2026-09-03T09:18:08.293701+00:00",
+  "model_execution": {
+    "paddleocr": {
+      "executed": true,
+      "paddleocr_version": "3.7.0",
+      "paddlepaddle_version": "3.2.0",
+      "detection_model": "PP-OCRv5_mobile_det",
+      "recognition_model": "PP-OCRv5_mobile_rec",
+      "device": "cpu",
+      "actually_executed": true
+    },
+    "openclip": {
+      "executed": true,
+      "open_clip_torch_version": "3.3.0",
+      "torch_version": "2.14.0+cpu",
+      "model": "ViT-B-32",
+      "pretrained": "laion2b_s34b_b79k",
+      "device": "cpu",
+      "actually_executed": true
+    },
+    "inpainting": {
+      "executed": true,
+      "engine": "LaMa FP32 ONNX",
+      "model": "Carve/LaMa-ONNX lama_fp32.onnx",
+      "onnxruntime_version": "1.29.0",
+      "device": "cpu",
+      "actually_executed": true,
+      "model_name": "Carve/LaMa-ONNX lama_fp32.onnx"
+    }
+  },
+  "records": [
+    {
+      "filename": "001.jpg",
+      "ocr_text": [
+        "Z.C.Y.J",
+        "征程煙具",
+        "锌合金材料",
+        "支持",
+        "定制LOGO",
+        "多种颜色尺寸可供选择"
+      ],
+      "text_coverage": 0.129618,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.91179,
+        "scores": {
+          "product_photo": 0.91179,
+          "product_infographic": 0.000194,
+          "advertisement": 0.079807,
+          "factory_or_company": 0.000655,
+          "certificate_or_document": 0.007536,
+          "qr_or_contact_card": 1.8e-05
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR text coverage is at least 12%",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "002.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047077,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.997669,
+        "scores": {
+          "product_photo": 0.997669,
+          "product_infographic": 9e-06,
+          "advertisement": 0.001327,
+          "factory_or_company": 0.000653,
+          "certificate_or_document": 0.000339,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "002.webp"
+    },
+    {
+      "filename": "003.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047077,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998536,
+        "scores": {
+          "product_photo": 0.998536,
+          "product_infographic": 7e-06,
+          "advertisement": 0.000427,
+          "factory_or_company": 0.000833,
+          "certificate_or_document": 0.000197,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "003.webp"
+    },
+    {
+      "filename": "004.jpg",
+      "ocr_text": [],
+      "text_coverage": 0.0,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.99977,
+        "scores": {
+          "product_photo": 0.99977,
+          "product_infographic": 1.6e-05,
+          "advertisement": 5.6e-05,
+          "factory_or_company": 0.000152,
+          "certificate_or_document": 2e-06,
+          "qr_or_contact_card": 3e-06
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "clean product photo; no OCR text detected",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": "004.webp"
+    },
+    {
+      "filename": "005.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.048375,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998815,
+        "scores": {
+          "product_photo": 0.998815,
+          "product_infographic": 1.2e-05,
+          "advertisement": 1.3e-05,
+          "factory_or_company": 0.001029,
+          "certificate_or_document": 0.000113,
+          "qr_or_contact_card": 1.8e-05
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "005.webp"
+    },
+    {
+      "filename": "006.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.050228,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999794,
+        "scores": {
+          "product_photo": 0.999794,
+          "product_infographic": 1e-06,
+          "advertisement": 7e-06,
+          "factory_or_company": 2.1e-05,
+          "certificate_or_document": 0.000177,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "006.webp"
+    },
+    {
+      "filename": "007.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047568,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999169,
+        "scores": {
+          "product_photo": 0.999169,
+          "product_infographic": 1e-06,
+          "advertisement": 3.7e-05,
+          "factory_or_company": 0.000259,
+          "certificate_or_document": 0.000534,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "007.webp"
+    },
+    {
+      "filename": "008.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.047758,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999486,
+        "scores": {
+          "product_photo": 0.999486,
+          "product_infographic": 0.0,
+          "advertisement": 5.9e-05,
+          "factory_or_company": 7e-05,
+          "certificate_or_document": 0.000384,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "008.webp"
+    },
+    {
+      "filename": "009.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.049077,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998741,
+        "scores": {
+          "product_photo": 0.998741,
+          "product_infographic": 2e-06,
+          "advertisement": 0.000175,
+          "factory_or_company": 0.000287,
+          "certificate_or_document": 0.000793,
+          "qr_or_contact_card": 2e-06
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "009.webp"
+    },
+    {
+      "filename": "010.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.050165,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999281,
+        "scores": {
+          "product_photo": 0.999281,
+          "product_infographic": 3e-06,
+          "advertisement": 3e-05,
+          "factory_or_company": 0.000189,
+          "certificate_or_document": 0.000496,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "010.webp"
+    },
+    {
+      "filename": "011.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.051369,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999461,
+        "scores": {
+          "product_photo": 0.999461,
+          "product_infographic": 1.3e-05,
+          "advertisement": 5.5e-05,
+          "factory_or_company": 8.8e-05,
+          "certificate_or_document": 0.000383,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "011.webp"
+    },
+    {
+      "filename": "012.jpg",
+      "ocr_text": [
+        "苍南县龙港征程电子商务商行",
+        "shop15i4936k5u504.1688.com"
+      ],
+      "text_coverage": 0.04664,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.993041,
+        "scores": {
+          "product_photo": 0.993041,
+          "product_infographic": 2.7e-05,
+          "advertisement": 0.005688,
+          "factory_or_company": 5.4e-05,
+          "certificate_or_document": 0.001083,
+          "qr_or_contact_card": 0.000106
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "small peripheral text/watermark; LaMa inpainting required",
+      "mask_generated": true,
+      "inpainting_executed": true,
+      "final_filename": "012.webp"
+    },
+    {
+      "filename": "013.jpg",
+      "ocr_text": [],
+      "text_coverage": 0.0,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999972,
+        "scores": {
+          "product_photo": 0.999972,
+          "product_infographic": 3e-06,
+          "advertisement": 1.5e-05,
+          "factory_or_company": 5e-06,
+          "certificate_or_document": 6e-06,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "clean product photo; no OCR text detected",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": "013.webp"
+    },
+    {
+      "filename": "014.jpg",
+      "ocr_text": [
+        "久是前列担当",
+        "印记",
+        "温都讯3月3日晚至4",
+        "省委常委、市委书记陈伟",
+        "市党政代表团在金华学",
+        "书时专注投入而误",
+        "察，寻访红色印记，感受",
+        "故事，一句“真理",
+        "脉动，与金华市委书记陈",
+        "甜”令大家十分",
+        "交流深化两地全方",
+        "驱“一块铺板",
+        "，携手推动更高质量发",
+        "当书桌又当床",
+        "指引黎明前",
+        "市领导姚高员、陈作荣等",
+        "历，让大家",
+        "考察。金华市领导邢志",
+        "新使命，我",
+        "东玲玲、宋志恒等一同考",
+        "悟中坚定理",
+        "为中践行初",
+        "这是一次追溯真理、坚定",
+        "这是一",
+        "之行。走进义乌城西街",
+        "理念之行。东",
+        "水塘村，置身首个中文全",
+        "水之奇，也无资",
+        "《共产党宣言》诞生地陈",
+        "视文化产业书",
+        "故居，市党政代表团一行",
+        "生有”的发展",
+        "红色经典。望道先生译",
+        "街香港街、",
+        "功能现代",
+        "表团一行",
+        "为争创先",
+        "温都讯昨天，我市举行",
+        "工作、默默奉献的妇女工作",
+        "百年辉煌巾帼红数智未来",
+        "社会主义",
+        "者致以崇高敬意。他指出，",
+        "力量”纪念“三八”国际妇",
+        "扣锚定“五大新坐标”开",
+        "今年是中国共产党成立100",
+        "节111周年主题活动。",
+        "“十个新局面”聚焦“明",
+        "周年、“十四五”开局之年，",
+        "先、强执行、开新局”工作主",
+        "市委书记陈伟俊作出",
+        "也是温州争创社",
+        "对标对表打造新时",
+        "示，代表市委、市政府向",
+        "代化先行市",
+        "“重要窗口",
+        "市广大妇女同胞送上节",
+        "市各级妇",
+        "祝福，向各条战线上辛勤",
+        "举习近平",
+        "@温州",
+        "插花",
+        "温州市总工"
+      ],
+      "text_coverage": 0.178577,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.692438,
+        "scores": {
+          "product_photo": 0.692438,
+          "product_infographic": 6.8e-05,
+          "advertisement": 0.21535,
+          "factory_or_company": 0.014249,
+          "certificate_or_document": 0.073834,
+          "qr_or_contact_card": 0.004061
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR text coverage is at least 12%",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "015.jpg",
+      "ocr_text": [],
+      "text_coverage": 0.0,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999998,
+        "scores": {
+          "product_photo": 0.999998,
+          "product_infographic": 0.0,
+          "advertisement": 0.0,
+          "factory_or_company": 1e-06,
+          "certificate_or_document": 1e-06,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "keep",
+      "reason": "clean product photo; no OCR text detected",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": "015.webp"
+    },
+    {
+      "filename": "016.jpg",
+      "ocr_text": [
+        "店铺推荐",
+        "爆款推荐",
+        "大量现货批发工厂直销",
+        "新款四层锌合金独眼：",
+        "欧美货源50mm-4层批发点纹锌合金卡通",
+        "￥10.6",
+        "￥12",
+        "Z.C.Y.J",
+        "征程烟具",
+        "支持",
+        "铝合金材料",
+        "定制LOGO",
+        "多种颜色尺寸可供选择",
+        "厂家批发橡皮漆40m",
+        "批发平板铝合金磨烟",
+        "平板50/55/63mm2",
+        "￥13.5",
+        "￥15.2",
+        "￥14.7",
+        "ZHENG CHENG",
+        "厂家批发四层平板梅平板锌合金点纹纳米热卖新品夜光漆磨烟",
+        "￥10.2",
+        "￥9.2"
+      ],
+      "text_coverage": 0.188702,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.773261,
+        "scores": {
+          "product_photo": 0.773261,
+          "product_infographic": 0.009713,
+          "advertisement": 0.21528,
+          "factory_or_company": 0.000275,
+          "certificate_or_document": 0.001469,
+          "qr_or_contact_card": 3e-06
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR text coverage is at least 12%",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "017.jpg",
+      "ocr_text": [
+        "平板梅花纹磨烟器",
+        "FLAT PLUM PATTERNSMOKER",
+        "采用锌合金金属材料制作",
+        "六种规格，六种颜色",
+        "请您对我们服务态度放心，选我们，不会让您失望"
+      ],
+      "text_coverage": 0.129644,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.997828,
+        "scores": {
+          "product_photo": 0.997828,
+          "product_infographic": 0.000532,
+          "advertisement": 0.001204,
+          "factory_or_company": 8.5e-05,
+          "certificate_or_document": 0.00035,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR text coverage is at least 12%",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "018.jpg",
+      "ocr_text": [
+        "产品参数",
+        "PRODUCT PARAMETERS",
+        "名称：点纹磨烟器40MM",
+        "材质：锌合金",
+        "36mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：80g（不含包装）",
+        "规格：Φ40*36",
+        "产地：温州",
+        "40mm",
+        "名称：点纹磨烟器50MM",
+        "材质：锌合金",
+        "40mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：108g（不含包装）",
+        "规格：Φ50*40",
+        "产地：温州",
+        "50mm"
+      ],
+      "text_coverage": 0.178882,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.831455,
+        "scores": {
+          "product_photo": 0.831455,
+          "product_infographic": 0.163733,
+          "advertisement": 0.000975,
+          "factory_or_company": 2.4e-05,
+          "certificate_or_document": 0.003814,
+          "qr_or_contact_card": 0.0
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR identified infographic marker: PRODUCT PARAMETERS",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "019.jpg",
+      "ocr_text": [
+        "名称：点纹磨烟器55MM",
+        "材质：锌合金",
+        "40mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：143g（不含包装）",
+        "规格：Φ55*40",
+        "产地：温州",
+        "55mm",
+        "名称：点纹磨烟器63MM",
+        "材质：锌合金",
+        "41mm",
+        "颜色：红绿蓝黑银枪",
+        "重量：180g（不含包装）",
+        "规格：Φ63x41",
+        "产地：温州",
+        "63mm"
+      ],
+      "text_coverage": 0.169015,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.583295,
+        "scores": {
+          "product_photo": 0.583295,
+          "product_infographic": 0.39987,
+          "advertisement": 0.000372,
+          "factory_or_company": 3e-05,
+          "certificate_or_document": 0.016432,
+          "qr_or_contact_card": 1e-06
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR text coverage is at least 12%",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "020.jpg",
+      "ocr_text": [
+        "常规颜色图：红绿蓝银枪",
+        "精致外观",
+        "Delicate appearance",
+        "锌合金材质，点纹纹路",
+        "六种颜色可供选择",
+        "磨烟区",
+        "Delicate appearance",
+        "需要磨碎东西放置，转动",
+        "盖子即可磨碎东西",
+        "过滤网",
+        "Delicate appearance",
+        "中层成品放置区域",
+        "过滤网会将细致过滤",
+        "让最终磨碎均匀",
+        "烟沫网",
+        "Delicate appearance",
+        "太细的过滤下来",
+        "置落在此处"
+      ],
+      "text_coverage": 0.087261,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.999052,
+        "scores": {
+          "product_photo": 0.999052,
+          "product_infographic": 0.000599,
+          "advertisement": 0.000209,
+          "factory_or_company": 2.9e-05,
+          "certificate_or_document": 0.000103,
+          "qr_or_contact_card": 7e-06
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR detected text in the central product area",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "021.jpg",
+      "ocr_text": [
+        "品解析",
+        "PRODUCT ANALYSIS"
+      ],
+      "text_coverage": 0.013335,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998056,
+        "scores": {
+          "product_photo": 0.998056,
+          "product_infographic": 0.000368,
+          "advertisement": 0.000123,
+          "factory_or_company": 0.001421,
+          "certificate_or_document": 2.5e-05,
+          "qr_or_contact_card": 7e-06
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR identified infographic marker: PRODUCT ANALYSIS",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "028.jpg",
+      "ocr_text": [
+        "同尺寸不同齿解析",
+        "DIFFERENT TOOTH RESOLUTION OF THE",
+        "50MM",
+        "55MM"
+      ],
+      "text_coverage": 0.056453,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.998111,
+        "scores": {
+          "product_photo": 0.998111,
+          "product_infographic": 0.00079,
+          "advertisement": 1.8e-05,
+          "factory_or_company": 0.001056,
+          "certificate_or_document": 1e-05,
+          "qr_or_contact_card": 1.5e-05
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR identified infographic marker: DIFFERENT TOOTH",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "029.jpg",
+      "ocr_text": [
+        "细节展示",
+        "SHOW DETAILS",
+        "40MM齿",
+        "50MM齿-1"
+      ],
+      "text_coverage": 0.034993,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.990133,
+        "scores": {
+          "product_photo": 0.990133,
+          "product_infographic": 0.009288,
+          "advertisement": 0.000413,
+          "factory_or_company": 0.000126,
+          "certificate_or_document": 1.1e-05,
+          "qr_or_contact_card": 2.8e-05
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR identified infographic marker: SHOW DETAILS",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "030.jpg",
+      "ocr_text": [
+        "50MM齿-2",
+        "55MM齿-1"
+      ],
+      "text_coverage": 0.033316,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.995232,
+        "scores": {
+          "product_photo": 0.995232,
+          "product_infographic": 0.004005,
+          "advertisement": 0.000265,
+          "factory_or_company": 0.000419,
+          "certificate_or_document": 6.4e-05,
+          "qr_or_contact_card": 1.5e-05
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR detected text in the central product area",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    },
+    {
+      "filename": "031.jpg",
+      "ocr_text": [
+        "55MM齿-2",
+        "63MM齿"
+      ],
+      "text_coverage": 0.027429,
+      "classification": {
+        "label": "product_photo",
+        "confidence": 0.996642,
+        "scores": {
+          "product_photo": 0.996642,
+          "product_infographic": 0.002642,
+          "advertisement": 0.000535,
+          "factory_or_company": 0.000118,
+          "certificate_or_document": 3.9e-05,
+          "qr_or_contact_card": 2.4e-05
+        }
+      },
+      "keep_or_delete": "delete",
+      "reason": "PaddleOCR detected text in the central product area",
+      "mask_generated": false,
+      "inpainting_executed": false,
+      "final_filename": null
+    }
+  ],
+  "summary": {
+    "original_count": 31,
+    "deduplicated_count": 25,
+    "ai_actually_checked_count": 25,
+    "deleted_count": 12,
+    "inpainting_actually_executed_count": 10,
+    "final_kept_count": 13
+  }
+}

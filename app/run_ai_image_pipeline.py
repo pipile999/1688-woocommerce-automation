@@ -96,6 +96,72 @@ def package_version(name: str) -> str:
     return importlib.metadata.version(name)
 
 
+def write_acceptance_audit(audit: dict, product_dir: Path) -> dict:
+    """Write the stable per-image acceptance schema from actual model outputs."""
+    product_dir = product_dir.resolve()
+    model_execution = {
+        "paddleocr": {
+            **audit["execution"]["paddleocr"],
+            "actually_executed": bool(audit["execution"]["paddleocr"]["executed"]),
+        },
+        "openclip": {
+            **audit["execution"]["openclip"],
+            "actually_executed": bool(audit["execution"]["openclip"]["executed"]),
+        },
+        "inpainting": {
+            **audit["execution"]["inpainting"],
+            "actually_executed": bool(audit["execution"]["inpainting"]["executed"]),
+            "model_name": audit["execution"]["inpainting"]["model"],
+        },
+    }
+    records = []
+    for record in audit["records"]:
+        mask_generated = bool(record["mask_file"]) and (
+            product_dir / record["mask_file"]
+        ).is_file()
+        final_filename = Path(record["output_file"]).name if record["output_file"] else None
+        records.append(
+            {
+                "filename": record["filename"],
+                "ocr_text": record["ocr_text"],
+                "text_coverage": record["text_coverage"],
+                "classification": record["classification"],
+                "keep_or_delete": "keep" if record["keep"] else "delete",
+                "reason": record["decision_reason"],
+                "mask_generated": mask_generated,
+                "inpainting_executed": bool(record["inpainting_executed"]),
+                "final_filename": final_filename,
+            }
+        )
+
+    summary = {
+        "original_count": audit["summary"]["source_count"],
+        "deduplicated_count": audit["summary"]["sha_unique_count"],
+        "ai_actually_checked_count": len(records)
+        if model_execution["paddleocr"]["actually_executed"]
+        and model_execution["openclip"]["actually_executed"]
+        else 0,
+        "deleted_count": audit["summary"]["deleted_count"],
+        "inpainting_actually_executed_count": sum(
+            record["inpainting_executed"] for record in records
+        ),
+        "final_kept_count": audit["summary"]["final_kept_count"],
+    }
+    acceptance = {
+        "offer_id": audit["offer_id"],
+        "created_at": audit["created_at"],
+        "model_execution": model_execution,
+        "records": records,
+        "summary": summary,
+    }
+    destination = product_dir / "image_audit" / "image-audit.json"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(
+        json.dumps(acceptance, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return acceptance
+
+
 def run(product_dir: Path, lama_model: Path) -> dict:
     product_dir = product_dir.resolve()
     raw_dir = product_dir / "raw_images"
@@ -220,8 +286,7 @@ def run(product_dir: Path, lama_model: Path) -> dict:
         },
         "records": records,
     }
-    audit_path = product_dir / "image-audit.json"
-    audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
+    acceptance = write_acceptance_audit(audit, product_dir)
 
     processed_json = product_dir / "processed-product.json"
     product = json.loads(processed_json.read_text(encoding="utf-8"))
@@ -232,11 +297,11 @@ def run(product_dir: Path, lama_model: Path) -> dict:
         "longest_edge_px": 1800,
         "quality": 83,
         "exif_removed": True,
-        "audit_file": "image-audit.json",
+        "audit_file": "image_audit/image-audit.json",
         "model_execution": audit["execution"],
     }
     processed_json.write_text(json.dumps(product, ensure_ascii=False, indent=2), encoding="utf-8")
-    return audit
+    return {**audit, "acceptance_summary": acceptance["summary"]}
 
 
 def main() -> None:

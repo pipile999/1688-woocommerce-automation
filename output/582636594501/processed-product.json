@@ -1182,7 +1182,7 @@
     "longest_edge_px": 1800,
     "quality": 83,
     "exif_removed": true,
-    "audit_file": "image-audit.json",
+    "audit_file": "image_audit/image-audit.json",
     "model_execution": {
       "paddleocr": {
         "executed": true,
