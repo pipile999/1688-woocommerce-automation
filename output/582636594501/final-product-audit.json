@@ -241,5 +241,41 @@
     "successfully_bound_color_count": 9,
     "random_floral_pattern": "No dedicated image; WARNING"
   },
-  "variation_image_audit_file": "output/582636594501/variation-image-audit.json"
+  "variation_image_audit_file": "output/582636594501/variation-image-audit.json",
+  "final_rest_api_verification": {
+    "product_id": 10294,
+    "model": "582636594501",
+    "status_before": "publish",
+    "status_after": "publish",
+    "title_saved": true,
+    "slug_saved": true,
+    "short_description_saved": true,
+    "long_description_saved": true,
+    "featured_image_id": 10281,
+    "featured_image_correct": true,
+    "gallery_image_ids": [
+      10282,
+      10283,
+      10284,
+      10285,
+      10286,
+      10287,
+      10288,
+      10289,
+      10290,
+      10291,
+      10292,
+      10293
+    ],
+    "gallery_correct": true,
+    "sku_count_before": 50,
+    "sku_count_after": 50,
+    "sku_and_price_unchanged": true,
+    "variation_images_verified": 50,
+    "rank_math_title_saved": true,
+    "rank_math_description_saved": true,
+    "focus_keyword_saved": true,
+    "admin_url": "https://mypakg.com/wp-admin/post.php?post=10294&action=edit",
+    "product_url": "https://mypakg.com/product/4-layer-zinc-alloy-herb-grinder-storage-chamber/"
+  }
 }
