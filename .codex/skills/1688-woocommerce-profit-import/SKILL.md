@@ -13,6 +13,24 @@ The priority is **profit and commercially valuable traffic**, not achieving a co
 
 Use existing project scripts and tested components whenever available. Do not rebuild working modules without a reason.
 
+## Highest-priority principle: Adaptive Supplier Content Strategy / 供应商素材自适应策略
+
+Audit the actual supplier evidence before deciding image count, image roles, description modules, specifications, or page depth. This principle overrides any default template, preferred gallery size, preferred featured-image type, or standard long-description outline.
+
+**Optimize only information that truly exists. Never create unsupported product facts merely to complete a template.** Missing information is not permission to infer or invent material, dimensions, specifications, functions, packaging, accessories, benefits, certifications, or selling points. Leave an unsupported field empty or omit the module and record the limitation in the audit.
+
+Adapt the presentation to the evidence:
+
+- Sparse but valid supplier content may produce a concise product page using only the few real, useful images and attributes available.
+- Rich, high-quality content should be retained and organized by its real buyer value, including Featured, Gallery, Variation, Product Details, Features, Structure, Dimensions, Materials, Application/Usage, Packaging, Accessories, and Color Options when supported.
+- Do not delete valuable images to meet a fixed gallery count, and do not add repetitive or low-value images to make a page appear fuller.
+- Description structure and length must follow the product evidence rather than a universal module sequence.
+- Image decisions must consider context and whether an asset helps a buyer understand, compare, trust, or purchase the real product. Repair or crop a partly useful image when practical; reject the whole image only when it lacks meaningful purchase value, cannot be repaired reasonably, is severely low quality, or is unrelated.
+
+AI must choose the most suitable presentation from the current supplier assets, image quality, verified attributes, SKU structure, page completeness, SEO value, buyer-decision value, and page-load cost. Truthfulness, image quality, purchase experience, and conversion value take priority over template consistency.
+
+For image-specific execution, including featured-image selection, canvas adaptation, sliced-detail reconstruction, Chinese graphic translation, retention decisions, and performance treatment, read `rules/images.md` before processing images.
+
 ## Required input
 
 At minimum:
@@ -43,7 +61,7 @@ Optional:
 
 ### 1. Acquire source data
 
-Try the existing direct 1688 acquisition path first.
+Use the composite acquisition order: `1688-cli` for structured product data, then OpenCLI `1688 assets` for main/SKU/detail media. Use direct 1688 requests only as a low-priority fallback; do not loop-retry X5/CAPTCHA responses. Reserve an interface for the 1688 Open Platform API when it is available.
 
 Collect:
 
@@ -52,14 +70,16 @@ Collect:
 - attributes
 - source prices
 - all SKUs / variations
-- variation IDs / spec IDs
+- variation IDs; preserve a source SKU ID exactly when it is supplied
 - inventory when available
 - package dimensions/weight when available
 - main images
 - variation/color images
 - description/detail images
 
-If direct acquisition fails due to login, CAPTCHA or anti-bot controls, diagnose and report the failure. Do not silently fabricate missing fields.
+The upload hard gate is: offer ID/Model, title, source URL, source price or tiers, complete SKU combinations, SKU attributes, a price for every SKU, and at least one real product image. A distinct `spec_id`, package dimensions/weight, supplier packaging details, and inventory are optional. Leave unavailable optional fields empty and record an audit WARNING; never invent them. When no distinct source spec ID exists, record `source_spec_id: unavailable` and retain the SKU/variation ID supplied by the source.
+
+If acquisition fails due to login, CAPTCHA or anti-bot controls, diagnose and report the failure. Do not silently fabricate missing fields.
 
 ### 2. Preserve raw evidence
 
@@ -116,16 +136,18 @@ Use `rules/seo-and-conversion.md` for keyword and copy decisions.
 
 Run the actual image pipeline, not placeholder logic:
 
-1. exact-content SHA deduplication
-2. PaddleOCR text detection
-3. OpenCLIP visual classification
-4. decide keep / delete / repair / translate
-5. mask unwanted text/logo/watermark
-6. LaMa or configured inpainting model for background restoration
-7. translate valuable Chinese product-information graphics into natural English
-8. assign image role
-9. generate SEO filename/ALT/media title
-10. adaptive WebP optimization
+1. inventory and audit the supplier's actual main, SKU, detail, and sliced-detail assets
+2. exact-content SHA deduplication
+3. PaddleOCR text detection
+4. OpenCLIP visual classification
+5. detect and reconstruct continuous sliced-detail designs when evidence supports it
+6. decide keep / delete / repair / translate from image context and buyer value
+7. mask unwanted text/logo/watermark
+8. LaMa or configured inpainting model for background restoration
+9. translate valuable Chinese product-information graphics into natural English
+10. assign image role according to the available evidence
+11. generate SEO filename/ALT/media title
+12. adaptive WebP optimization
 
 Use `rules/images.md` for the detailed rules.
 
@@ -141,10 +163,11 @@ Classify every final image as one or more of:
 
 Featured image rule:
 
-- **Prefer a strong multi-color product collection image** when one exists.
-- It may remain the featured image even if it visually shows one or two more colors than the currently available SKU list.
-- It must still be clear, relevant to the same product, visually strong, reasonably clean, free of supplier identity/contact details and suitable for attracting clicks.
-- If no strong multi-color image exists, choose the best representative single-product image.
+- Rank candidates in this order: **image quality → resolution → product clarity → composition/click appeal → product relevance → multi-color value**.
+- Multi-color is an optional merchandising advantage, never the first criterion.
+- A sharp, high-resolution, attractive single-product image must beat a blurry, low-resolution, poorly composed, undersized, or badly proportioned multi-color image.
+- When a high-quality multi-color candidate and a high-quality single-product candidate are otherwise close, prefer the multi-color candidate for its commercial display value.
+- A featured candidate must be relevant to the real product, clean of supplier identity/contact details, and suitable for the store's product-card and product-page presentation.
 
 Do not select the featured image merely because it is first in the source list.
 
@@ -215,9 +238,9 @@ Image filename/ALT should match the real image content and may reuse closely rel
 
 ### 9. Long Description layout
 
-Build the description as a sales page, not a block of SEO text.
+Build the description as a sales page, not a block of SEO text. Choose its structure dynamically from the available evidence. A product with three useful images and few verified attributes may need only a concise, coherent description. A product with many strong images, dimensions, structure, packaging, and usage evidence may justify a richer page. Products with sliced detail designs require reconstruction and content organization before layout.
 
-Use available evidence flexibly. Typical order:
+Use only evidence-supported modules; examples include:
 
 - Product Overview
 - strong product image
@@ -296,6 +319,12 @@ Verify:
 - WordPress/WooCommerce API GET confirms saved values
 
 Warnings are allowed when evidence is genuinely unavailable; do not convert uncertainty into false PASS.
+
+### 13. Final image-access acceptance gate
+
+After every WooCommerce write, retrieve the stored product again and inspect every `<img src>` in the Long Description. Each URL must return HTTP 200 and an image Content-Type. A broken image is a **FAIL**, not a warning: do not report the import complete until every description image is accessible. Also verify that the Featured Image is the final selected high-quality image, every Gallery image is accessible, variation-image mappings are correct, SKU count and prices remain intact, and Model/source URL metadata are present.
+
+If a final processed image is not yet in the WordPress Media Library, upload it there and use the real attachment URL in the description. Never use local paths, `file://` URLs, temporary paths, or an external source hotlink as the final description image URL.
 
 ## Audit outputs
 
