@@ -56,6 +56,8 @@ Optional:
 6. Never modify unrelated products, theme files, plugin configuration, permalink structure or site-wide settings unless the user explicitly asks.
 7. Prefer WooCommerce REST API for product writes and verification. Do not use browser form automation for routine product updates when REST API access exists.
 8. After any WooCommerce write, GET the product and all variations again and verify the stored state before claiming success.
+9. For a new product, the default final state is `publish`, but only after every pre-publication critical gate passes. Use `draft` only when the user explicitly asks for a draft.
+10. Before every product upload, read the store's current Product Categories through WooCommerce REST and select the most specific truthful existing category. Never create a category automatically or use a broad catch-all merely for convenience.
 
 ## Workflow
 
@@ -273,11 +275,32 @@ Do not use one hardcoded quality value as the only rule. Compare output quality/
 
 Record original and final dimensions/KB when feasible.
 
-### 11. WooCommerce write strategy
+### 11. Mandatory category selection
+
+Before uploading each product, retrieve the current WooCommerce Product Categories through REST, including parent relationships. Select the most specific truthful existing child category from the product's verified type, title, attributes, function/use case, and the store's existing merchandising structure.
+
+- Prefer the most specific suitable child category; include its parent as well only when the store structure or navigation benefits from both.
+- Do not bulk-place unrelated products into a broad default category.
+- Do not classify from noisy 1688 title keywords alone.
+- Do not create categories automatically.
+- If no truthful existing category fits, record `WARNING: category_unresolved`; do not assign a misleading category. Because correct category assignment is a critical publication gate, also record a publication-blocking failure until the category is resolved.
+
+The final audit must record:
+
+- `selected_category_ids`
+- `selected_category_names`
+- `category_path`
+- `category_selection_reason`
+
+### 12. WooCommerce write and default publication strategy
 
 If creating a new product:
 
-- default to Draft unless the user explicitly requests publication.
+- Default to `publish` after acquisition, image processing, SEO, SKU/variation mapping, price calculation, category selection, image HTTP checks, and WooCommerce REST verification all pass.
+- A safe two-phase implementation may create an internal draft, verify it, then switch it to `publish`; do not leave a verified new product in Draft unless the user explicitly requested Draft.
+- Any `FAIL` blocks publication.
+- Non-critical `WARNING` records may still publish, including unavailable `spec_id`, packaging dimensions, package weight, or a variation without a dedicated image when it is not mapped to an incorrect image.
+- Every warning must remain in the final audit.
 
 If updating an existing Product ID:
 
@@ -296,7 +319,7 @@ Prefer REST API calls for:
 
 Rank Math SEO fields may be written through the existing tested mechanism/API when supported.
 
-### 12. Verification gates
+### 13. Pre-publication verification gates
 
 Do not report success until all applicable gates pass.
 
@@ -314,17 +337,26 @@ Verify:
 - every calculated price matches the fixed formula
 - variation attributes remain correct
 - variation image mapping checked
+- selected category IDs, names, hierarchy path, and selection reason verified against the current REST category tree
 - no supplier/company/contact information remains in public copy/images where detectable
 - final images are optimized formats
 - WordPress/WooCommerce API GET confirms saved values
 
-Warnings are allowed when evidence is genuinely unavailable; do not convert uncertainty into false PASS.
+Publication requires correct Model, backend source URL, unchanged SKU count and identifiers, exact price formula, correct Featured image, accessible Gallery, HTTP 200 Long Description images with no broken images, no Variation-image FAIL, and correct category assignment. A critical failure keeps the product unpublished. Non-critical warnings may publish but must remain explicit in the audit; do not convert uncertainty into false PASS.
 
-### 13. Final image-access acceptance gate
+### 14. Final image-access acceptance gate
 
 After every WooCommerce write, retrieve the stored product again and inspect every `<img src>` in the Long Description. Each URL must return HTTP 200 and an image Content-Type. A broken image is a **FAIL**, not a warning: do not report the import complete until every description image is accessible. Also verify that the Featured Image is the final selected high-quality image, every Gallery image is accessible, variation-image mappings are correct, SKU count and prices remain intact, and Model/source URL metadata are present.
 
 If a final processed image is not yet in the WordPress Media Library, upload it there and use the real attachment URL in the description. Never use local paths, `file://` URLs, temporary paths, or an external source hotlink as the final description image URL.
+
+### 15. Default interpretation
+
+When the user says only `处理并上传这些1688链接` or an equivalent request, interpret it as:
+
+`complete processing → automatic category selection → full acceptance → publish`
+
+Use `draft` only when the user explicitly requests a draft or when a publication-blocking failure prevents release.
 
 ## Audit outputs
 

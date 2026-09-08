@@ -28,6 +28,14 @@ Answer quickly: what is it, important construction/features, key options, and bu
 
 Use product evidence to remove buyer uncertainty. Combine concise copy, useful images and specifications. Do not turn it into generic SEO filler.
 
+## Product category relevance
+
+Category assignment is a required pre-publication SEO and merchandising decision, not a generic upload default. Read the current WooCommerce category tree through REST for every product and choose the most specific truthful existing child category from verified product type, title, attributes, function/use case, and the site's existing structure.
+
+Do not classify from 1688 title keywords alone, force products into a broad catch-all, or create categories automatically. Keep a parent category alongside the most specific child only when that matches the site's real navigation. If no suitable existing category exists, record `WARNING: category_unresolved` and block publication rather than select a misleading category.
+
+The audit must explain the selected IDs/names, full category path, and evidence-based selection reason.
+
 ## Search-result click potential
 
 For products with multiple finishes/colors, favor a strong multi-color featured image under the user's business rule because it communicates choice quickly. This is a merchandising rule, not a claim that Google algorithmically ranks such images higher.

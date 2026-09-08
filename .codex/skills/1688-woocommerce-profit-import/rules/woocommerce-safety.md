@@ -8,7 +8,23 @@ Before updating an existing product, GET it and verify its identity/model/source
 
 Never create a replacement product when the task is to update an existing Product ID.
 
-Preserve product status unless instructed otherwise.
+For a new product, the default final state is `publish` after every critical acceptance gate passes. A safe implementation may create a temporary Draft for verification and then publish it. Leave a new product as Draft only when the user explicitly requests Draft or a publication-blocking failure exists.
+
+For an existing product, preserve its status unless the user explicitly requests a status change.
+
+Any `FAIL` blocks publication. Non-critical warnings such as unavailable source `spec_id`, package dimensions, package weight, or absence of a dedicated variation image may publish when no wrong image is assigned; retain every warning in the final audit.
+
+## Mandatory category selection
+
+Before each upload, retrieve the current WooCommerce Product Categories through REST, including parent relationships. Select the most specific truthful existing category from the verified product type, title, attributes, function/use case, and the store's existing merchandising structure.
+
+- Prefer the most specific suitable child category.
+- Retain both parent and child only when appropriate for the existing store structure.
+- Do not use a broad default category for convenience or classify from noisy 1688 title keywords alone.
+- Never create categories automatically.
+- If no truthful category exists, record `WARNING: category_unresolved`, assign no misleading substitute, and block publication until category assignment is resolved.
+
+Record `selected_category_ids`, `selected_category_names`, `category_path`, and `category_selection_reason` in the final audit. Re-read the stored product after write and verify those category IDs through WooCommerce REST.
 
 ## Secrets
 
@@ -35,6 +51,21 @@ After image updates, GET every variation and compare actual image assignment aga
 ## Audit integrity
 
 Never let a stale intermediate audit override newer verified REST API results. `final-product-audit.json` must agree with the final variation audit and final WooCommerce GET response.
+
+## Publication gate
+
+Before setting a new product to `publish`, verify all of the following:
+
+- Model is correct and visible where required.
+- The original source URL is saved in backend metadata and not exposed publicly.
+- SKU count matches the source and every SKU/source identifier is unchanged.
+- Every price matches `source_price / 0.7 / 6.7`.
+- Featured and Gallery assignments match the approved final assets.
+- Every Gallery and Long Description image returns HTTP 200 with an image Content-Type; any broken image is `FAIL`.
+- Variation images contain no false mapping and no Variation-image `FAIL`.
+- Category selection is correct and verified against the current REST category tree.
+
+After publication, GET the parent product and all variations once more and confirm the final `publish` state and stored values.
 
 ## Site scope
 
