@@ -13,6 +13,27 @@ The priority is **profit and commercially valuable traffic**, not achieving a co
 
 Use existing project scripts and tested components whenever available. Do not rebuild working modules without a reason.
 
+## Highest-priority operating rule: End-to-End Batch Execution
+
+When the user provides one or more 1688/Alibaba links or selects a range of products from an Excel file, the default task is the complete continuous pipeline:
+
+`acquisition → image processing → content/SEO → SKU/pricing → automatic category selection → WooCommerce upload → final acceptance → publish`
+
+This rule governs workflow continuity and has the highest operational priority. The Adaptive Supplier Content Strategy below continues to govern product-content and image decisions.
+
+- Execute the full pipeline in one run. Do not stop after acquisition to wait for a separate request to process, upload, verify, or publish.
+- Do not request confirmation between ordinary stages. Existing authorization boundaries still apply; do not expand the user's scope or alter unrelated products or site settings.
+- Save durable per-product, per-stage checkpoints after each successful stage. On interruption or restart, inspect the checkpoint and existing artifacts, resume from the first incomplete stage, and do not repeat successful acquisition or processing.
+- Isolate failures by product. Record a product-level `FAIL`, block unsafe downstream work and publication for that product, then continue eligible stages for the remaining products.
+- Handle existing non-critical `WARNING` conditions according to this Skill, retain them in the audit, and continue the batch without interruption.
+- Pause and notify the user only when completion genuinely requires their manual action, such as a 1688 X5 page, login challenge, CAPTCHA, or slider verification. Do not loop or rapidly retry the blocked 1688 request.
+- While 1688 acquisition is paused for verification, continue local processing, content work, WooCommerce work, and acceptance for products whose required source data is already complete whenever those stages remain safe and independent.
+- After the user completes verification, confirm the persistent session identity, resume the blocked offer from its checkpoint, and continue every remaining stage through publication without requiring a new workflow command.
+- Publish every product that passes all critical acceptance gates. Never publish a product with a critical `FAIL`.
+- Report once after the entire batch is complete, except for a genuinely required manual-action notice. The final batch report must include successes, warnings, failures, and unresolved items without turning earlier checkpointed work into a new run.
+
+Interpret short requests such as `处理这些链接` and `处理Excel第X-X个` as authorization to execute this complete end-to-end pipeline for exactly the supplied links or selected spreadsheet range. The user does not need to issue separate commands for processing, upload, verification, or publication.
+
 ## Highest-priority principle: Adaptive Supplier Content Strategy / 供应商素材自适应策略
 
 Audit the actual supplier evidence before deciding image count, image roles, description modules, specifications, or page depth. This principle overrides any default template, preferred gallery size, preferred featured-image type, or standard long-description outline.
