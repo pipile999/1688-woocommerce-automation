@@ -165,12 +165,12 @@ Run the actual image pipeline, not placeholder logic:
 4. OpenCLIP visual classification
 5. detect and reconstruct continuous sliced-detail designs when evidence supports it
 6. decide keep / delete / repair / translate from image context and buyer value
-7. mask unwanted text/logo/watermark
-8. LaMa or configured inpainting model for background restoration
-9. translate valuable Chinese product-information graphics into natural English
-10. assign image role according to the available evidence
-11. generate SEO filename/ALT/media title
-12. adaptive WebP optimization
+7. choose one evidence-based repair path: precise mask + LaMa for light pollution; `rembg` product cutout on a clean neutral background for heavily polluted backgrounds with a clear, complete product; or OCR-backed English relayout/HTML specifications for parameter graphics
+8. translate valuable Chinese product-information graphics into natural English only when the information and layout can be retained faithfully
+9. assign image role according to the available evidence
+10. generate SEO filename/ALT/media title
+11. encode once from the highest-resolution saved original to adaptive quality-first WebP
+12. rerun PaddleOCR and OpenCLIP plus visual-quality checks on every final asset before upload
 
 Use `rules/images.md` for the detailed rules.
 
@@ -281,7 +281,9 @@ Do not invent sections merely to fill a template.
 
 ### 10. Image performance
 
-Optimize after all editing/inpainting/text replacement is complete.
+Optimize after all editing/inpainting/text replacement is complete. Always start from the highest-resolution saved original, never a 1688 thumbnail, WordPress small/thumbnail derivative, or an already compressed WebP. The valid order is:
+
+`highest-resolution original → cleanup/OCR/rembg/English conversion → correct dimensions → one final WebP encode`
 
 Prefer WebP and adaptive compression.
 
@@ -292,9 +294,11 @@ Goals:
 - no unnecessary huge source dimensions
 - retain WordPress responsive-image behavior/srcset
 
-Do not use one hardcoded quality value as the only rule. Compare output quality/size and choose a sensible result.
+Image clarity takes priority over file size. Do not use one hardcoded quality value as the only rule. Adaptively choose the lowest setting that retains clean product edges, material texture, readable text, smooth gradients, and no visible blocks or artifacts. If no lossy setting passes, use a single lossless WebP encode from the finished master. If the quality comparison fails, raise quality and encode again before upload.
 
-Record original and final dimensions/KB when feasible.
+Do not upscale a low-resolution image and call it high resolution. Product cutout images normally use a 1200 × 1200 neutral canvas without stretching; rich higher-resolution sources may remain larger when useful. Detail images retain a readable proportional format rather than being forced square.
+
+Record source/final dimensions, source/final bytes, compression ratio, encoder quality, sharpness/quality result, and whether upscaling occurred for every newly generated final asset.
 
 ### 11. Mandatory category selection
 
@@ -361,6 +365,9 @@ Verify:
 - selected category IDs, names, hierarchy path, and selection reason verified against the current REST category tree
 - no supplier/company/contact information remains in public copy/images where detectable
 - final images are optimized formats
+- every final image passes a second real OCR/visual QA check with no Chinese supplier promotion, 1688/shop URL, supplier/company identity, contact details, QR code, unauthorized logo, smear, broken edge, fake-looking repair, unreadable text, product deformation, or excessive compression loss
+- every edit starts from the highest-resolution saved original and no final image is produced by recompressing an older lossy WebP
+- Long Description uses Media Library full/large assets, responsive `max-width:100%; height:auto;`, and never a thumbnail/small derivative; usable supplier material must not result in a zero-image Long Description
 - WordPress/WooCommerce API GET confirms saved values
 
 Publication requires correct Model, backend source URL, unchanged SKU count and identifiers, exact price formula, correct Featured image, accessible Gallery, HTTP 200 Long Description images with no broken images, no Variation-image FAIL, and correct category assignment. A critical failure keeps the product unpublished. Non-critical warnings may publish but must remain explicit in the audit; do not convert uncertainty into false PASS.

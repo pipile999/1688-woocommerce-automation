@@ -16,6 +16,10 @@ Include B2B/wholesale modifiers when the product/store proposition supports them
 
 Natural English, immediately understandable, commercially relevant. Include the primary product concept and important differentiator/attribute when useful. Remove 1688 promotional clutter and keyword stuffing.
 
+For a quality re-audit, inspect Product Title, Meta Title, and Focus Keyword together. Prefer an accurate core category term plus genuinely supported material, construction, size, or function; use wholesale/bulk language only when the product and store proposition support it. Relevant long-tail commercial intent is valuable, but concise accuracy comes first.
+
+Remove supplier brands, 1688 merchant names, unrelated brands, mechanical synonym repetition, and irrelevant high-traffic terms. Never invent search volume. Use real Google Ads Keyword Planner data when available; otherwise optimize from verified product semantics and commercial intent and record that volume data was unavailable. Do not disguise the real use of a product to evade platform restrictions.
+
 ## Slug
 
 Short, descriptive and stable. Do not repeatedly change live slugs without a reason.
@@ -27,6 +31,8 @@ Answer quickly: what is it, important construction/features, key options, and bu
 ## Long description
 
 Use product evidence to remove buyer uncertainty. Combine concise copy, useful images and specifications. Do not turn it into generic SEO filler.
+
+Convert a dense or damaged parameter graphic into a clean HTML table only from complete, confirmed OCR/source values. Omit uncertain fragments rather than guessing. When usable supplier product imagery exists, include a reasonable responsive full/large image instead of leaving the Long Description image-free.
 
 ## Product category relevance
 

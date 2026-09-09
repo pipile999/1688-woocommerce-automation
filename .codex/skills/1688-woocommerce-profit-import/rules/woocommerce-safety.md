@@ -64,8 +64,13 @@ Before setting a new product to `publish`, verify all of the following:
 - Every Gallery and Long Description image returns HTTP 200 with an image Content-Type; any broken image is `FAIL`.
 - Variation images contain no false mapping and no Variation-image `FAIL`.
 - Category selection is correct and verified against the current REST category tree.
+- Every final image was produced from the highest-resolution saved original, not a thumbnail or previously compressed WebP, and records dimensions, bytes, compression ratio, selected quality, and sharpness/quality PASS.
+- Real second-pass PaddleOCR/OpenCLIP and visual QA found no supplier/Chinese/contact/URL/QR/unauthorized-logo residue, smear, broken edge, fake repair, deformation, unreadable text, or excessive compression loss.
+- Long Description uses accessible Media Library full/large images with responsive sizing; a thumbnail/small URL, visibly undersized detail asset, or zero images despite usable supplier material is `FAIL`.
 
 After publication, GET the parent product and all variations once more and confirm the final `publish` state and stored values.
+
+For a post-publication quality repair, GET and snapshot identity, status, categories, SKU set, prices, source variation/spec identifiers, Model, source URL, and variation-image relationships before writing. Update only failed image/content/SEO fields, preserve the original publication status, then GET parent and variations again and prove every immutable value is unchanged. Every final Featured, Gallery, Description, and changed Variation attachment URL must return HTTP 200 with an image Content-Type.
 
 ## Site scope
 

@@ -5,3 +5,4 @@ torchvision==0.29.0
 open-clip-torch==3.3.0
 onnxruntime==1.29.0
 opencv-contrib-python==4.10.0.84
+rembg[cpu]==2.0.84

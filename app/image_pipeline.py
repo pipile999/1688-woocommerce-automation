@@ -1,10 +1,11 @@
-"""Executable OCR, OpenCLIP classification, LaMa inpainting, and WebP tools."""
+"""Executable OCR, OpenCLIP, LaMa, rembg, and quality-first WebP tools."""
 
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from io import BytesIO
 from pathlib import Path
+import os
 
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
@@ -44,6 +45,80 @@ class Classification:
     label: str
     confidence: float
     scores: dict[str, float]
+
+
+class RembgAdapter:
+    """Persistent local rembg session for faithful product cutouts."""
+
+    model_name = "isnet-general-use"
+
+    def __init__(self, models_dir: Path):
+        from rembg import new_session
+
+        models_dir.mkdir(parents=True, exist_ok=True)
+        os.environ["U2NET_HOME"] = str(models_dir.resolve())
+        self.session = new_session(self.model_name)
+
+    def cutout(self, image_bytes: bytes) -> Image.Image:
+        from rembg import remove
+
+        source = ImageOps.exif_transpose(Image.open(BytesIO(image_bytes))).convert("RGB")
+        result = remove(
+            source,
+            session=self.session,
+            alpha_matting=False,
+        ).convert("RGBA")
+        alpha = result.getchannel("A").filter(ImageFilter.MedianFilter(3))
+        alpha_array = np.asarray(alpha, dtype=np.uint8).copy()
+        alpha_array[alpha_array < 18] = 0
+        # Remove small disconnected foreground islands such as faint OCR/logo
+        # remnants while retaining every substantial product component in a
+        # multi-item composition.
+        import cv2
+
+        component_mask = (alpha_array > 0).astype(np.uint8)
+        count, labels, stats, _ = cv2.connectedComponentsWithStats(component_mask, connectivity=8)
+        minimum_area = max(64, round(source.width * source.height * 0.0008))
+        for label in range(1, count):
+            if int(stats[label, cv2.CC_STAT_AREA]) < minimum_area:
+                alpha_array[labels == label] = 0
+        alpha = Image.fromarray(alpha_array, mode="L")
+        result.putalpha(alpha)
+        if not alpha.getbbox():
+            raise RuntimeError("rembg returned an empty foreground mask")
+        return result
+
+    def on_neutral_square(
+        self,
+        image_bytes: bytes,
+        *,
+        canvas_size: int = 1200,
+        occupancy: float = 0.78,
+        background: tuple[int, int, int] = (250, 250, 248),
+    ) -> tuple[Image.Image, dict]:
+        cutout = self.cutout(image_bytes)
+        bbox = cutout.getchannel("A").getbbox()
+        assert bbox is not None
+        cutout = cutout.crop(bbox)
+        target = max(1, round(canvas_size * occupancy))
+        scale = min(target / max(cutout.size), 1.0)
+        if scale < 1.0:
+            cutout = cutout.resize(
+                (max(1, round(cutout.width * scale)), max(1, round(cutout.height * scale))),
+                Image.Resampling.LANCZOS,
+            )
+        canvas = Image.new("RGB", (canvas_size, canvas_size), background)
+        offset = ((canvas_size - cutout.width) // 2, (canvas_size - cutout.height) // 2)
+        canvas.paste(cutout, offset, cutout)
+        occupied = max(cutout.width, cutout.height) / canvas_size
+        return canvas, {
+            "model": self.model_name,
+            "canvas": [canvas_size, canvas_size],
+            "foreground_dimensions": list(cutout.size),
+            "foreground_occupancy": round(occupied, 4),
+            "upscaled": False,
+            "background_rgb": list(background),
+        }
 
 
 DELETE_CLASSES = {
@@ -91,6 +166,111 @@ def optimize_webp(image_bytes: bytes, max_edge: int = 1800, quality: int = 83) -
     return output.getvalue()
 
 
+def _sharpness(image: Image.Image) -> float:
+    import cv2
+
+    gray = cv2.cvtColor(np.asarray(image.convert("RGB")), cv2.COLOR_RGB2GRAY)
+    # CV_64F doubles the working-set for no useful QA precision and can fail
+    # late in long batch runs after the OCR/CLIP models have occupied RAM.
+    # Float32 keeps the Laplacian metric stable while avoiding that spike.
+    return float(cv2.Laplacian(gray, cv2.CV_32F).var(dtype=np.float32))
+
+
+def _psnr(reference: np.ndarray, candidate: np.ndarray) -> float:
+    error = float(np.mean((reference.astype(np.float32) - candidate.astype(np.float32)) ** 2))
+    if error == 0:
+        return 99.0
+    return float(20.0 * np.log10(255.0 / np.sqrt(error)))
+
+
+def adaptive_quality_webp(
+    image: Image.Image,
+    *,
+    source_dimensions: tuple[int, int],
+    source_filesize: int,
+    max_edge: int | None = None,
+    text_sensitive: bool = False,
+) -> tuple[bytes, dict]:
+    """Encode once from the finished master and reject visibly lossy candidates."""
+
+    finished = ImageOps.exif_transpose(image).convert("RGB")
+    if max_edge and max(finished.size) > max_edge:
+        scale = max_edge / max(finished.size)
+        finished = finished.resize(
+            (max(1, round(finished.width * scale)), max(1, round(finished.height * scale))),
+            Image.Resampling.LANCZOS,
+        )
+    reference = np.asarray(finished)
+    reference_sharpness = _sharpness(finished)
+    minimum_psnr = 40.0 if text_sensitive else 37.0
+    minimum_sharpness_ratio = 0.86 if text_sensitive else 0.78
+    selected = None
+    attempts = []
+    for quality in (86, 88, 90, 92, 94, 96):
+        buffer = BytesIO()
+        finished.save(buffer, "WEBP", quality=quality, method=6, exif=b"")
+        payload = buffer.getvalue()
+        decoded = Image.open(BytesIO(payload)).convert("RGB")
+        candidate_sharpness = _sharpness(decoded)
+        sharpness_ratio = candidate_sharpness / reference_sharpness if reference_sharpness else 1.0
+        psnr = _psnr(reference, np.asarray(decoded))
+        passed = psnr >= minimum_psnr and sharpness_ratio >= minimum_sharpness_ratio
+        attempts.append(
+            {
+                "quality": quality,
+                "psnr_db": round(psnr, 3),
+                "sharpness_ratio": round(sharpness_ratio, 4),
+                "pass": passed,
+            }
+        )
+        if passed:
+            selected = (payload, quality, psnr, sharpness_ratio, candidate_sharpness)
+            break
+    if selected is None:
+        quality = 98
+        buffer = BytesIO()
+        finished.save(buffer, "WEBP", quality=quality, method=6, exif=b"")
+        payload = buffer.getvalue()
+        decoded = Image.open(BytesIO(payload)).convert("RGB")
+        candidate_sharpness = _sharpness(decoded)
+        sharpness_ratio = candidate_sharpness / reference_sharpness if reference_sharpness else 1.0
+        psnr = _psnr(reference, np.asarray(decoded))
+        passed = psnr >= minimum_psnr and sharpness_ratio >= minimum_sharpness_ratio
+        attempts.append({"quality": quality, "psnr_db": round(psnr, 3), "sharpness_ratio": round(sharpness_ratio, 4), "pass": passed})
+        if not passed:
+            buffer = BytesIO()
+            finished.save(buffer, "WEBP", lossless=True, method=6, exif=b"")
+            payload = buffer.getvalue()
+            decoded = Image.open(BytesIO(payload)).convert("RGB")
+            candidate_sharpness = _sharpness(decoded)
+            sharpness_ratio = candidate_sharpness / reference_sharpness if reference_sharpness else 1.0
+            psnr = _psnr(reference, np.asarray(decoded))
+            attempts.append({"quality": "lossless", "psnr_db": round(psnr, 3), "sharpness_ratio": round(sharpness_ratio, 4), "pass": True})
+            selected = (payload, "lossless", psnr, sharpness_ratio, candidate_sharpness)
+        else:
+            selected = (payload, quality, psnr, sharpness_ratio, candidate_sharpness)
+    payload, quality, psnr, sharpness_ratio, candidate_sharpness = selected
+    return payload, {
+        "source_width": int(source_dimensions[0]),
+        "source_height": int(source_dimensions[1]),
+        "processed_width": finished.width,
+        "processed_height": finished.height,
+        "source_filesize": int(source_filesize),
+        "final_filesize": len(payload),
+        "compression_ratio": round(len(payload) / source_filesize, 4) if source_filesize else None,
+        "quality": quality,
+        "psnr_db": round(psnr, 3),
+        "source_processed_sharpness": round(reference_sharpness, 3),
+        "final_sharpness": round(candidate_sharpness, 3),
+        "sharpness_ratio": round(sharpness_ratio, 4),
+        "sharpness_quality_check": "PASS",
+        "text_sensitive": text_sensitive,
+        "exif_removed": True,
+        "upscaled": False,
+        "attempts": attempts,
+    }
+
+
 class OCRAdapter:
     """PaddleOCR PP-OCRv5 mobile detector and recognizer running on CPU."""
 
@@ -113,7 +293,14 @@ class OCRAdapter:
 
     def analyze(self, image_bytes: bytes) -> OCRAnalysis:
         image = ImageOps.exif_transpose(Image.open(BytesIO(image_bytes))).convert("RGB")
-        predictions = list(self.engine.predict(np.asarray(image)))
+        scale = min(1.0, 5000 / max(image.size), (16_000_000 / (image.width * image.height)) ** 0.5)
+        analysis_image = image
+        if scale < 1.0:
+            analysis_image = image.resize(
+                (max(1, round(image.width * scale)), max(1, round(image.height * scale))),
+                Image.Resampling.LANCZOS,
+            )
+        predictions = list(self.engine.predict(np.asarray(analysis_image)))
         payload = predictions[0].json if predictions else {"res": {}}
         result = payload.get("res", payload)
         texts = result.get("rec_texts", [])
@@ -126,16 +313,25 @@ class OCRAdapter:
             valid_characters = sum(character.isalnum() for character in normalized_text)
             if float(score) < self.min_score or valid_characters < 2:
                 continue
-            points = [[int(round(x)), int(round(y))] for x, y in np.asarray(polygon).tolist()]
+            points = [
+                [int(round(x / scale)), int(round(y / scale))]
+                for x, y in np.asarray(polygon).tolist()
+            ]
             detections.append(OCRDetection(normalized_text, round(float(score), 6), points))
 
-        mask = Image.new("L", image.size, 0)
+        mask = Image.new("L", analysis_image.size, 0)
         draw = ImageDraw.Draw(mask)
         for detection in detections:
-            draw.polygon([tuple(point) for point in detection.polygon], fill=255)
+            draw.polygon(
+                [(round(point[0] * scale), round(point[1] * scale)) for point in detection.polygon],
+                fill=255,
+            )
         if detections:
-            mask = mask.filter(ImageFilter.MaxFilter(17))
-        coverage = float(np.count_nonzero(np.asarray(mask))) / float(image.width * image.height)
+            import cv2
+
+            dilated = cv2.dilate(np.asarray(mask, dtype=np.uint8), np.ones((17, 17), np.uint8), iterations=1)
+            mask = Image.fromarray(dilated, mode="L")
+        coverage = float(np.count_nonzero(np.asarray(mask))) / float(mask.width * mask.height)
         return OCRAnalysis(detections, coverage, mask)
 
 
@@ -169,6 +365,10 @@ class VisionClassifierAdapter:
         "qr_or_contact_card": [
             "a QR code, business card, phone number, or contact information graphic",
             "a contact card containing a QR code or social media handle",
+        ],
+        "damaged_or_deformed": [
+            "a badly edited product image with smeared patches, broken edges, blur, or artificial repair artifacts",
+            "a deformed or stretched ecommerce product with visibly damaged cutout edges",
         ],
     }
 

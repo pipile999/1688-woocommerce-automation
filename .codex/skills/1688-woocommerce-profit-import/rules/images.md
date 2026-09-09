@@ -53,6 +53,22 @@ When a removable logo/watermark/text region does not cover critical product deta
 
 Never remove a mark if the user does not have the right to use the underlying image.
 
+## Product cutout and pure-background repair
+
+Use the mature open-source `rembg` pipeline as the default alternative to large-area inpainting when the product itself is clear and complete but the border, base, or background contains extensive supplier advertising, a large logo/shop URL/Chinese promotion, too many repair masks, or a background that cannot be reconstructed naturally.
+
+Apply exactly one suitable treatment:
+
+- **A — light pollution:** a small logo, URL, or watermark → precise OCR/region mask plus real inpainting.
+- **B — heavy background pollution with a clear product:** run real `rembg` foreground extraction, clean the alpha edge, preserve the real product pixels and proportions, and center it on white or a very light neutral 1200 × 1200 canvas. Do not stretch, regenerate, embellish, or invent a decorative AI background. Target roughly 70%–85% canvas occupancy when the source resolution supports it; never upscale a small source merely to reach that percentage.
+- **C — parameter/text graphic:** do not erase large text areas into visible smears. OCR the real content first. Retain a simple graphic only when it can be translated and laid out naturally in English. When dense text, damaged OCR, or clutter prevents a faithful result, remove the image from the storefront and present only confirmed facts in a clean Long Description HTML specifications table.
+
+Mask generation alone is not inpainting, and foreground extraction alone is not a passed final image. Record the tool/model actually executed and run the final QA below.
+
+## Parameter graphics to HTML
+
+Only confirmed values such as Material, Size/Dimensions, Weight, Colors, Packaging Quantity, and Configuration may enter the public table. Omit incomplete or uncertain OCR fragments such as `6/`, `()`, or an unexplained `72`; missing evidence is never filled by inference. A clean HTML table is preferable to a visibly painted-over parameter image.
+
 ## Valuable Chinese graphics
 
 Keep useful dimensions, structure, material, function, specification and usage graphics. Replace Chinese with natural English while preserving the underlying real product imagery.
@@ -141,12 +157,35 @@ Match color/pattern visually. Same color across sizes may share an image. Never 
 
 Use images that explain product structure, dimensions, material, features, details, packaging or application. Place them near the corresponding text rather than dumping every image into the top gallery.
 
+When usable real product material exists, Long Description must not end with zero images. Use at least one relevant product, detail, structure, application, packaging, or color-options asset, while still rejecting junk rather than adding it only to meet a count.
+
+Use a WordPress Media Library full or suitable large source, never a thumbnail/small URL. Ordinary detail images should have an effective display width near 1000–1600 px when the original supports it, retain their natural proportions, and use responsive HTML `max-width:100%; height:auto;`. A tiny image floating in large blank space, a needless downscale, or a thumbnail-backed detail image is a `FAIL`.
+
 ## SEO metadata
 
 Filename: concise descriptive English, lowercase/hyphenated where practical.
 
 ALT: describe what is actually visible. Use relevant product language naturally; do not keyword-stuff and do not force unique keywords merely to make every image different.
 
+## Highest-resolution and generation-loss rules
+
+Image clarity is higher priority than file size.
+
+1. Start every edit from the highest-resolution saved original. Never use a 1688 thumbnail, WordPress thumbnail/small derivative, or an old processed WebP as an editing source.
+2. Do not shrink before OCR, masking, inpainting, cutout, or translation. Resize only after the finished master exists.
+3. Preserve useful original detail. Product cutouts normally use a 1200 × 1200 canvas; rich higher-resolution product sources may remain larger. Detail/long images retain a readable proportional format and are not forced square.
+4. Never ordinary-resize a 600 px image to 1200 px and label it high resolution. Select another real higher-resolution source or retain the honest native size.
+5. Use one final WebP encode after all edits. Prefer adaptive visually lossless settings; when no lossy setting passes, use a single lossless WebP encode from the finished master. Never repeatedly edit or recompress an already lossy WebP.
+6. Choose WebP quality adaptively. Text/parameter images require a higher minimum. Product edges, textures, small text, gradients, and repaired boundaries must remain visually clean with no blocks, blur, banding, or halos.
+7. Record `source_width`, `source_height`, `processed_width`, `processed_height`, source/final file size, compression ratio, selected quality, sharpness/quality result, EXIF removal, and upscaling status. A visible clarity loss is `FAIL`; raise quality and re-encode from the finished master.
+8. Upload a high-quality master to Media Library and allow WordPress to generate responsive derivatives. Featured/Gallery retain the master. Description uses full/large plus responsive `srcset`/CSS, never the wrong small derivative.
+
+## Second OCR and visual QA hard gate
+
+Run real PaddleOCR and OpenCLIP again on every final image, including rembg, inpainted, translated, and recompressed outputs. Also inspect for smear/blur, broken cutout edges, fake-looking repaired regions, unreadable text, product deformation, compression artifacts, and lost texture.
+
+Any remaining Chinese supplier promotion, `1688`, shop URL, `.com`, supplier/company identity, phone/WeChat/contact, QR code, or unauthorized supplier logo is `FAIL`. Retry from the original with the appropriate A/B/C path; if it still fails, reject the image. Never upload a sick asset or simulate AI execution with rules while claiming the model ran.
+
 ## Performance
 
-Optimize final edited assets to WebP where suitable. Use adaptive dimensions/quality based on visual complexity and intended role. Preserve acceptable visual quality and avoid unnecessarily large dimensions/files. Keep WordPress responsive image generation/srcset intact.
+Optimize final edited assets to WebP where suitable with quality-first adaptive compression and WordPress responsive-image behavior intact. Reduce bytes only within the range where visual comparison shows no obvious loss.

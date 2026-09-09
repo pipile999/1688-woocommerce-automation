@@ -1,0 +1,22 @@
+{
+  "scope": "all 113 products processed and published by this Skill on 2026-09-08",
+  "total_checked": 113,
+  "problem_products": 80,
+  "featured_redone": 8,
+  "rembg_images": 18,
+  "supplier_logo_url_deleted": 46,
+  "parameter_to_html": 0,
+  "chinese_residual_fixed": 37,
+  "too_small_detail_fixed": 0,
+  "long_description_supplemented": 28,
+  "title_seo_rewritten": 0,
+  "final_failures": [],
+  "pass_count": 113,
+  "warning_count": 0,
+  "fail_count": 0,
+  "paddleocr_actually_executed": true,
+  "openclip_actually_executed": true,
+  "rembg_model": "isnet-general-use",
+  "elapsed_seconds": 75.702,
+  "completed_at": "2026-09-09T10:50:19.652634+00:00"
+}
