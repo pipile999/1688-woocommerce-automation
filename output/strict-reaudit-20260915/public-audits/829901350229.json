@@ -1,0 +1,39 @@
+{
+  "offer_id": "829901350229",
+  "product_id": 13936,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13936,
+    "offer_id": "829901350229",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:21:24.736362+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5732168634008",
+    "Dedicated variant image removed as unverified/unclean: 5732168634010"
+  ],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/829901350229-hand-crank-plastic-herb-grinder-with-drawer-04.webp",
+      "reason": "White watermark remnant at lower product edge.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/829901350229-hand-crank-plastic-herb-grinder-with-drawer-05.webp",
+      "reason": "White watermark remnant at lower product edge.",
+      "index": 5
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/hand-crank-plastic-herb-grinder-with-drawer/"
+}

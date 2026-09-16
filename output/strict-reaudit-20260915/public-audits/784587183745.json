@@ -1,0 +1,41 @@
+{
+  "offer_id": "784587183745",
+  "product_id": 10723,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10723,
+    "offer_id": "784587183745",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:15:26.273470+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 7,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/784587183745-usb-electric-herb-grinder-digital-display-005.webp",
+      "reason": "Text overlay obscures dimension diagram.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/784587183745-usb-electric-herb-grinder-digital-display-015.webp",
+      "reason": "Mostly blank overpainted parameter image.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/784587183745-usb-electric-herb-grinder-digital-display-qa-005.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/usb-electric-herb-grinder-digital-display/"
+}

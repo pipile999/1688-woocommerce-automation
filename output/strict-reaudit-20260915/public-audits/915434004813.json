@@ -1,0 +1,56 @@
+{
+  "offer_id": "915434004813",
+  "product_id": 13322,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13322,
+    "offer_id": "915434004813",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:25:07.838427+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 6,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 10,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/915434004813-biodegradable-rolling-tray-with-funnel-04.webp",
+      "reason": "MK brand emblem on packaging.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/915434004813-biodegradable-rolling-tray-with-funnel-07.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/915434004813-biodegradable-rolling-tray-with-funnel-14.webp",
+      "reason": "Perceptual duplicate",
+      "index": 12
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/915434004813-biodegradable-rolling-tray-with-funnel-11.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 16
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/915434004813-biodegradable-rolling-tray-with-funnel-13.webp",
+      "reason": "MK brand emblem on packaging.",
+      "index": 17
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/915434004813-biodegradable-rolling-tray-with-funnel-15.webp",
+      "reason": "MK brand emblem on packaging.",
+      "index": 18
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/biodegradable-rolling-tray-with-funnel/"
+}

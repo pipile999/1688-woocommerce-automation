@@ -1,0 +1,53 @@
+{
+  "offer_id": "897842763122",
+  "product_id": 12573,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12573,
+    "offer_id": "897842763122",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:24:05.348060+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5920303971681"
+  ],
+  "problem_images_removed": 5,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 7,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/897842763122-spiral-aluminum-snuff-bottle-01.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/897842763122-spiral-aluminum-snuff-bottle-03.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/897842763122-spiral-aluminum-snuff-bottle-04.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/897842763122-spiral-aluminum-snuff-bottle-11.webp",
+      "reason": "Perceptual duplicate",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/897842763122-spiral-aluminum-snuff-bottle-13.webp",
+      "reason": "Perceptual duplicate",
+      "index": 10
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/spiral-aluminum-snuff-bottle/"
+}

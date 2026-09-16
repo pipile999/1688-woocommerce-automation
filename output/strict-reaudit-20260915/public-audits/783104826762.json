@@ -1,0 +1,31 @@
+{
+  "offer_id": "783104826762",
+  "product_id": 12997,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12997,
+    "offer_id": "783104826762",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:58:28.797475+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 10,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/783104826762-novelty-metal-herb-grinder-78-x-117-mm-03.webp",
+      "reason": "Corrupted weight text/placeholder characters.",
+      "index": 3
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/novelty-metal-herb-grinder-78-x-117-mm/"
+}

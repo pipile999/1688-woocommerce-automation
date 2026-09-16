@@ -1,0 +1,36 @@
+{
+  "offer_id": "623545522965",
+  "product_id": 13065,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13065,
+    "offer_id": "623545522965",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:44:25.582815+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/623545522965-flat-top-4-layer-aluminum-herb-grinder-63-mm-08.webp",
+      "reason": "Duplicate of top 1.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/623545522965-flat-top-4-layer-aluminum-herb-grinder-63-mm-10.webp",
+      "reason": "Duplicate of top 4.",
+      "index": 8
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/flat-top-4-layer-aluminum-herb-grinder-63-mm/"
+}

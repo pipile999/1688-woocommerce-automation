@@ -1,0 +1,16 @@
+{
+  "offer_id": "1014780668165",
+  "product_id": 12864,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "WARNING_IMAGE_MISMATCH",
+  "rest_verified": false,
+  "reason": "WARNING_IMAGE_MISMATCH: Source title explicitly says 20-capacity cigarette case (香烟盒,20支装), but images show a much smaller matchbox holder, 48x65 mm, striker insert and matches. Source/title/image consistency cannot be proven without new evidence; no automatic overwrite.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

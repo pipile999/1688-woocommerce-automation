@@ -1,0 +1,86 @@
+{
+  "offer_id": "708707580744",
+  "product_id": 13579,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13579,
+    "offer_id": "708707580744",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:14:23.061119+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5410791954441",
+    "Dedicated variant image removed as unverified/unclean: 5410791954448",
+    "Dedicated variant image removed as unverified/unclean: 5978922353771",
+    "Dedicated variant image removed as unverified/unclean: 5978922353770",
+    "Dedicated variant image removed as unverified/unclean: 5978922353769",
+    "Dedicated variant image removed as unverified/unclean: 5978922353768",
+    "Dedicated variant image removed as unverified/unclean: 5978922353766",
+    "Dedicated variant image removed as unverified/unclean: 5410791954462",
+    "Dedicated variant image removed as unverified/unclean: 5410791954446"
+  ],
+  "problem_images_removed": 10,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 32,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-04.webp",
+      "reason": "Pixelated damaged product artwork.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-23.webp",
+      "reason": "Repair failed final enhanced OCR/classification",
+      "index": 24
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-24.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 25
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-25.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 26
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-26.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 27
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-27.webp",
+      "reason": "RAW brand logo.",
+      "index": 28
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-29.webp",
+      "reason": "Damaged mosaic artwork.",
+      "index": 30
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-30.webp",
+      "reason": "Damaged mosaic artwork.",
+      "index": 31
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-41.webp",
+      "reason": "Perceptual duplicate",
+      "index": 41
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/708707580744-metal-rolling-tray-18-x-14-cm-45.webp",
+      "reason": "Perceptual duplicate",
+      "index": 45
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/metal-rolling-tray-18-x-14-cm/"
+}

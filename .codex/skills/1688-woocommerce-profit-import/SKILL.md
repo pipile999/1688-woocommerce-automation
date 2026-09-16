@@ -7,6 +7,14 @@ description: End-to-end 1688/Alibaba product import workflow for a high-volume W
 
 ## Mission
 
+## Highest-priority strict revision 2026-09-15
+
+Before every upload/update apply the strict gates in `rules/images.md` and `rules/woocommerce-safety.md`. These override older unrestricted counts and repeated image roles: ordinary Featured + Gallery <=5; top + Description <=10, except documented useful variant coverage. Top images must be square, high-quality and from this offer's proven supplier-main pool. Never repeat perceptually equivalent top images in Description.
+
+Zero tolerance for logos, supplier/shop identity, contact details and faint/central/edge watermarks. OCR PASS alone is insufficient: enhanced faint-mark detection plus final visual QA are mandatory. Parameter cards become verified HTML facts and a clean useful crop/dimension view, never painted-over text blocks. Never alter product structure to conceal marks.
+
+Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint -> uniquely verified WooCommerce ID. Inspect all candidates, never the first fuzzy match. Ambiguity stops only that product with WARNING_DUPLICATE_MAPPING. Every image needs same-offer provenance and target product ID/role. Retrospective audits require actual scanning, safe corrections, WooCommerce updates and fresh REST/HTTP acceptance; preserve correct identifiers, prices, categories and publish status.
+
 Turn one or more 1688/Alibaba product URLs into commercially useful WooCommerce products with the highest practical chance of gaining relevant organic traffic, clicks, inquiries, add-to-carts and sales.
 
 The priority is **profit and commercially valuable traffic**, not achieving a cosmetic SEO score.
@@ -51,6 +59,12 @@ Adapt the presentation to the evidence:
 AI must choose the most suitable presentation from the current supplier assets, image quality, verified attributes, SKU structure, page completeness, SEO value, buyer-decision value, and page-load cost. Truthfulness, image quality, purchase experience, and conversion value take priority over template consistency.
 
 For image-specific execution, including featured-image selection, canvas adaptation, sliced-detail reconstruction, Chinese graphic translation, retention decisions, and performance treatment, read `rules/images.md` before processing images.
+
+## Strict exact caching
+
+Cache schema version: 1. Use local SQLite exact-key caching only. Keys include Offer ID, unmodified source URL, SHA256 of image bytes (the complete image inventory for product content), supplier specification text hash, and the active Skill/rules content version. Reuse title, description, translations, SEO or image judgments only with a completely identical key. Different Offer IDs must never share product content or repaired-image caches. Never enable semantic caches, GPTCache semantic mode, embeddings, similarity or fuzzy lookup.
+
+Record CACHE_HIT or CACHE_MISS for each lookup. Changes to images, specifications, URL or rules invalidate the corresponding cache. Checkpoints alone do not authorize reuse. Re-read current source SKU identifiers and prices, recompute source_price / 0.7 / 6.7, derive Model from Offer ID, and revalidate image dimensions on every processing run. Categories and image HTTP status require fresh WooCommerce REST/HTTP validation before publication; cached content is not publication acceptance. Cached pricing or identifiers must never overwrite current source values. Final image QA continues to follow the image rules.
 
 ## Required input
 

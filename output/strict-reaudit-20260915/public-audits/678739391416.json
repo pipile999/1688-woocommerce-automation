@@ -1,0 +1,46 @@
+{
+  "offer_id": "678739391416",
+  "product_id": 12141,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12141,
+    "offer_id": "678739391416",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:51:42.993340+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/678739391416-lightning-shaped-4-layer-aluminum-herb-grinder-63-mm-06.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/678739391416-lightning-shaped-4-layer-aluminum-herb-grinder-63-mm-13.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/678739391416-lightning-shaped-4-layer-aluminum-herb-grinder-63-mm-07.webp",
+      "reason": "Repeats top composition with redundant text.",
+      "index": 15
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/678739391416-lightning-shaped-4-layer-aluminum-herb-grinder-63-mm-08.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 16
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/lightning-shaped-4-layer-aluminum-herb-grinder-63-mm/"
+}

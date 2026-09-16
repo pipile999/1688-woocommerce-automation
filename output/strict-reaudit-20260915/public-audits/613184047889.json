@@ -1,0 +1,41 @@
+{
+  "offer_id": "613184047889",
+  "product_id": 13118,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13118,
+    "offer_id": "613184047889",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:42:48.339154+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-08.webp",
+      "reason": "Perceptual duplicate",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-04.webp",
+      "reason": "Perceptual duplicate",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/manual-plastic-rolling-machine-110-mm/"
+}

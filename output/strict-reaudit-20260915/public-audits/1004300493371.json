@@ -1,0 +1,61 @@
+{
+  "offer_id": "1004300493371",
+  "product_id": 11214,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11214,
+    "offer_id": "1004300493371",
+    "status": "UPDATED",
+    "timestamp": "2026-09-15T13:05:00.560995+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 7,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-06.webp",
+      "reason": "Perceptual duplicate",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-13.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-09.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-10.webp",
+      "reason": "Broken parameter layout with leftover glyphs; original dimension crop pending, not uploaded.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-15.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-17.webp",
+      "reason": "Different grinder product and Z.C.Y.J supplier logo; image mismatch removed.",
+      "index": 12
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-23.webp",
+      "reason": "Unrelated keychain grinder recommendation; image mismatch removed.",
+      "index": 13
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/frog-shaped-4-layer-plastic-herb-grinder/"
+}

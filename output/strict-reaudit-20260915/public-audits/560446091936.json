@@ -1,0 +1,81 @@
+{
+  "offer_id": "560446091936",
+  "product_id": 12260,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12260,
+    "offer_id": "560446091936",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:31:55.199349+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 3667184415515",
+    "Dedicated variant image removed as unverified/unclean: 3667184415513",
+    "Dedicated variant image removed as unverified/unclean: 3667184415512",
+    "Dedicated variant image removed as unverified/unclean: 3667184415514"
+  ],
+  "problem_images_removed": 10,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 2,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-01.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-03.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-05.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-06.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-07.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-08.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-09.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-18.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-19.webp",
+      "reason": "JYLI brand on watch face.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/560446091936-watch-shaped-zinc-alloy-herb-grinder-20.webp",
+      "reason": "Branded watch faces.",
+      "index": 12
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/watch-shaped-zinc-alloy-herb-grinder/"
+}

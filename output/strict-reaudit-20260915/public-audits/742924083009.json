@@ -1,0 +1,31 @@
+{
+  "offer_id": "742924083009",
+  "product_id": 12074,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12074,
+    "offer_id": "742924083009",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:56:58.857139+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/742924083009-classic-4-layer-zinc-alloy-herb-grinder-75-mm-05.webp",
+      "reason": "Corrupted square placeholder in weight label; parameter image excluded.",
+      "index": 5
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/classic-4-layer-zinc-alloy-herb-grinder-75-mm/"
+}

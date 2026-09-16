@@ -1,0 +1,16 @@
+{
+  "offer_id": "1009522330693",
+  "product_id": 10820,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: The only currently acceptable main-pool candidate still has a white supplier URL over the skull chin; original main images have central watermarks crossing skull/hat geometry. No reliable clean main-pool alternative was proven. Keep product state unchanged and report the unresolved image failure.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

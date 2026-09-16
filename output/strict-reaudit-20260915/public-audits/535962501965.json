@@ -1,0 +1,31 @@
+{
+  "offer_id": "535962501965",
+  "product_id": 13030,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13030,
+    "offer_id": "535962501965",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:28:41.128685+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/535962501965-curved-acrylic-filter-holder-with-resin-pipe-11.webp",
+      "reason": "Near-duplicate of dimension view; redundant angle.",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/curved-acrylic-filter-holder-with-resin-pipe/"
+}

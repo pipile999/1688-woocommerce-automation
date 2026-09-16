@@ -1,0 +1,71 @@
+{
+  "offer_id": "993195036520",
+  "product_id": 12639,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12639,
+    "offer_id": "993195036520",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:59:32.830306+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 9,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 4,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-01.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-02.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-03.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-04.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-05.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-06.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-07.webp",
+      "reason": "Perceptual duplicate",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-08.webp",
+      "reason": "Perceptual duplicate",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993195036520-magnetic-2-layer-aluminum-pipe-13.webp",
+      "reason": "Corrupted parameter placeholders.",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/magnetic-2-layer-aluminum-pipe/"
+}

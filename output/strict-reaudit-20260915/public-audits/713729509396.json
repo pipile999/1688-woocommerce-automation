@@ -1,0 +1,18 @@
+{
+  "offer_id": "713729509396",
+  "product_id": [
+    10357
+  ],
+  "analysis_completed": false,
+  "checkpoint": null,
+  "result": "WARNING_SOURCE_MAPPING",
+  "rest_verified": false,
+  "reason": "FileNotFoundError: local evidence missing or inconsistent",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

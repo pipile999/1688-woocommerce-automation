@@ -1,0 +1,16 @@
+{
+  "offer_id": "595064945822",
+  "product_id": 13220,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: All main candidates show QMOTION branding printed on product; no clean verified main view. Parameter card also has visibly smeared labels. Preserve product data and isolate unresolved image quality.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

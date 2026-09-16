@@ -1,0 +1,49 @@
+{
+  "offer_id": "993417872006",
+  "product_id": 10533,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10533,
+    "offer_id": "993417872006",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:59:46.665487+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6050370172719",
+    "Dedicated variant image removed as unverified/unclean: 6050370172717"
+  ],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993417872006-gold-press-tool-opp-bag.webp",
+      "reason": "Fine white supplier watermark at bottom.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993417872006-silver-aluminum-press-tool.webp",
+      "reason": "Fine white supplier watermark at bottom.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993417872006-press-tool-opp-bag-packaging.webp",
+      "reason": "Fine white supplier watermark at bottom.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/993417872006-press-tool-gift-box-packaging.webp",
+      "reason": "Near duplicate of top gift-box view.",
+      "index": 9
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/compact-aluminum-t-handle-press-tool/"
+}

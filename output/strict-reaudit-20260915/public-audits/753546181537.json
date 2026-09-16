@@ -1,0 +1,38 @@
+{
+  "offer_id": "753546181537",
+  "product_id": 10979,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10979,
+    "offer_id": "753546181537",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:57:40.782025+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5365088790196"
+  ],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/753546181537-blue-and-white-pattern-long-stem-resin-pipe-245-mm-01.webp",
+      "reason": "Supplier flame logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/753546181537-blue-and-white-pattern-long-stem-resin-pipe-245-mm-06.webp",
+      "reason": "Supplier identity on box.",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/blue-and-white-pattern-long-stem-resin-pipe-245-mm/"
+}

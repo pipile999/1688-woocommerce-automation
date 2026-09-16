@@ -1,0 +1,31 @@
+{
+  "offer_id": "971789512000",
+  "product_id": 10692,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10692,
+    "offer_id": "971789512000",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:28:20.148793+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 8,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/971789512000-four-layer-hand-crank-zinc-alloy-herb-grinder-63x65mm-010.webp",
+      "reason": "Dark text overlay obscures original dimension diagram.",
+      "index": 9
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/four-layer-hand-crank-zinc-alloy-herb-grinder-63x65mm/"
+}

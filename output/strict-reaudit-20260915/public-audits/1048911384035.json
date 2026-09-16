@@ -1,0 +1,90 @@
+{
+  "offer_id": "1048911384035",
+  "product_id": 11830,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11830,
+    "offer_id": "1048911384035",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:25:38.912110+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6075143249243",
+    "Dedicated variant image removed as unverified/unclean: 6075233033998",
+    "Dedicated variant image removed as unverified/unclean: 6075143249244"
+  ],
+  "problem_images_removed": 12,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 3,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-04.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-02.webp",
+      "reason": "Bottom shop URL.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-03.webp",
+      "reason": "Central supplier watermark.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-06.webp",
+      "reason": "Faint Chinese watermark over packaging.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-07.webp",
+      "reason": "Faint Chinese watermark over packaging.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-qa-008.webp",
+      "reason": "Faint Chinese watermark over packaging.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-12.webp",
+      "reason": "Perceptual duplicate",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-14.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1048911384035-tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm-10.webp",
+      "reason": "Broken parameter glyphs.",
+      "index": 16
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1055773496093-anti-aircraft-cannon-shaped-metal-herb-grinder-75-mm-qa-020.webp",
+      "reason": "Unrelated two-tone grinders.",
+      "index": 17
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1042027148908-speaker-shaped-4-layer-aluminum-herb-grinder-qa-001.webp",
+      "reason": "Unrelated speaker grinders.",
+      "index": 18
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-qa-002.webp",
+      "reason": "Unrelated printed grinders.",
+      "index": 19
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/tree-of-life-4-layer-zinc-alloy-herb-grinder-50-mm/"
+}

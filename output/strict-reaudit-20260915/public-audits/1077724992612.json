@@ -1,0 +1,78 @@
+{
+  "offer_id": "1077724992612",
+  "product_id": 11796,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11796,
+    "offer_id": "1077724992612",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:28:19.830978+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6292171250136"
+  ],
+  "problem_images_removed": 10,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 2,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1077724992612-3-in-1-stainless-steel-pipe-tool-with-wood-handle-01.webp",
+      "reason": "Central Chinese supplier watermark.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1077724992612-3-in-1-stainless-steel-pipe-tool-with-wood-handle-12.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1077724992612-3-in-1-stainless-steel-pipe-tool-with-wood-handle-08.webp",
+      "reason": "Broken parameter glyphs.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1077724992612-3-in-1-stainless-steel-pipe-tool-with-wood-handle-14.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1067572639949-golf-ball-shaped-4-layer-metal-herb-grinder-qa-015.webp",
+      "reason": "Unrelated ball grinders.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1067572639949-golf-ball-shaped-4-layer-metal-herb-grinder-qa-016.webp",
+      "reason": "Unrelated printed grinders.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1077724992612-3-in-1-stainless-steel-pipe-tool-with-wood-handle-18.webp",
+      "reason": "Unrelated golf grinders.",
+      "index": 12
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1067572639949-golf-ball-shaped-4-layer-metal-herb-grinder-15.webp",
+      "reason": "Unrelated golf grinders.",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1077724992612-3-in-1-stainless-steel-pipe-tool-with-wood-handle-20.webp",
+      "reason": "Unrelated jacket grinders.",
+      "index": 14
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1067572639949-golf-ball-shaped-4-layer-metal-herb-grinder-14.webp",
+      "reason": "Unrelated hippo grinders.",
+      "index": 15
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/3-in-1-stainless-steel-pipe-tool-with-wood-handle/"
+}

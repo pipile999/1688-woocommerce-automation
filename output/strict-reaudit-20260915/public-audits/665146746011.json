@@ -1,0 +1,36 @@
+{
+  "offer_id": "665146746011",
+  "product_id": 12300,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12300,
+    "offer_id": "665146746011",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:51:04.912935+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 8,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/665146746011-pinwheel-top-4-layer-zinc-alloy-herb-grinder-63-mm-05.webp",
+      "reason": "Perceptual duplicate",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/665146746011-pinwheel-top-4-layer-zinc-alloy-herb-grinder-63-mm-06.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/pinwheel-top-4-layer-zinc-alloy-herb-grinder-63-mm/"
+}

@@ -1,0 +1,58 @@
+{
+  "offer_id": "553534719552",
+  "product_id": 12607,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12607,
+    "offer_id": "553534719552",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:29:42.830703+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 4048952172168"
+  ],
+  "problem_images_removed": 6,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/553534719552-old-man-resin-pipe-with-curved-stem-01.webp",
+      "reason": "Embossed brand on shank.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/553534719552-old-man-resin-pipe-with-curved-stem-05.webp",
+      "reason": "Embossed brand on shank.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/553534719552-old-man-resin-pipe-with-curved-stem-06.webp",
+      "reason": "Embossed brand on shank.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/553534719552-old-man-resin-pipe-with-curved-stem-07.webp",
+      "reason": "Embossed brand on shank.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/553534719552-old-man-resin-pipe-with-curved-stem-09.webp",
+      "reason": "Potential identity text on shank.",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/553534719552-old-man-resin-pipe-with-curved-stem-13.webp",
+      "reason": "Potential identity text on shank.",
+      "index": 13
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/old-man-resin-pipe-with-curved-stem/"
+}

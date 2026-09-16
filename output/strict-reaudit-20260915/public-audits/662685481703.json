@@ -1,0 +1,31 @@
+{
+  "offer_id": "662685481703",
+  "product_id": 12658,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12658,
+    "offer_id": "662685481703",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:50:29.905927+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/662685481703-concave-3-piece-aluminum-herb-grinder-with-removable-screen-63-mm-08.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/concave-3-piece-aluminum-herb-grinder-with-removable-screen-63-mm/"
+}

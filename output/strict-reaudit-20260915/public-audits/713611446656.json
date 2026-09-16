@@ -1,0 +1,16 @@
+{
+  "offer_id": "713611446656",
+  "product_id": 11119,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: Surviving main pool contains supplier-logo packaging or pixelated product designs; no clean faithful main candidate.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

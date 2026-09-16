@@ -1,0 +1,16 @@
+{
+  "offer_id": "1027641718795",
+  "product_id": 12380,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: All inspected car-ashtray images carry CLICKIT/Cigar Collection branding on the product. Parameter image also retains central Chinese supplier watermark. No clean main-pool candidate currently passes the zero-logo gate; stop this product pending reliable original-source repair.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

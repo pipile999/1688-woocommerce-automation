@@ -1,0 +1,63 @@
+{
+  "offer_id": "1036989743660",
+  "product_id": 12111,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12111,
+    "offer_id": "1036989743660",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:24:49.694878+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6221498583226"
+  ],
+  "problem_images_removed": 7,
+  "rembg_images_applied": 1,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1036989743660-football-shaped-2-layer-biodegradable-herb-grinder-63-mm-03.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1036989743660-football-shaped-2-layer-biodegradable-herb-grinder-63-mm-02.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1036989743660-football-shaped-2-layer-biodegradable-herb-grinder-63-mm-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1036989743660-football-shaped-2-layer-biodegradable-herb-grinder-63-mm-07.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1036989743660-football-shaped-2-layer-biodegradable-herb-grinder-63-mm-14.webp",
+      "reason": "Branded character packaging.",
+      "index": 14
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1042027148908-speaker-shaped-4-layer-aluminum-herb-grinder-qa-015.webp",
+      "reason": "Unrelated basketball grinder.",
+      "index": 15
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1042027148908-speaker-shaped-4-layer-aluminum-herb-grinder-qa-018.webp",
+      "reason": "Unrelated slot-machine grinder.",
+      "index": 16
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/football-shaped-2-layer-biodegradable-herb-grinder-63-mm/"
+}

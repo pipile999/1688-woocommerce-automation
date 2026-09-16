@@ -1,0 +1,31 @@
+{
+  "offer_id": "590420699967",
+  "product_id": 10969,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10969,
+    "offer_id": "590420699967",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:36:46.693816+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 8,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/590420699967-press-lid-plastic-storage-container-for-travel-07.webp",
+      "reason": "Redundant packaging angle.",
+      "index": 7
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/press-lid-plastic-storage-container-for-travel/"
+}

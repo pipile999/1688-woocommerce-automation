@@ -1,0 +1,36 @@
+{
+  "offer_id": "647045907437",
+  "product_id": 10664,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10664,
+    "offer_id": "647045907437",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:45:43.747136+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/647045907437-4-in-1-led-grinder-storage-jar-128x67mm-004.webp",
+      "reason": "Perceptual duplicate",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/647045907437-4-in-1-led-grinder-storage-jar-128x67mm-005.webp",
+      "reason": "Perceptual duplicate",
+      "index": 5
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/4-in-1-led-grinder-storage-jar-128x67mm/"
+}

@@ -1,0 +1,8 @@
+{
+  "scope_products": 196,
+  "existing_analysis": 194,
+  "verified_before_low_cost_resume": 105,
+  "source": "Read-only count immediately after the user requested stopping Vision and using saved decisions",
+  "new_vision_llm_calls_allowed": false,
+  "rerun_completed_image_analysis_allowed": false
+}

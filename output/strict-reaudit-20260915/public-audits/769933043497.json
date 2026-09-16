@@ -1,0 +1,63 @@
+{
+  "offer_id": "769933043497",
+  "product_id": 12833,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12833,
+    "offer_id": "769933043497",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:58:14.745657+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5365785041280"
+  ],
+  "problem_images_removed": 7,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-01.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-03.webp",
+      "reason": "Mosaic damaged product design sheet.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-06.webp",
+      "reason": "Eerinworld brand on product.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-10.webp",
+      "reason": "Brand on product/box.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-12.webp",
+      "reason": "Perceptual duplicate",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-14.webp",
+      "reason": "Eerinworld brand on included tray.",
+      "index": 14
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/769933043497-rolling-tray-workstation-set-with-filling-funnel-15.webp",
+      "reason": "Eerinworld brand on included tray.",
+      "index": 15
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/rolling-tray-workstation-set-with-filling-funnel/"
+}

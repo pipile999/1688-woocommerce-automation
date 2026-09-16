@@ -1,0 +1,81 @@
+{
+  "offer_id": "1041216765166",
+  "product_id": 11547,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11547,
+    "offer_id": "1041216765166",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:25:00.279297+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 11,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 3,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-03.webp",
+      "reason": "Central Chinese supplier watermark.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-02.webp",
+      "reason": "Bottom supplier URL.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-05.webp",
+      "reason": "Watermark crosses lid.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-08.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-11.webp",
+      "reason": "Perceptual duplicate",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-15.webp",
+      "reason": "Unrelated boat ashtray.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-16.webp",
+      "reason": "Unrelated car ashtray.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-07.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 12
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1041216765166-uv-printed-4-layer-aluminum-herb-grinder-63-mm-12.webp",
+      "reason": "Broken parameter text.",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1042027148908-speaker-shaped-4-layer-aluminum-herb-grinder-qa-019.webp",
+      "reason": "Unrelated heart grinders.",
+      "index": 14
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/uv-printed-4-layer-aluminum-herb-grinder-63-mm/"
+}

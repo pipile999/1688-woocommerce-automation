@@ -1,0 +1,46 @@
+{
+  "offer_id": "610090666736",
+  "product_id": 10924,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10924,
+    "offer_id": "610090666736",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:42:33.854752+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 7,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-07.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-08.webp",
+      "reason": "Perceptual duplicate",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/610090666736-manual-rolling-machine-with-110-mm-rolling-belt-18.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/manual-rolling-machine-with-110-mm-rolling-belt/"
+}

@@ -1,0 +1,95 @@
+{
+  "offer_id": "712869990092",
+  "product_id": 13502,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13502,
+    "offer_id": "712869990092",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:14:44.648315+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 4988950984936",
+    "Dedicated variant image removed as unverified/unclean: 5510744821685",
+    "Dedicated variant image removed as unverified/unclean: 4988950984937",
+    "Dedicated variant image removed as unverified/unclean: 6119983436799",
+    "Dedicated variant image removed as unverified/unclean: 5808674258502",
+    "Dedicated variant image removed as unverified/unclean: 4988950984941",
+    "Dedicated variant image removed as unverified/unclean: 4988950984932",
+    "Dedicated variant image removed as unverified/unclean: 4988950984940",
+    "Dedicated variant image removed as unverified/unclean: 4988950984939",
+    "Dedicated variant image removed as unverified/unclean: 5976833585858",
+    "Dedicated variant image removed as unverified/unclean: 4988950984933",
+    "Dedicated variant image removed as unverified/unclean: 5507005484385",
+    "Dedicated variant image removed as unverified/unclean: 5507005484386",
+    "Dedicated variant image removed as unverified/unclean: 4988950984931",
+    "Dedicated variant image removed as unverified/unclean: 4988950984934",
+    "Dedicated variant image removed as unverified/unclean: 4988950984938",
+    "Dedicated variant image removed as unverified/unclean: 4988950984935",
+    "Dedicated variant image removed as unverified/unclean: 5882333880685"
+  ],
+  "problem_images_removed": 10,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 32,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-06.webp",
+      "reason": "Greenery420 brand.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-10.webp",
+      "reason": "RAW brand logo.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-27.webp",
+      "reason": "Insufficient useful native resolution",
+      "index": 27
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-28.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 28
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-32.webp",
+      "reason": "Damaged mosaic artwork.",
+      "index": 32
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-33.webp",
+      "reason": "Damaged mosaic artwork.",
+      "index": 33
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-44.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 44
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-45.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 45
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-46.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 46
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712869990092-printed-tin-rolling-tray-180-x-140-mm-47.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 47
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/printed-tin-rolling-tray-180-x-140-mm/"
+}

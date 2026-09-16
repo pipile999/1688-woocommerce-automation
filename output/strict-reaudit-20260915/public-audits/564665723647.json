@@ -1,0 +1,31 @@
+{
+  "offer_id": "564665723647",
+  "product_id": 10515,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10515,
+    "offer_id": "564665723647",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:33:50.515462+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/564665723647-long-stem-pipe-boxed-set.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/long-stem-carved-resin-tobacco-pipe-410mm/"
+}

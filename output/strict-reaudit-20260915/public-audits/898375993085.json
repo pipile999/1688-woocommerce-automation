@@ -1,0 +1,16 @@
+{
+  "offer_id": "898375993085",
+  "product_id": 13884,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL: All five available main/detail images contain OREO product branding or watermark across product; no reliable clean supplier-main alternative.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

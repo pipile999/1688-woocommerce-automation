@@ -1,5 +1,15 @@
 # WooCommerce Safety and Verification
 
+## Strict identity/update gate — revision 2026-09-15
+
+Audit input_1688_url -> canonical_offer_id -> source_url -> product fingerprint -> woocommerce_product_id. Fingerprint canonical Offer ID, original source URL, raw title/attributes, immutable SKU/variation/spec combinations and image SHA lineage. A fuzzy title/Model search is not sufficient evidence.
+
+Enumerate all candidates from canonical backend source URLs and Offer/Model metadata, including conflicting records. Before writing verify Model, source URL Offer ID, source/processed/live title and attributes, complete immutable SKU IDs, and visual image/product provenance. If multiple IDs match, inspect each; update only a uniquely proven target. Otherwise STOP THIS PRODUCT + WARNING_DUPLICATE_MAPPING, record candidate evidence, and continue other products. Never create replacements to bypass ambiguity.
+
+Every image payload needs source_offer_id, source_url, source_image_url, woocommerce_product_id and image_role in its local audit. Same-offer original SHA lineage and directories are mandatory; cross-offer image is FAIL. Global hash-only media/content caches cannot authorize reuse.
+
+Retrospective writes patch failed content/images only. Snapshot parent/variation IDs, SKUs, source IDs, prices, Model, backend URL, correct categories and status; re-fetch before writing to detect concurrent changes. Afterwards fresh GET parent and all variations: protected values unchanged, expected images/HTML stored, correct bindings, main-pool square top <=5, perceptually disjoint Description, total <=10 or documented variant exception, actual visual approval and HTTP 200/image Content-Type. Ordinary warnings continue the batch; ambiguity stops only its product. Unresolved hard failures stay FAIL; preserve existing publish state.
+
 ## Writes
 
 Prefer WooCommerce REST API over browser form automation.

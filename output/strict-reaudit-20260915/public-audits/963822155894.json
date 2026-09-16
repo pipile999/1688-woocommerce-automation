@@ -1,0 +1,41 @@
+{
+  "offer_id": "963822155894",
+  "product_id": 13780,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13780,
+    "offer_id": "963822155894",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:27:50.676153+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6071034590026",
+    "Dedicated variant image removed as unverified/unclean: 6071034590027",
+    "Dedicated variant image removed as unverified/unclean: 6071034590025",
+    "Dedicated variant image removed as unverified/unclean: 6071034590028"
+  ],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 8,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963822155894-tree-design-zinc-alloy-herb-grinder-04.webp",
+      "reason": "White watermark at lower product edge.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963822155894-tree-design-zinc-alloy-herb-grinder-11.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/tree-design-zinc-alloy-herb-grinder/"
+}

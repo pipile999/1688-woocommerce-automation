@@ -1,0 +1,31 @@
+{
+  "offer_id": "1001500889637",
+  "product_id": 11133,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11133,
+    "offer_id": "1001500889637",
+    "status": "UPDATED",
+    "timestamp": "2026-09-15T13:04:30.496534+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1001500889637-walnut-wood-one-hitter-storage-box-set-05.webp",
+      "reason": "Parameter dimension photo has an unreadable weight glyph; pending original-source crop, not allowed in top gallery.",
+      "index": 4
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/walnut-wood-one-hitter-storage-box-set/"
+}

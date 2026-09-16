@@ -1,0 +1,41 @@
+{
+  "offer_id": "826411335228",
+  "product_id": 13344,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13344,
+    "offer_id": "826411335228",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:20:38.432018+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/826411335228-plastic-cone-storage-tube-120-mm-06.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/826411335228-plastic-cone-storage-tube-120-mm-07.webp",
+      "reason": "Repeats same box composition of detail 3 without additional information.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/826411335228-plastic-cone-storage-tube-120-mm-14.webp",
+      "reason": "Perceptual duplicate",
+      "index": 15
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/plastic-cone-storage-tube-120-mm/"
+}

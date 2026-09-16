@@ -1,0 +1,71 @@
+{
+  "offer_id": "1058694853810",
+  "product_id": 11931,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11931,
+    "offer_id": "1058694853810",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:27:51.678589+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 9,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-03.webp",
+      "reason": "Central supplier watermark.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-12.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-08.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-09.webp",
+      "reason": "Broken parameter text.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-qa-015.webp",
+      "reason": "Unrelated grinder.",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-qa-017.webp",
+      "reason": "Unrelated eagle grinder.",
+      "index": 14
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-22.webp",
+      "reason": "Unrelated branded grinder.",
+      "index": 15
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-qa-019.webp",
+      "reason": "Perceptual duplicate",
+      "index": 16
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1058694853810-crocodile-shaped-metal-pipe-qa-001.webp",
+      "reason": "Perceptual duplicate",
+      "index": 17
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/crocodile-shaped-metal-pipe/"
+}

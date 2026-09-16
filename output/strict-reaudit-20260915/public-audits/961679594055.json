@@ -1,0 +1,41 @@
+{
+  "offer_id": "961679594055",
+  "product_id": 12122,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12122,
+    "offer_id": "961679594055",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:27:12.550331+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/961679594055-stainless-steel-dab-tool-and-pipe-cleaner-07.webp",
+      "reason": "Labubu branding on packaging.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/961679594055-stainless-steel-dab-tool-and-pipe-cleaner-08.webp",
+      "reason": "Labubu branding and corrupted parameter text.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/961679594055-stainless-steel-dab-tool-and-pipe-cleaner-09.webp",
+      "reason": "Labubu branding on packaging.",
+      "index": 8
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/stainless-steel-dab-tool-and-pipe-cleaner/"
+}

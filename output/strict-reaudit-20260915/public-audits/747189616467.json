@@ -1,0 +1,16 @@
+{
+  "offer_id": "747189616467",
+  "product_id": 11720,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: Every available main depicts beverage brand/logo-like trade identity printed on actual product; cannot remove without altering merchandise.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

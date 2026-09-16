@@ -1,0 +1,51 @@
+{
+  "offer_id": "963195717514",
+  "product_id": 11053,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11053,
+    "offer_id": "963195717514",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:27:29.884728+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 5,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963195717514-reusable-aluminum-spring-filter-holder-qa-002.webp",
+      "reason": "Excessive blank canvas; sharper equivalent exists.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963195717514-reusable-aluminum-spring-filter-holder-04.webp",
+      "reason": "Smokingpot supplier brand on box.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963195717514-reusable-aluminum-spring-filter-holder-06.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963195717514-reusable-aluminum-spring-filter-holder-qa-009.webp",
+      "reason": "Perceptual duplicate",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/963195717514-reusable-aluminum-spring-filter-holder-11.webp",
+      "reason": "Brand packaging and corrupted parameter placeholders.",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/reusable-aluminum-spring-filter-holder/"
+}

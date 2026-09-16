@@ -1,0 +1,16 @@
+{
+  "offer_id": "665548985724",
+  "product_id": 11526,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: All surviving main candidates show Backwoods, Runtz or Rick and Morty branding printed on the product; no approved clean main.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

@@ -1,0 +1,44 @@
+{
+  "offer_id": "911386635414",
+  "product_id": 11651,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11651,
+    "offer_id": "911386635414",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:24:52.104379+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5941877590994",
+    "Dedicated variant image removed as unverified/unclean: 5941877590993"
+  ],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 3,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/911386635414-electric-push-button-plastic-herb-grinder-19.webp",
+      "reason": "CEREAL publication identity on scene prop.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/911386635414-electric-push-button-plastic-herb-grinder-07.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/911386635414-electric-push-button-plastic-herb-grinder-06.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/electric-push-button-plastic-herb-grinder/"
+}

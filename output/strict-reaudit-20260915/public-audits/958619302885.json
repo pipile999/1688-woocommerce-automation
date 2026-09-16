@@ -1,0 +1,48 @@
+{
+  "offer_id": "958619302885",
+  "product_id": 12288,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12288,
+    "offer_id": "958619302885",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:18:19.424161+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6242183723116"
+  ],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/958619302885-aluminum-ashtray-and-storage-container-set-04.webp",
+      "reason": "Visible identity printed on cigarette prop.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/958619302885-aluminum-ashtray-and-storage-container-set-01.webp",
+      "reason": "Unnecessary promotional frame, clean same view exists.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/958619302885-aluminum-ashtray-and-storage-container-set-03.webp",
+      "reason": "Visible identity printed on cigarette prop.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/958619302885-aluminum-ashtray-and-storage-container-set-10.webp",
+      "reason": "Corrupted parameter placeholders.",
+      "index": 10
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/aluminum-ashtray-and-storage-container-set/"
+}

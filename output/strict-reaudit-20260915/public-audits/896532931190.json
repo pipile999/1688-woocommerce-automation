@@ -1,0 +1,25 @@
+{
+  "offer_id": "896532931190",
+  "product_id": 13961,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13961,
+    "offer_id": "896532931190",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:23:15.961363+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 13,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/magnetic-storage-container/"
+}

@@ -1,0 +1,72 @@
+{
+  "offer_id": "723845559968",
+  "product_id": 13269,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13269,
+    "offer_id": "723845559968",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:55:31.065041+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5026244996923",
+    "Dedicated variant image removed as unverified/unclean: 5026244996931",
+    "Dedicated variant image removed as unverified/unclean: 5026244996926",
+    "Dedicated variant image removed as unverified/unclean: 5026244996927",
+    "Dedicated variant image removed as unverified/unclean: 5026244996930"
+  ],
+  "problem_images_removed": 8,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 7,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-15.webp",
+      "reason": "LA Cannabis company branding.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-02.webp",
+      "reason": "Contains Sleep brand panel.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-03.webp",
+      "reason": "Warehouse/factory stock promotional image.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-08.webp",
+      "reason": "Allegre logo.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-11.webp",
+      "reason": "LV/Jinshang branding.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-12.webp",
+      "reason": "Sleep band logo.",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-16.webp",
+      "reason": "My Blitz branding.",
+      "index": 14
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-17.webp",
+      "reason": "Redundant promotional layout.",
+      "index": 15
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/printed-tin-rolling-tray/"
+}

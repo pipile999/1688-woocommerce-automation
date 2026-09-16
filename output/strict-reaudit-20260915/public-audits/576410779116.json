@@ -1,0 +1,25 @@
+{
+  "offer_id": "576410779116",
+  "product_id": 12334,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12334,
+    "offer_id": "576410779116",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:35:16.913600+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 8,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/beveled-4-layer-metal-herb-grinder-63-mm/"
+}

@@ -1,0 +1,41 @@
+{
+  "offer_id": "768881650544",
+  "product_id": 12801,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12801,
+    "offer_id": "768881650544",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:57:52.042263+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 3,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/768881650544-printed-tin-rolling-tray-18-x-14-cm-01.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/768881650544-printed-tin-rolling-tray-18-x-14-cm-02.webp",
+      "reason": "Damaged pixelated print.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/768881650544-printed-tin-rolling-tray-18-x-14-cm-05.webp",
+      "reason": "Corrupted placeholder in weight label.",
+      "index": 5
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/printed-tin-rolling-tray-18-x-14-cm/"
+}

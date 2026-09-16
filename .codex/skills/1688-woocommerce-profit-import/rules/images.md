@@ -1,5 +1,17 @@
 # Image Rules
 
+## Highest-priority strict revision 2026-09-15
+
+- Zero tolerance for brand/supplier logos, Chinese or English shop/company names, contacts, 1688/shop URLs and faint, translucent, central or edge watermarks. Real PaddleOCR/OpenCLIP are necessary but insufficient: inspect original and enhanced grayscale/CLAHE variants for faint marks, then perform final visual QA. Record actual model execution separately from visual approval. Never mark unreviewed assets visually PASS.
+- Small edge/background contamination: precise mask and real inpainting. Heavy background contamination with clear complete subject: real rembg cutout on white/light neutral background. Marks over product structure that cannot be repaired reliably: reject. Never regenerate, invent, stretch or destroy product details merely to retain a photo.
+- Parameter cards cannot become erased-text patches. A: confirmed parameters to HTML, crop away text panel, retain clean useful product/dimension panel. B: badly polluted layout to confirmed HTML plus a simple dimension diagram made from real product pixels and explicitly verified measurements. C: text-only cards to HTML only. Record source text/regions for every value; omit uncertain OCR. Never invent geometry/measurements.
+- Ordinary Featured + Gallery <=5; top + Description <=10. More than ten requires documented useful SKU/color coverage. No minimum quota. Only this offer's supplier-main candidates can enter top roles: genuine high-quality squares (600/800 px or another adequate native size), clear complete subject. Long, flat, parameter-heavy and text-heavy graphics are ineligible. Structure/dimensions/use/packaging belong in Description.
+- Top and Description must be perceptually disjoint. Use pHash/image similarity and source lineage, not URLs/filenames; resized/reencoded copies remain duplicates. Record compared pairs/distances. This is image QA, not semantic result caching. If only one unique useful image exists, do not repeat it in Description to satisfy the older nonempty preference; record insufficient_distinct_detail_material.
+- Before upload record source_offer_id, source_url, source_image_url, woocommerce_product_id, image_role, raw SHA256 and transformation lineage. Paths and caches are isolated by canonical offer. Cross-offer provenance or unrelated supplier recommendations are FAIL; no cross-offer cached outputs.
+- Preserve originals and recoverable before snapshots. Re-audit every storefront image, including unchanged ones. Final gates: enhanced watermark detection, actual visual inspection, subject integrity, legibility, native quality, role limits, provenance, duplicate separation and HTTP 200.
+
+This revision overrides conflicting older retention/count/duplicate-role guidance below. Excluded raw evidence is preserved.
+
 ## Objective
 
 Use images to increase click-through, product understanding and conversion while keeping pages fast and removing supplier identity.

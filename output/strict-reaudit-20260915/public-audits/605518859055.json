@@ -1,0 +1,16 @@
+{
+  "offer_id": "605518859055",
+  "product_id": 10434,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: Every available supplier-main candidate includes an unapproved Punisher-style emblem; clean sugar-skull-only image is detail-pool, not a proven main candidate. Do not silently alter printed product artwork.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

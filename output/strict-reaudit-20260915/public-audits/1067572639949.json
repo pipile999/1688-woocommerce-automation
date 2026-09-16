@@ -1,0 +1,16 @@
+{
+  "offer_id": "1067572639949",
+  "product_id": 11001,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: Golf-ball images contain unapproved logo/crest designs and no verified clean main candidate. Unrelated hippo/football recommendation images also excluded. Do not alter physical product artwork or overwrite with another product.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

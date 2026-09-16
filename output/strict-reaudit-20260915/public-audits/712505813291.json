@@ -1,0 +1,33 @@
+{
+  "offer_id": "712505813291",
+  "product_id": 10700,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10700,
+    "offer_id": "712505813291",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:54:37.002886+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 4992611741320"
+  ],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/712505813291-compact-rubber-snuff-pipe-53x19mm-006.webp",
+      "reason": "Different mouthpiece profile from primary model; supplier recommendation not proven exact variant.",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/compact-rubber-snuff-pipe-53x19mm/"
+}

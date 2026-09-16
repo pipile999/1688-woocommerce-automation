@@ -1,0 +1,16 @@
+{
+  "offer_id": "634473455690",
+  "product_id": 13431,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: Supplier-main candidates visibly carry BACKWOODS brand graphics; no verified clean main candidate. Do not substitute unrelated print or invent altered product artwork.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

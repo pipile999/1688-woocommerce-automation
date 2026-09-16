@@ -1,0 +1,36 @@
+{
+  "offer_id": "585751386821",
+  "product_id": 11663,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11663,
+    "offer_id": "585751386821",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:35:56.978595+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 2,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 7,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/585751386821-hamburger-shaped-2-layer-plastic-herb-grinder-63-mm-05.webp",
+      "reason": "Perceptual duplicate",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/585751386821-hamburger-shaped-2-layer-plastic-herb-grinder-63-mm-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 8
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/hamburger-shaped-2-layer-plastic-herb-grinder-63-mm/"
+}

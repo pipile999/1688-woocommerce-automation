@@ -1,0 +1,43 @@
+{
+  "offer_id": "1003092683871",
+  "product_id": 12395,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12395,
+    "offer_id": "1003092683871",
+    "status": "UPDATED",
+    "timestamp": "2026-09-15T13:04:45.579776+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6162202587889"
+  ],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1003092683871-watermelon-shaped-4-layer-herb-grinder-with-display-box-07.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1004300493371-frog-shaped-4-layer-plastic-herb-grinder-23.webp",
+      "reason": "Unrelated keychain grinder recommendation, not watermelon product; image mismatch removed.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1003092683871-watermelon-shaped-4-layer-herb-grinder-with-display-box-02.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 8
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/watermelon-shaped-4-layer-herb-grinder-with-display-box/"
+}

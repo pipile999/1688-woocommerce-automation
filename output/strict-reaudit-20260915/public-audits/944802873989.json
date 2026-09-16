@@ -1,0 +1,25 @@
+{
+  "offer_id": "944802873989",
+  "product_id": 11335,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11335,
+    "offer_id": "944802873989",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:25:48.928736+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 11,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/hammer-shaped-zinc-alloy-herb-grinder/"
+}

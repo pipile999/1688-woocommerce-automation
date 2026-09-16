@@ -1,0 +1,46 @@
+{
+  "offer_id": "842079311266",
+  "product_id": 13059,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13059,
+    "offer_id": "842079311266",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:21:49.646124+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/842079311266-pirate-hat-3-layer-zinc-alloy-herb-grinder-05.webp",
+      "reason": "Corrupted weight placeholder.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/842079311266-pirate-hat-3-layer-zinc-alloy-herb-grinder-09.webp",
+      "reason": "One Piece brand title on packaging.",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/842079311266-pirate-hat-3-layer-zinc-alloy-herb-grinder-10.webp",
+      "reason": "One Piece brand title on packaging.",
+      "index": 14
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/842079311266-pirate-hat-3-layer-zinc-alloy-herb-grinder-11.webp",
+      "reason": "One Piece brand title on packaging.",
+      "index": 15
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/pirate-hat-3-layer-zinc-alloy-herb-grinder/"
+}

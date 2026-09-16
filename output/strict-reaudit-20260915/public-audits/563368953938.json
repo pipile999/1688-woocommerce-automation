@@ -1,0 +1,58 @@
+{
+  "offer_id": "563368953938",
+  "product_id": 11405,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11405,
+    "offer_id": "563368953938",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:32:46.820638+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6218111658869"
+  ],
+  "problem_images_removed": 6,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 5,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/563368953938-cigarette-style-ceramic-pipe-78-mm-01.webp",
+      "reason": "Chinese supplier watermark and branded packaging.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/563368953938-cigarette-style-ceramic-pipe-78-mm-05.webp",
+      "reason": "Poor cutout edge and detached artifact.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/563368953938-cigarette-style-ceramic-pipe-78-mm-06.webp",
+      "reason": "Chinese supplier watermark and branded packaging.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/563368953938-cigarette-style-ceramic-pipe-78-mm-qa-007.webp",
+      "reason": "Duplicate of top 3.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/563368953938-cigarette-style-ceramic-pipe-78-mm-qa-008.webp",
+      "reason": "Duplicate of top 4.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/563368953938-cigarette-style-ceramic-pipe-78-mm-qa-011.webp",
+      "reason": "Duplicate of top 1.",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/cigarette-style-ceramic-pipe-78-mm/"
+}

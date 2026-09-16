@@ -1,0 +1,25 @@
+{
+  "offer_id": "597909013209",
+  "product_id": 10956,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10956,
+    "offer_id": "597909013209",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:41:00.900604+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/4-layer-zinc-alloy-herb-grinder-with-side-ports-52-mm/"
+}

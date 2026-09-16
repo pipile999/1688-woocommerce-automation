@@ -1,0 +1,46 @@
+{
+  "offer_id": "872146602108",
+  "product_id": 12782,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12782,
+    "offer_id": "872146602108",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:22:28.232400+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/872146602108-rotating-top-4-layer-zinc-alloy-herb-grinder-70-mm-01.webp",
+      "reason": "KAI LE supplier logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/872146602108-rotating-top-4-layer-zinc-alloy-herb-grinder-70-mm-04.webp",
+      "reason": "Corrupted parameter text.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/872146602108-rotating-top-4-layer-zinc-alloy-herb-grinder-70-mm-11.webp",
+      "reason": "Fine white watermark across product band.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/872146602108-rotating-top-4-layer-zinc-alloy-herb-grinder-70-mm-10.webp",
+      "reason": "Fine white watermark across product band.",
+      "index": 17
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/rotating-top-4-layer-zinc-alloy-herb-grinder-70-mm/"
+}

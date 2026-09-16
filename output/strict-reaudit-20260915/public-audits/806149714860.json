@@ -1,0 +1,86 @@
+{
+  "offer_id": "806149714860",
+  "product_id": 11962,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11962,
+    "offer_id": "806149714860",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:16:11.973169+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 12,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-02.webp",
+      "reason": "Unverified small circular brand labels on top caps.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-03.webp",
+      "reason": "Unverified small circular brand labels on top caps.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-05.webp",
+      "reason": "Unverified small circular brand label on included cap.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-07.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-11.webp",
+      "reason": "Perceptual duplicate",
+      "index": 11
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-14.webp",
+      "reason": "Unverified small circular brand labels on top caps.",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-17.webp",
+      "reason": "Perceptual duplicate",
+      "index": 16
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-20.webp",
+      "reason": "Perceptual duplicate",
+      "index": 19
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-22.webp",
+      "reason": "Perceptual duplicate",
+      "index": 21
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-23.webp",
+      "reason": "Perceptual duplicate",
+      "index": 22
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/806149714860-manual-rolling-machine-24.webp",
+      "reason": "Perceptual duplicate",
+      "index": 23
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/manual-rolling-machine/"
+}

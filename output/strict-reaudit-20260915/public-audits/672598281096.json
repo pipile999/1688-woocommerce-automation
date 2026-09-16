@@ -1,0 +1,25 @@
+{
+  "offer_id": "672598281096",
+  "product_id": 13870,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13870,
+    "offer_id": "672598281096",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:13:47.789669+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/printed-push-top-plastic-storage-jar-6-x-10-cm/"
+}

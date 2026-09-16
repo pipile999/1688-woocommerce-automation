@@ -1,0 +1,25 @@
+{
+  "offer_id": "984680436841",
+  "product_id": 10503,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10503,
+    "offer_id": "984680436841",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:31:11.977973+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 4,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/usb-electric-grinder-filling-tool-50x80mm/"
+}

@@ -1,0 +1,25 @@
+{
+  "offer_id": "617286456555",
+  "product_id": 12313,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12313,
+    "offer_id": "617286456555",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:43:20.057435+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 7,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/diamond-side-4-layer-zinc-alloy-herb-grinder-67-mm/"
+}

@@ -1,0 +1,58 @@
+{
+  "offer_id": "630846461945",
+  "product_id": 12968,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12968,
+    "offer_id": "630846461945",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:44:42.155770+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 4495663733119"
+  ],
+  "problem_images_removed": 6,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 3,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/630846461945-teardrop-4-layer-zinc-alloy-herb-grinder-50-mm-01.webp",
+      "reason": "Mark covers product core; cannot repair without changing genuine structure",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/630846461945-teardrop-4-layer-zinc-alloy-herb-grinder-50-mm-02.webp",
+      "reason": "Backwoods/Cookies branding.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/630846461945-teardrop-4-layer-zinc-alloy-herb-grinder-50-mm-05.webp",
+      "reason": "Branded character packaging.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/630846461945-teardrop-4-layer-zinc-alloy-herb-grinder-50-mm-09.webp",
+      "reason": "Smeared/garbled specification card.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/630846461945-teardrop-4-layer-zinc-alloy-herb-grinder-50-mm-11.webp",
+      "reason": "Branded character artwork.",
+      "index": 8
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/630846461945-teardrop-4-layer-zinc-alloy-herb-grinder-50-mm-12.webp",
+      "reason": "Repair failed final enhanced OCR/classification",
+      "index": 9
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/teardrop-4-layer-zinc-alloy-herb-grinder-50-mm/"
+}

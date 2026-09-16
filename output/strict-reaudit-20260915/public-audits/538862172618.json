@@ -1,0 +1,48 @@
+{
+  "offer_id": "538862172618",
+  "product_id": 12528,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12528,
+    "offer_id": "538862172618",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:10:03.774481+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5059478649540"
+  ],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 11,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/538862172618-high-heel-metal-pipe-stand-07.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/538862172618-high-heel-metal-pipe-stand-09.webp",
+      "reason": "Insufficient useful native resolution",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/538862172618-high-heel-metal-pipe-stand-17.webp",
+      "reason": "Redundant near-identical angle to 11.",
+      "index": 12
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/538862172618-high-heel-metal-pipe-stand-13.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 17
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/high-heel-metal-pipe-stand/"
+}

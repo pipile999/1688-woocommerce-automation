@@ -1,0 +1,87 @@
+{
+  "offer_id": "693006743269",
+  "product_id": 13292,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13292,
+    "offer_id": "693006743269",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:52:34.304427+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5266942098688",
+    "Dedicated variant image removed as unverified/unclean: 5266942098687",
+    "Dedicated variant image removed as unverified/unclean: 5266942098683",
+    "Dedicated variant image removed as unverified/unclean: 5266942098680",
+    "Dedicated variant image removed as unverified/unclean: 5266942098686"
+  ],
+  "problem_images_removed": 11,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-15.webp",
+      "reason": "LA Cannabis company logo.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/693006743269-tin-rolling-tray-with-magnetic-3d-lid-01.webp",
+      "reason": "LA Cannabis company logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/693006743269-tin-rolling-tray-with-magnetic-3d-lid-02.webp",
+      "reason": "LA Cannabis company logo.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/693006743269-tin-rolling-tray-with-magnetic-3d-lid-03.webp",
+      "reason": "Brand title on included design.",
+      "index": 4
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/693006743269-tin-rolling-tray-with-magnetic-3d-lid-05.webp",
+      "reason": "LA Cannabis company logo.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-08.webp",
+      "reason": "Allegre logo.",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-12.webp",
+      "reason": "Sleep band logo.",
+      "index": 12
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-16.webp",
+      "reason": "My Blitz branding.",
+      "index": 15
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/723845559968-printed-tin-rolling-tray-11.webp",
+      "reason": "LV and Jinshang branding.",
+      "index": 16
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/693006743269-tin-rolling-tray-with-magnetic-3d-lid-23.webp",
+      "reason": "Multiple brand logos.",
+      "index": 17
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/693006743269-tin-rolling-tray-with-magnetic-3d-lid-26.webp",
+      "reason": "Canadian Lumber branding.",
+      "index": 18
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/tin-rolling-tray-with-magnetic-3d-lid/"
+}

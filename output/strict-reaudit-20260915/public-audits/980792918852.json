@@ -1,0 +1,63 @@
+{
+  "offer_id": "980792918852",
+  "product_id": 11762,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11762,
+    "offer_id": "980792918852",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:30:59.598640+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5938842516515"
+  ],
+  "problem_images_removed": 7,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 3,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-02.webp",
+      "reason": "Chinese company watermark across product.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-04.webp",
+      "reason": "Chinese company watermark across product.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-05.webp",
+      "reason": "Chinese company watermark across product.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-11.webp",
+      "reason": "Faint watermark on first product closeup.",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-14.webp",
+      "reason": "Corrupted parameter placeholders.",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-15.webp",
+      "reason": "Corrupted parameter placeholders.",
+      "index": 10
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/980792918852-water-transfer-printed-4-layer-zinc-alloy-herb-grinder-16.webp",
+      "reason": "Corrupted parameter placeholders.",
+      "index": 11
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/water-transfer-printed-4-layer-zinc-alloy-herb-grinder/"
+}

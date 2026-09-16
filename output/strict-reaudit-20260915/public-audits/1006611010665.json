@@ -1,0 +1,53 @@
+{
+  "offer_id": "1006611010665",
+  "product_id": 11281,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11281,
+    "offer_id": "1006611010665",
+    "status": "UPDATED",
+    "timestamp": "2026-09-15T13:09:03.524663+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 6002830148095"
+  ],
+  "problem_images_removed": 5,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 4,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1006611010665-avocado-shaped-4-layer-plastic-herb-grinder-03.webp",
+      "reason": "Faint white shop URL at bottom remains.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1006611010665-avocado-shaped-4-layer-plastic-herb-grinder-06.webp",
+      "reason": "Bottom shop URL and visibly smeared/deformed face details from old inpainting.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1006611010665-avocado-shaped-4-layer-plastic-herb-grinder-10.webp",
+      "reason": "Perceptual duplicate",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1006611010665-avocado-shaped-4-layer-plastic-herb-grinder-11.webp",
+      "reason": "Perceptual duplicate",
+      "index": 7
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/1006611010665-avocado-shaped-4-layer-plastic-herb-grinder-09.webp",
+      "reason": "Parameter graphic contains unreadable residual glyphs.",
+      "index": 9
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/avocado-shaped-4-layer-plastic-herb-grinder/"
+}

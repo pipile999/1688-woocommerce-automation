@@ -1,0 +1,16 @@
+{
+  "offer_id": "686860422447",
+  "product_id": 10521,
+  "analysis_completed": true,
+  "checkpoint": null,
+  "result": "FAIL",
+  "rest_verified": false,
+  "reason": "FAIL_IMAGE_QUALITY: Horns Bee identity on every main candidate; supplier-logo box also present. No clean unbranded main candidate.",
+  "warnings": [],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": false,
+  "http_200": 0,
+  "http_fail": 0
+}

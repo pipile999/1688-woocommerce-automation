@@ -1,0 +1,41 @@
+{
+  "offer_id": "595358601590",
+  "product_id": 13091,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13091,
+    "offer_id": "595358601590",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:37:14.501902+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 11,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/595358601590-3-layer-plastic-herb-grinder-60-mm-09.webp",
+      "reason": "Perceptual duplicate",
+      "index": 9
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/595358601590-3-layer-plastic-herb-grinder-60-mm-14.webp",
+      "reason": "Duplicate of top 4.",
+      "index": 13
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/595358601590-3-layer-plastic-herb-grinder-60-mm-16.webp",
+      "reason": "Parameter card removed; only complete confirmed facts eligible for HTML",
+      "index": 15
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/3-layer-plastic-herb-grinder-60-mm/"
+}

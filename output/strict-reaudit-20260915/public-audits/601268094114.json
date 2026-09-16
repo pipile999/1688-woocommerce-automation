@@ -1,0 +1,33 @@
+{
+  "offer_id": "601268094114",
+  "product_id": 12324,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12324,
+    "offer_id": "601268094114",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:41:16.328238+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 4202383956738"
+  ],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 6,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/601268094114-4-layer-zinc-alloy-herb-grinder-with-drawer-63-mm-06.webp",
+      "reason": "Near-duplicate of top 2.",
+      "index": 6
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/4-layer-zinc-alloy-herb-grinder-with-drawer-63-mm-3/"
+}

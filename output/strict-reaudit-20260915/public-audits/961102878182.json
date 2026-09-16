@@ -1,0 +1,31 @@
+{
+  "offer_id": "961102878182",
+  "product_id": 13922,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 13922,
+    "offer_id": "961102878182",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:27:00.764939+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 5894230388152",
+    "Dedicated variant image removed as unverified/unclean: 5894230388151",
+    "Dedicated variant image removed as unverified/unclean: 5894230388154",
+    "Dedicated variant image removed as unverified/unclean: 5894230388153",
+    "Dedicated variant image removed as unverified/unclean: 5894230388150"
+  ],
+  "problem_images_removed": 0,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 4,
+  "http_fail": 0,
+  "removed_images": [],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/retractable-lighter-holder-with-clip/"
+}

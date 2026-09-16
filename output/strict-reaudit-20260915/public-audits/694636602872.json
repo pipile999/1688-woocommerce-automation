@@ -1,0 +1,48 @@
+{
+  "offer_id": "694636602872",
+  "product_id": 10710,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 10710,
+    "offer_id": "694636602872",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:52:47.862656+00:00",
+    "rest_verified": true
+  },
+  "result": "WARNING",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [
+    "Dedicated variant image removed as unverified/unclean: 4927370208645"
+  ],
+  "problem_images_removed": 4,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 4,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/694636602872-portable-leather-cigar-case-two-three-capacity-002.webp",
+      "reason": "Visible pixelated/mosaic product panel.",
+      "index": 1
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/694636602872-portable-leather-cigar-case-two-three-capacity-003.webp",
+      "reason": "Visible pixelated/mosaic product panel.",
+      "index": 3
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/694636602872-portable-leather-cigar-case-two-three-capacity-024.webp",
+      "reason": "Pixelated product artwork.",
+      "index": 6
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/694636602872-portable-leather-cigar-case-two-three-capacity-025.webp",
+      "reason": "Large mosaic covering product.",
+      "index": 7
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/portable-leather-cigar-case-two-three-capacity/"
+}

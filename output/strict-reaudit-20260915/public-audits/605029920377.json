@@ -1,0 +1,31 @@
+{
+  "offer_id": "605029920377",
+  "product_id": 11293,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 11293,
+    "offer_id": "605029920377",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T02:41:44.404891+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 1,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 9,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/605029920377-2-layer-wood-herb-grinder-with-zinc-alloy-teeth-68-mm-17.webp",
+      "reason": "Same source composition as top 1.",
+      "index": 7
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/2-layer-wood-herb-grinder-with-zinc-alloy-teeth-68-mm/"
+}

@@ -1,0 +1,41 @@
+{
+  "offer_id": "720078217435",
+  "product_id": 12404,
+  "analysis_completed": true,
+  "checkpoint": {
+    "product_id": 12404,
+    "offer_id": "720078217435",
+    "status": "UPDATED",
+    "timestamp": "2026-09-16T03:14:55.001940+00:00",
+    "rest_verified": true
+  },
+  "result": "PASS",
+  "rest_verified": true,
+  "reason": null,
+  "warnings": [],
+  "problem_images_removed": 3,
+  "rembg_images_applied": 0,
+  "local_scanned_this_resume": false,
+  "modified": true,
+  "http_200": 4,
+  "http_fail": 0,
+  "removed_images": [
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/720078217435-h2-electric-grinder-and-storage-jar-01.webp",
+      "reason": "Supplier flame logo.",
+      "index": 2
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/720078217435-h2-electric-grinder-and-storage-jar-05.webp",
+      "reason": "Brand identity on product band.",
+      "index": 5
+    },
+    {
+      "url": "https://mypakg.com/wp-content/uploads/2026/09/720078217435-h2-electric-grinder-and-storage-jar-07.webp",
+      "reason": "Overcompressed narrow long image, text unreadable.",
+      "index": 7
+    }
+  ],
+  "protected_fields_unchanged": true,
+  "permalink": "https://mypakg.com/product/h2-electric-grinder-and-storage-jar/"
+}
