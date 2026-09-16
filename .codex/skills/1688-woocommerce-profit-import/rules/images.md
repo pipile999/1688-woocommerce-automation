@@ -1,16 +1,22 @@
 # Image Rules
 
-## Highest-priority strict revision 2026-09-15
+## Default hard gates — revision 2026-09-16
 
-- Zero tolerance for brand/supplier logos, Chinese or English shop/company names, contacts, 1688/shop URLs and faint, translucent, central or edge watermarks. Real PaddleOCR/OpenCLIP are necessary but insufficient: inspect original and enhanced grayscale/CLAHE variants for faint marks, then perform final visual QA. Record actual model execution separately from visual approval. Never mark unreviewed assets visually PASS.
-- Small edge/background contamination: precise mask and real inpainting. Heavy background contamination with clear complete subject: real rembg cutout on white/light neutral background. Marks over product structure that cannot be repaired reliably: reject. Never regenerate, invent, stretch or destroy product details merely to retain a photo.
+- Zero tolerance for brand/supplier logos, Chinese or English shop/company names, contacts, 1688/shop URLs and faint, translucent, central or edge watermarks. OCR PASS alone is insufficient: use original and contrast-enhanced grayscale/CLAHE views for faint-mark detection plus local quality/provenance checks. Vision is selective, not mandatory per image. Record actual execution and review method; local checks must never be described as a Vision/LLM review.
+- Small edge/background contamination: precise OpenCV cleanup or mask and real inpainting. Heavy background contamination with clear complete subject: real rembg cutout on white/light neutral background. Marks over product structure that cannot be repaired reliably: reject. Never regenerate, invent, stretch or destroy product details merely to retain a photo.
 - Parameter cards cannot become erased-text patches. A: confirmed parameters to HTML, crop away text panel, retain clean useful product/dimension panel. B: badly polluted layout to confirmed HTML plus a simple dimension diagram made from real product pixels and explicitly verified measurements. C: text-only cards to HTML only. Record source text/regions for every value; omit uncertain OCR. Never invent geometry/measurements.
-- Ordinary Featured + Gallery <=5; top + Description <=10. More than ten requires documented useful SKU/color coverage. No minimum quota. Only this offer's supplier-main candidates can enter top roles: genuine high-quality squares (600/800 px or another adequate native size), clear complete subject. Long, flat, parameter-heavy and text-heavy graphics are ineligible. Structure/dimensions/use/packaging belong in Description.
+- Ordinary Featured + Gallery <=5; total distinct final images across top, Description and variation-only roles <=10. More than ten requires documented useful SKU/color coverage. No minimum quota: one or two qualifying main images are sufficient. Only this offer's supplier-main candidates can enter top roles: genuine high-quality squares (600×600, 800×800 or higher-quality 1:1), clear complete subject. Long, portrait, flat, parameter, dimension-instruction and text-heavy graphics are ineligible. Structure/dimensions/use/packaging belong in Description.
 - Top and Description must be perceptually disjoint. Use pHash/image similarity and source lineage, not URLs/filenames; resized/reencoded copies remain duplicates. Record compared pairs/distances. This is image QA, not semantic result caching. If only one unique useful image exists, do not repeat it in Description to satisfy the older nonempty preference; record insufficient_distinct_detail_material.
 - Before upload record source_offer_id, source_url, source_image_url, woocommerce_product_id, image_role, raw SHA256 and transformation lineage. Paths and caches are isolated by canonical offer. Cross-offer provenance or unrelated supplier recommendations are FAIL; no cross-offer cached outputs.
-- Preserve originals and recoverable before snapshots. Re-audit every storefront image, including unchanged ones. Final gates: enhanced watermark detection, actual visual inspection, subject integrity, legibility, native quality, role limits, provenance, duplicate separation and HTTP 200.
+- Preserve originals and recoverable before snapshots. Do not launch retrospective store scans unless requested. On resume reuse unchanged, valid exact-key decisions instead of rerunning OCR/models. Final gates remain enhanced watermark detection, evidenced local quality checks or selective Vision review, subject integrity, legibility, native quality, role limits, provenance, duplicate separation and HTTP 200.
 
 This revision overrides conflicting older retention/count/duplicate-role guidance below. Excluded raw evidence is preserved.
+
+## Low-cost analysis and exact reuse
+
+Use Python/PaddleOCR/OpenCV/rembg/pHash first. No default per-image Vision/LLM loop. Escalate only an important ambiguous asset, with an explicit reason and source evidence; otherwise reject an unreliable asset without generative reconstruction. OpenCLIP is an optional local aid, not proof of a clean image.
+
+Reuse OCR/decisions/approved outputs only when Offer ID, original source URL, image SHA256, specification hash and relevant Skill/rules version match exactly. Log CACHE_HIT/CACHE_MISS; never enable semantic or fuzzy result caching. Identical approved final bytes need no duplicate OCR or encoding. Changed bytes require new local QA. Record source/final hashes, rules version, tool/model actually run, cache reference, decision/reason and any Vision escalation. A cached PASS must point to real prior evidence, not a placeholder. HTTP availability and target product binding are independently validated before publication.
 
 ## Objective
 
@@ -20,7 +26,7 @@ Use images to increase click-through, product understanding and conversion while
 
 Audit the actual supplier image set before choosing a featured image, gallery size, image roles, detail-page modules, dimensions, or output count. Never apply one fixed image count, one fixed detail-page layout, or one fixed featured-image type to every product.
 
-Use only real, product-supported information. Three valid product photos may be the complete and correct output when the supplier provides nothing else. Do not manufacture missing dimensions, materials, specifications, functions, packaging, accessories, benefits, or visual modules. Conversely, do not discard independently valuable, high-quality supplier assets merely to satisfy a gallery limit.
+Use only real, product-supported information. Three valid product photos may be the complete and correct output when the supplier provides nothing else. Do not manufacture missing dimensions, materials, specifications, functions, packaging, accessories, benefits, or visual modules. Select the strongest complementary assets within the hard caps and preserve unused original evidence locally.
 
 Classify useful evidence according to what actually exists: Featured, Gallery, Variation, Product Details, Features, Structure, Dimensions, Materials, Application/Usage, Packaging, Accessories, and Color Options. There is no required count for any role.
 
@@ -71,7 +77,7 @@ Use the mature open-source `rembg` pipeline as the default alternative to large-
 
 Apply exactly one suitable treatment:
 
-- **A — light pollution:** a small logo, URL, or watermark → precise OCR/region mask plus real inpainting.
+- **A — light pollution:** a small logo, URL, or watermark → precise OpenCV background cleanup or region mask plus real inpainting; never modify product geometry.
 - **B — heavy background pollution with a clear product:** run real `rembg` foreground extraction, clean the alpha edge, preserve the real product pixels and proportions, and center it on white or a very light neutral 1200 × 1200 canvas. Do not stretch, regenerate, embellish, or invent a decorative AI background. Target roughly 70%–85% canvas occupancy when the source resolution supports it; never upscale a small source merely to reach that percentage.
 - **C — parameter/text graphic:** do not erase large text areas into visible smears. OCR the real content first. Retain a simple graphic only when it can be translated and laid out naturally in English. When dense text, damaged OCR, or clutter prevents a faithful result, remove the image from the storefront and present only confirmed facts in a clean Long Description HTML specifications table.
 
@@ -80,6 +86,8 @@ Mask generation alone is not inpainting, and foreground extraction alone is not 
 ## Parameter graphics to HTML
 
 Only confirmed values such as Material, Size/Dimensions, Weight, Colors, Packaging Quantity, and Configuration may enter the public table. Omit incomplete or uncertain OCR fragments such as `6/`, `()`, or an unexplained `72`; missing evidence is never filled by inference. A clean HTML table is preferable to a visibly painted-over parameter image.
+
+For text plus a useful dimension/product illustration, extract confirmed facts to HTML and retain or crop the clean illustration. For a messy text area, crop that area away if the remaining product/measurement view stays complete and legible. For text-only cards, use confirmed HTML facts and remove the image from storefront use. Do not leave erased blocks, fragmented characters or unreadable relayout; do not invent missing measurements.
 
 ## Valuable Chinese graphics
 
@@ -103,7 +111,7 @@ A sharp, high-resolution single-product image can beat a low-quality multi-color
 
 ## Featured canvas and aspect-ratio adaptation
 
-When the best source image does not fit the store's product-card aspect ratio, adapt it according to the evidence and visual quality:
+Only an eligible supplier-main product photo may be adapted for a square canvas; never promote an excluded long/portrait/flat detail graphic or parameter/dimension card by padding it into a square. For an eligible photo requiring canvas adjustment:
 
 - resize proportionally;
 - add padding or extend the canvas;
@@ -130,7 +138,7 @@ Do not join images solely because their widths match. Do not independently trans
 
 Do not mechanically keep an extremely long or heavy reconstructed image. Based on content boundaries, reading flow, mobile/desktop legibility, and page weight, either keep one reasonably sized continuous image or divide it into 2–N coherent modules such as Product Structure, Features, Specifications, or Application. The number of modules must follow the content, never a fixed target.
 
-Preserve resolution sufficient for readable detail while optimizing load performance. Avoid duplicate use of the same reconstructed content across Gallery and Description unless each placement adds clear buyer value.
+Preserve resolution sufficient for readable detail while optimizing load performance. Never repeat perceptually equivalent content across Featured/Gallery and Description, even after resizing, renaming or re-encoding.
 
 ## Chinese text in sliced designs
 
@@ -144,11 +152,11 @@ Translate only real product information. Remove rather than translate supplier i
 
 Optimize for retaining real, high-quality, sales-relevant product information rather than deleting aggressively. Keep a product display, multi-angle, application, detail, feature, structure/disassembly, dimensions, material, specification, color/SKU, packaging, or accessory image when it is real, relevant, and independently useful to a buyer. Text alone is never a deletion reason.
 
-Delete only exact/near duplicates, unrelated images, severely blurry images, low-quality images with no useful product information, company/factory promotion, contact information, QR codes, supplier identity, or advertising/watermarks too extensive to repair reasonably. Do not delete an independently useful high-quality image merely because the Gallery already has many images.
+Exclude exact/near duplicates, unrelated or severely blurry images, company/factory promotion, contacts, QR codes and identity/watermarks that cannot be reliably removed. Route valuable eligible material to Description within the total cap; retain unused raw evidence locally rather than exceeding caps without a real variant exception.
 
 ## Chinese buyer-information graphics
 
-For a Chinese graphic with purchase value, use OCR, translate to natural English, mask the original Chinese, inpaint/reconstruct the background, relayout the English, and retain the image. Remove rather than translate company names, logos, contact details, QR codes, supplier identity, and supplier advertising.
+For a simple Chinese graphic with purchase value, faithful English relayout is allowed. For parameter/specification cards, use the HTML/crop decisions above instead of block-by-block painted translation. Remove rather than translate company names, logos, contacts, QR codes and supplier advertising.
 
 ## Role separation and audit trail
 
@@ -159,17 +167,17 @@ For every original image, record dimensions, resolution, sharpness_score, inform
 
 ## Gallery
 
-No hard image-count target. Use enough images to answer buyer questions without repetitive clutter. A sparse supplier set may legitimately produce a very small gallery. A rich supplier set may justify more images when each adds distinct buyer value.
+Featured plus Gallery has a hard maximum of five, not a target. Use only qualifying square supplier-main photos. Detail long images, portrait/flat graphics, parameter cards, dimension diagrams and text-heavy images cannot enter Gallery. A sparse set may legitimately use one or two top images.
 
 ## Variations
 
-Match color/pattern visually. Same color across sizes may share an image. Never knowingly bind the wrong color.
+Match color/pattern from reliable source evidence. Same color across sizes may share an image. Missing dedicated imagery is WARNING; never fabricate it or bind another color. Document any useful multi-variant exception to the total image cap.
 
 ## Description images
 
 Use images that explain product structure, dimensions, material, features, details, packaging or application. Place them near the corresponding text rather than dumping every image into the top gallery.
 
-When usable real product material exists, Long Description must not end with zero images. Use at least one relevant product, detail, structure, application, packaging, or color-options asset, while still rejecting junk rather than adding it only to meet a count.
+When usable distinct real product material exists, Long Description must not end with zero images. Use relevant scene/detail/structure/use/packaging/dimension material, organizing continuous slices when supported. If only top images exist and no distinct useful detail remains, record insufficient_distinct_detail_material rather than duplicating a top image or inventing content. Do not add junk to meet a count.
 
 Use a WordPress Media Library full or suitable large source, never a thumbnail/small URL. Ordinary detail images should have an effective display width near 1000–1600 px when the original supports it, retain their natural proportions, and use responsive HTML `max-width:100%; height:auto;`. A tiny image floating in large blank space, a needless downscale, or a thumbnail-backed detail image is a `FAIL`.
 
@@ -194,7 +202,7 @@ Image clarity is higher priority than file size.
 
 ## Second OCR and visual QA hard gate
 
-Run real PaddleOCR and OpenCLIP again on every final image, including rembg, inpainted, translated, and recompressed outputs. Also inspect for smear/blur, broken cutout edges, fake-looking repaired regions, unreadable text, product deformation, compression artifacts, and lost texture.
+For every new or changed final asset, run real local PaddleOCR with contrast-enhanced faint-mark detection and OpenCV quality checks, including rembg, inpainted, translated and recompressed outputs. Reuse valid exact-hash final QA instead of rerunning it. Check smear/blur, broken cutout edges, fake-looking repair, unreadable text, deformation, compression artifacts and lost texture. Use optional local OpenCLIP and selective Vision only when needed; record uncertainty and never claim an unexecuted model ran. Reject unresolved unsafe images.
 
 Any remaining Chinese supplier promotion, `1688`, shop URL, `.com`, supplier/company identity, phone/WeChat/contact, QR code, or unauthorized supplier logo is `FAIL`. Retry from the original with the appropriate A/B/C path; if it still fails, reject the image. Never upload a sick asset or simulate AI execution with rules while claiming the model ran.
 

@@ -1,6 +1,6 @@
 # WooCommerce Safety and Verification
 
-## Strict identity/update gate — revision 2026-09-15
+## Strict identity/update gate — revision 2026-09-16
 
 Audit input_1688_url -> canonical_offer_id -> source_url -> product fingerprint -> woocommerce_product_id. Fingerprint canonical Offer ID, original source URL, raw title/attributes, immutable SKU/variation/spec combinations and image SHA lineage. A fuzzy title/Model search is not sufficient evidence.
 
@@ -8,13 +8,15 @@ Enumerate all candidates from canonical backend source URLs and Offer/Model meta
 
 Every image payload needs source_offer_id, source_url, source_image_url, woocommerce_product_id and image_role in its local audit. Same-offer original SHA lineage and directories are mandatory; cross-offer image is FAIL. Global hash-only media/content caches cannot authorize reuse.
 
-Retrospective writes patch failed content/images only. Snapshot parent/variation IDs, SKUs, source IDs, prices, Model, backend URL, correct categories and status; re-fetch before writing to detect concurrent changes. Afterwards fresh GET parent and all variations: protected values unchanged, expected images/HTML stored, correct bindings, main-pool square top <=5, perceptually disjoint Description, total <=10 or documented variant exception, actual visual approval and HTTP 200/image Content-Type. Ordinary warnings continue the batch; ambiguity stops only its product. Unresolved hard failures stay FAIL; preserve existing publish state.
+Retrospective writes require explicit scope and patch failed content/images only. Snapshot parent/variation IDs, SKUs, source IDs, prices, Model, backend URL, correct categories and status; re-fetch before writing to detect concurrent changes. Afterwards fresh GET parent and all variations: protected values unchanged, expected images/HTML stored, correct bindings, main-pool square top <=5, perceptually disjoint Description, total distinct images including variation-only assets <=10 or documented variant exception, evidenced local image QA/selective Vision and HTTP 200/image Content-Type. Ordinary warnings continue the batch; ambiguity stops only its product. Unresolved hard failures stay FAIL; preserve existing publish state. A Skill-only update does not authorize product reads, scans or writes.
 
 ## Writes
 
 Prefer WooCommerce REST API over browser form automation.
 
 Before updating an existing product, GET it and verify its identity/model/source metadata.
+
+Compare intended mutable fields with the stored product: unchanged means SKIP, not a redundant write. Save successful stage checkpoints immediately with product_id, offer_id, stage/status and timestamp. Within the same batch/task, completed verified checkpoints are skipped on resume; cached image decisions do not replace fresh publication REST/HTTP acceptance. Do not rescan prior batches merely because a new batch starts.
 
 Never create a replacement product when the task is to update an existing Product ID.
 
@@ -58,6 +60,8 @@ Public product content must preserve `Model: <1688_offer_id>`. Preserve source U
 
 After image updates, GET every variation and compare actual image assignment against the expected color/pattern mapping. Produce PASS/WARNING/FAIL records.
 
+A missing dedicated SKU/color image is WARNING, not permission to bind another color or invent an image. Source_offer_id differing from the current canonical Offer ID is FAIL and must never enter an upload payload.
+
 ## Audit integrity
 
 Never let a stale intermediate audit override newer verified REST API results. `final-product-audit.json` must agree with the final variation audit and final WooCommerce GET response.
@@ -75,8 +79,8 @@ Before setting a new product to `publish`, verify all of the following:
 - Variation images contain no false mapping and no Variation-image `FAIL`.
 - Category selection is correct and verified against the current REST category tree.
 - Every final image was produced from the highest-resolution saved original, not a thumbnail or previously compressed WebP, and records dimensions, bytes, compression ratio, selected quality, and sharpness/quality PASS.
-- Real second-pass PaddleOCR/OpenCLIP and visual QA found no supplier/Chinese/contact/URL/QR/unauthorized-logo residue, smear, broken edge, fake repair, deformation, unreadable text, or excessive compression loss.
-- Long Description uses accessible Media Library full/large images with responsive sizing; a thumbnail/small URL, visibly undersized detail asset, or zero images despite usable supplier material is `FAIL`.
+- Real local final OCR, contrast-enhanced watermark detection and quality checks (or valid identical QA cache) found no supplier/Chinese/contact/URL/QR/unauthorized-logo residue, smear, broken edge, fake repair, deformation, unreadable text, or excessive compression loss. Only important locally unresolved images require Vision escalation; uncertainty is not PASS.
+- Long Description uses accessible Media Library full/large images with responsive sizing; thumbnail/small URLs, visibly undersized assets, or zero images despite usable distinct supplier detail material are FAIL. Do not duplicate top images when no distinct detail asset exists; record the documented sparse-material warning.
 
 After publication, GET the parent product and all variations once more and confirm the final `publish` state and stored values.
 

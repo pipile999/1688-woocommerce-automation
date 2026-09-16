@@ -7,13 +7,19 @@ description: End-to-end 1688/Alibaba product import workflow for a high-volume W
 
 ## Mission
 
-## Highest-priority strict revision 2026-09-15
+## Default new-product hard rules — revision 2026-09-16
 
-Before every upload/update apply the strict gates in `rules/images.md` and `rules/woocommerce-safety.md`. These override older unrestricted counts and repeated image roles: ordinary Featured + Gallery <=5; top + Description <=10, except documented useful variant coverage. Top images must be square, high-quality and from this offer's proven supplier-main pool. Never repeat perceptually equivalent top images in Description.
+Before every upload/update apply the strict gates in `rules/images.md` and `rules/woocommerce-safety.md`. Ordinary Featured + Gallery <=5; total distinct final images, including variation-only images, <=10 unless documented useful SKU/color coverage requires more. These are upper limits, never quotas. Top images must be high-quality squares from this offer's proven supplier-main pool: native 600×600, 800×800 or higher-quality 1:1 assets. Long/portrait/flat images, parameter cards, dimension diagrams and text-heavy graphics belong only in Description when useful, never Gallery. One or two qualifying main images are sufficient. Never repeat perceptually equivalent top images in Description.
 
 Zero tolerance for logos, supplier/shop identity, contact details and faint/central/edge watermarks. OCR PASS alone is insufficient: enhanced faint-mark detection plus final visual QA are mandatory. Parameter cards become verified HTML facts and a clean useful crop/dimension view, never painted-over text blocks. Never alter product structure to conceal marks.
 
-Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint -> uniquely verified WooCommerce ID. Inspect all candidates, never the first fuzzy match. Ambiguity stops only that product with WARNING_DUPLICATE_MAPPING. Every image needs same-offer provenance and target product ID/role. Retrospective audits require actual scanning, safe corrections, WooCommerce updates and fresh REST/HTTP acceptance; preserve correct identifiers, prices, categories and publish status.
+Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint -> uniquely verified WooCommerce ID. Inspect all candidates, never the first fuzzy match. Ambiguity stops only that product with WARNING_DUPLICATE_MAPPING. Every image needs same-offer provenance and target product ID/role. These defaults apply to future imports; updating this Skill never authorizes scanning or modifying existing products. Run retrospective work only when explicitly requested, within that scope, preserving correct identifiers, prices, categories and publish status.
+
+## Default low-cost execution
+
+Prefer `1688-cli / OpenCLI → Python → PaddleOCR → OpenCV → rembg → perceptual hash → WooCommerce REST`. Do not call Vision/LLM for every image by default. Use local evidence and quality checks first; escalate only an important image that local checks cannot reliably judge, recording why. Unresolved images must be rejected or flagged, never silently marked PASS. OpenCLIP may supplement local classification; it does not replace provenance or watermark checks.
+
+Load this Skill and initialize the store environment once per batch. Reuse valid exact-hash/rules-version analysis and completed stage checkpoints; do not repeat OCR, repair, encoding or model calls on unchanged, already-approved images. Reuse qualified WebP bytes without re-encoding. Re-edit only from the highest-resolution original. pHash is for image deduplication, not semantic caching. Ordinary WARNING continues the batch. Fresh publication REST/HTTP gates remain mandatory; skip a WooCommerce write when its intended fields already match. Detailed cache and QA evidence requirements are in `rules/images.md`.
 
 Turn one or more 1688/Alibaba product URLs into commercially useful WooCommerce products with the highest practical chance of gaining relevant organic traffic, clicks, inquiries, add-to-carts and sales.
 
@@ -52,7 +58,7 @@ Adapt the presentation to the evidence:
 
 - Sparse but valid supplier content may produce a concise product page using only the few real, useful images and attributes available.
 - Rich, high-quality content should be retained and organized by its real buyer value, including Featured, Gallery, Variation, Product Details, Features, Structure, Dimensions, Materials, Application/Usage, Packaging, Accessories, and Color Options when supported.
-- Do not delete valuable images to meet a fixed gallery count, and do not add repetitive or low-value images to make a page appear fuller.
+- Select the best valuable images within the hard caps; route useful non-gallery material to Description. Preserve unused raw evidence, but do not display repetitive or low-value images merely to fill a quota.
 - Description structure and length must follow the product evidence rather than a universal module sequence.
 - Image decisions must consider context and whether an asset helps a buyer understand, compare, trust, or purchase the real product. Repair or crop a partly useful image when practical; reject the whole image only when it lacks meaningful purchase value, cannot be repaired reasonably, is severely low quality, or is unrelated.
 
@@ -176,15 +182,15 @@ Run the actual image pipeline, not placeholder logic:
 1. inventory and audit the supplier's actual main, SKU, detail, and sliced-detail assets
 2. exact-content SHA deduplication
 3. PaddleOCR text detection
-4. OpenCLIP visual classification
+4. local content/quality classification, optionally supplemented by OpenCLIP; selective Vision escalation only for important unresolved cases
 5. detect and reconstruct continuous sliced-detail designs when evidence supports it
 6. decide keep / delete / repair / translate from image context and buyer value
-7. choose one evidence-based repair path: precise mask + LaMa for light pollution; `rembg` product cutout on a clean neutral background for heavily polluted backgrounds with a clear, complete product; or OCR-backed English relayout/HTML specifications for parameter graphics
+7. choose one evidence-based repair path: precise OpenCV cleanup or mask + real inpainting for light pollution; `rembg` product cutout on a clean neutral background for heavily polluted backgrounds with a clear, complete product; or confirmed OCR facts to HTML plus a clean useful crop for parameter graphics; reject unreliable repairs
 8. translate valuable Chinese product-information graphics into natural English only when the information and layout can be retained faithfully
 9. assign image role according to the available evidence
 10. generate SEO filename/ALT/media title
 11. encode once from the highest-resolution saved original to adaptive quality-first WebP
-12. rerun PaddleOCR and OpenCLIP plus visual-quality checks on every final asset before upload
+12. validate changed/new final bytes with real local OCR, contrast-enhanced faint-mark detection and quality checks; reuse identical valid QA cache entries and escalate to Vision only when important local uncertainty remains
 
 Use `rules/images.md` for the detailed rules.
 
@@ -208,7 +214,7 @@ Featured image rule:
 
 Do not select the featured image merely because it is first in the source list.
 
-Gallery size is not a fixed SEO number. Keep images only when they add meaningful information for the buyer.
+Featured + Gallery must not exceed five images. There is no minimum SEO quota; keep only meaningful qualifying images.
 
 ### 6. Chinese text inside useful product images
 
@@ -224,7 +230,7 @@ If the Chinese text explains:
 - product advantages
 - usage
 
-then:
+then use the parameter-to-HTML/crop rules first for parameter/specification graphics. Never paint over dense text or leave white blocks, residual characters or gibberish. For a simple non-parameter graphic that can be faithfully relaid out:
 
 1. OCR the Chinese text.
 2. Translate it into natural buyer-facing English.
@@ -243,7 +249,7 @@ Preferred logic:
 - Color/pattern image mapping has priority.
 - Different sizes of the same color may share one accurate color image when no size-specific image exists.
 - Never knowingly attach the wrong color image.
-- If no dedicated reliable image exists, leaving a fallback/multi-color image or no dedicated image is preferable to a false mapping.
+- If no dedicated reliable image exists, record WARNING and leave it unbound; a truthful generic fallback is permissible only when it cannot imply a different color. Never invent a dedicated image or bind another color.
 
 Validate every variation after write.
 
