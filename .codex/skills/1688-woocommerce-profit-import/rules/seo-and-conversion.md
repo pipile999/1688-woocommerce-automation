@@ -8,7 +8,9 @@ Optimize for profitable, relevant organic traffic and conversion—not an arbitr
 
 Build a cluster based on product truth and commercial intent. Prefer terms that can plausibly bring buyers rather than broad traffic with weak intent.
 
-When real keyword data exists, consider search demand and competition. Without real data, do not invent metrics.
+Use the mandatory evidence-driven sequence in `keyword-research.md`: true product facts, seeds, Keyword Planner/Keyword Ideas, US/English historical metrics, Trends assistance, limited SERP validation, local scoring, Primary/Long-tail/B2B selection. Cache actual keyword+country+language results with source and timestamp. Never label Google Ads competition as organic KD or a Trends index as monthly volume.
+
+KEEP CURRENT TITLE when data is unavailable or insufficient to establish an improvement. Generating more candidates is not evidence that a new title is better. Unknown initial English semantics require review, not a guessed translation.
 
 Include B2B/wholesale modifiers when the product/store proposition supports them.
 
@@ -18,7 +20,7 @@ Natural English, immediately understandable, commercially relevant. Include the 
 
 For a quality re-audit, inspect Product Title, Meta Title, and Focus Keyword together. Prefer an accurate core category term plus genuinely supported material, construction, size, or function; use wholesale/bulk language only when the product and store proposition support it. Relevant long-tail commercial intent is valuable, but concise accuracy comes first.
 
-Remove supplier brands, 1688 merchant names, unrelated brands, mechanical synonym repetition, and irrelevant high-traffic terms. Never invent search volume. Use real Google Ads Keyword Planner data when available; otherwise optimize from verified product semantics and commercial intent and record that volume data was unavailable. Do not disguise the real use of a product to evade platform restrictions.
+Remove supplier brands, 1688 merchant names, unrelated brands, mechanical synonym repetition, and irrelevant high-traffic terms. Never invent search volume. Prefer one naturally leading Primary Keyword plus one truly valuable supported long-tail/attribute, not multiple synonyms. Other relevant terms belong naturally in Meta/Description/ALT/FAQ/internal links only where the actual content supports them. Without sufficient real data, KEEP CURRENT TITLE and record DATA_UNAVAILABLE. Do not disguise the real use of a product to evade platform restrictions.
 
 ## Slug
 
@@ -44,7 +46,7 @@ The audit must explain the selected IDs/names, full category path, and evidence-
 
 ## Search-result click potential
 
-For products with multiple finishes/colors, favor a strong multi-color featured image under the user's business rule because it communicates choice quickly. This is a merchandising rule, not a claim that Google algorithmically ranks such images higher.
+Featured quality, clarity, complete subject and composition come first. Multi-color is only a bonus between similarly high-quality candidates, never a reason to choose a worse image. This is a merchandising decision, not a claim that Google ranks such images higher.
 
 ## Image search
 

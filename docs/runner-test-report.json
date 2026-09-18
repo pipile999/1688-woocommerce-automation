@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-18",
+  "scope": ["972743663599", "991366391366", "977271484514"],
+  "unit_and_regression_tests": {"passed": 67, "failed": 0},
+  "offline_existing_artifact_test": {
+    "passed": 3,
+    "failed": 0,
+    "resume_content_and_images": "CACHE_HIT for all three",
+    "original_and_processed_product_files_and_existing_images_unchanged": true,
+    "network_blocked": true,
+    "products": [
+      {"offer_id": "972743663599", "sku_count": 2, "existing_final_images": 7},
+      {"offer_id": "991366391366", "sku_count": 12, "existing_final_images": 10},
+      {"offer_id": "977271484514", "sku_count": 6, "existing_final_images": 9}
+    ]
+  },
+  "fresh_local_model_test": {
+    "passed": 1,
+    "review_required": 2,
+    "execution_errors": 0,
+    "raw_images_with_actual_paddleocr_and_openclip": 43,
+    "actual_rembg_repairs": 0,
+    "actual_inpainting_repairs": 0,
+    "rembg_inpainting_branch_validation": "NOT_TRIGGERED in these three products",
+    "products": [
+      {"offer_id": "972743663599", "status": "REVIEW_REQUIRED", "raw_images_checked": 8,
+       "reason": "No locally approved distinct detail image remains; complex text/graphic review needed"},
+      {"offer_id": "991366391366", "status": "DRY_RUN_PASS", "raw_images_checked": 16, "raw_duplicates_skipped": 1,
+       "selected_test_images": 10},
+      {"offer_id": "977271484514", "status": "REVIEW_REQUIRED", "raw_images_checked": 19,
+       "reason": "No main image cleared the conservative local text/classification gates"}
+    ]
+  },
+  "external_actions": {
+    "1688_recollections": 0,
+    "live_google_keyword_api_queries": 0,
+    "llm_calls": 0,
+    "remote_vision_calls": 0,
+    "woocommerce_writes": 0,
+    "actual_measurable_external_api_cost": 0,
+    "live_rest_http_publication_acceptance": "NOT_EXECUTED"
+  },
+  "remaining_limits": [
+    "Fresh Google Ads API authorization not tested; actual cached Planner evidence was used",
+    "New Trends/SERP acquisition is not automated; dated real cached/imported evidence only",
+    "Complex visual English layout, uncertain identity and unfamiliar translations require review",
+    "Offline PASS does not authorize publication or imply a passed fresh model/HTTP gate"
+  ]
+}

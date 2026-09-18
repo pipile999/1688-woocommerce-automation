@@ -17,6 +17,12 @@ Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint 
 
 ## Default low-cost execution
 
+### Standalone local Runner and data-driven titles — revision 2026-09-18
+
+Use the project's `python auto_import_runner.py <1688_url-or-products.xlsx>` for supported local-first execution; Excel sequence ranges use `--start X --end Y`. `--dry-run` is strictly offline and must not initialize store credentials or write WooCommerce. Read `rules/local-runner.md` for checkpoints, review queues and honest acceptance boundaries. Do not describe an offline replay as live collection, fresh model inference, HTTP acceptance or publication.
+
+The default title decision is now `verified product facts → seeds → Google Keyword Planner/Keyword Ideas → US/English historical metrics → Trends assistance → a few SERP checks → local scoring → Primary/Long-tail/B2B → Title`. Read `rules/keyword-research.md` and `rules/seo-and-conversion.md`. Preserve real sources/ranges and distinguish Ads competition from organic difficulty. When data is missing or insufficient to demonstrate a better title, **KEEP CURRENT TITLE**; never force a rewrite or invent metrics. Unfamiliar product semantics enter the review queue rather than being fabricated.
+
 Prefer `1688-cli / OpenCLI → Python → PaddleOCR → OpenCV → rembg → perceptual hash → WooCommerce REST`. Do not call Vision/LLM for every image by default. Use local evidence and quality checks first; escalate only an important image that local checks cannot reliably judge, recording why. Unresolved images must be rejected or flagged, never silently marked PASS. OpenCLIP may supplement local classification; it does not replace provenance or watermark checks.
 
 Load this Skill and initialize the store environment once per batch. Reuse valid exact-hash/rules-version analysis and completed stage checkpoints; do not repeat OCR, repair, encoding or model calls on unchanged, already-approved images. Reuse qualified WebP bytes without re-encoding. Re-edit only from the highest-resolution original. pHash is for image deduplication, not semantic caching. Ordinary WARNING continues the batch. Fresh publication REST/HTTP gates remain mandatory; skip a WooCommerce write when its intended fields already match. Detailed cache and QA evidence requirements are in `rules/images.md`.
@@ -275,7 +281,7 @@ Organize into:
 - long-tail transactional keywords
 - wholesale/B2B keywords
 
-If Google Ads Keyword Planner is configured, use real data. Otherwise mark it as unavailable and never invent search volume.
+Use Google Keyword Planner exact-market cache first, then configured real Keyword Ideas/history data. Missing data is DATA_UNAVAILABLE, never invented search volume. KEEP CURRENT TITLE unless the evidence supports a clearly better title; see `rules/keyword-research.md`. An initial English factual name for a new product is not a verified search-demand claim.
 
 Image filename/ALT should match the real image content and may reuse closely related terms naturally. Do not force N images to use N unique keywords.
 
@@ -458,3 +464,5 @@ Read these only when the task reaches that stage:
 - `rules/images.md`
 - `rules/seo-and-conversion.md`
 - `rules/woocommerce-safety.md`
+- `rules/keyword-research.md`
+- `rules/local-runner.md`

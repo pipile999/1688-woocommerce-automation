@@ -7,3 +7,7 @@ __pycache__/
 cache/*
 !cache/.gitkeep
 models/**/*.onnx
+google-ads.yaml
+google-ads.yml
+*.credentials.json
+output/auto-runner/
