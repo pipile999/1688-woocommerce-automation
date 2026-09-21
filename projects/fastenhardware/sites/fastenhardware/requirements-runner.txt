@@ -1,0 +1,4 @@
+-r requirements.txt
+-r requirements-ai.txt
+# Optional live Google Keyword Planner adapter; UI/export cache needs no SDK.
+google-ads>=29,<40

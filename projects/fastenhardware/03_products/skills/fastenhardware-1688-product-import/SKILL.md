@@ -1,14 +1,28 @@
 ---
-name: 1688-woocommerce-profit-import
-description: LEGACY / DO NOT USE FOR PRODUCTION. Historical rules only; use the dedicated mypakg or fastenhardware product-import Skill.
+name: fastenhardware-1688-product-import
+description: Import 1688 products exclusively into https://fastenhardware.com using its independent rules, guarded Runner and site data. Never use for any other website.
 ---
 
-# LEGACY / DO NOT USE FOR PRODUCTION
+## Fixed site boundary
 
-Production invocation is forbidden. Preserved only as historical evidence. Read the current project SITE.md and use its dedicated site Skill and Runner. Never use this Skill to upload or resume products.
+Read project-root SITE.md first. Site URL must equal `https://fastenhardware.com` exactly, otherwise HARD STOP. Use only `sites/fastenhardware/runner.py`; site/profile/root overrides are forbidden. Run `--dry-run` without product input for offline isolation preflight. All credentials, caches, maps, images, checkpoints, audits and reports belong exclusively under `sites/fastenhardware/`. Never read another site or Legacy runtime data. Only code/model binaries may be reused. Read `rules/site-isolation.md` before execution.
 
 
 # 1688 → WooCommerce Profit-Oriented Import
+
+## Fastenhardware product policy
+
+This Skill has its own business rules. Preserve diameter, length, thread pitch, full/partial thread, material, grade/class, head type, drive type, finish/coating, and DIN/ISO/ANSI (supplier ANS spellings require evidence, never guessed). Preserve every supplier SKU in original order and save zero-based `source_sku_position`; use it as Woo variation menu_order. Never sort by translated values, price, dimension or SKU ID.
+
+No dedicated SKU image: use the truthful parent Featured fallback or preserve the current correct image; never blank. Featured + Gallery <=5, exclusively sharp attractive native-square supplier main-pool images. Long images, dimensions, standards, parameter and structure diagrams go into Long Description. Specifications, dimensions, DIN/ISO, material, grade and product markings are `PROTECTED_PRODUCT_DATA`: never erase them as watermarks. Mixed supplier pollution and technical text requires separately reviewed masks; ambiguous regions stop automated repair and enter review.
+
+Use only this site's `sites/fastenhardware/data/keyword-cache.json` and `keyword-map.json`. Purchase keywords: `product type + standard + material + grade + finish + dimensions + B2B intent`, omitting unsupported fields. Google Keyword Planner/cache metrics must be real; no evidence means KEEP CURRENT TITLE. No packaging-site keyword or category data.
+
+Read only fastenhardware's live Category Tree. Prefer the deepest truthful existing category. When missing, this Skill may create an evidence-supported chain: `Fasteners → Screws / Bolts / Nuts / Washers / Rivets / Anchors / Threaded Rods & Studs → specific subtype`. Re-fetch and verify IDs, ancestry and name before assigning; never guess IDs. Runner creates a chain only from explicit source-bound `category_path`, not fuzzy title inference.
+
+Runner modifies product data and associated media only. Never overwrite global Product Template or remove Related Products, You May Also Like, inquiry/CTA, trust/service modules. Long Description figures use max-width:900px;width:100%;margin:auto; images retain original full-quality media URLs with max-width:100%;height:auto. This is display sizing, not destructive downsampling.
+
+Backend tracing: save Model/1688 Offer ID and canonical supplier source URL in `_1688_model`, `_1688_offer_id`, `_1688_source_url`; also expose unprefixed custom fields `1688 Offer ID` and `1688 Source URL` for backend visibility. The source URL must be complete and directly openable from the site's existing backend source panel. Before publication verify its backend visibility/clickability; REST persistence alone does not prove that UI gate. Do not install/alter global templates or plugins to satisfy the gate. If the existing panel is unavailable, stop publication for review.
 
 ## Mission
 
@@ -24,7 +38,7 @@ Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint 
 
 ### Standalone local Runner and data-driven titles — revision 2026-09-18
 
-Use the project's `python auto_import_runner.py <1688_url-or-products.xlsx>` for supported local-first execution; Excel sequence ranges use `--start X --end Y`. `--dry-run` is strictly offline and must not initialize store credentials or write WooCommerce. Read `rules/local-runner.md` for checkpoints, review queues and honest acceptance boundaries. Do not describe an offline replay as live collection, fresh model inference, HTTP acceptance or publication.
+Use the project's `python sites/fastenhardware/runner.py <1688_url-or-products.xlsx>` for supported local-first execution; Excel sequence ranges use `--start X --end Y`. `--dry-run` is strictly offline and must not initialize store credentials or write WooCommerce. Read `rules/local-runner.md` for checkpoints, review queues and honest acceptance boundaries. Do not describe an offline replay as live collection, fresh model inference, HTTP acceptance or publication.
 
 The default title decision is now `verified product facts → seeds → Google Keyword Planner/Keyword Ideas → US/English historical metrics → Trends assistance → a few SERP checks → local scoring → Primary/Long-tail/B2B → Title`. Read `rules/keyword-research.md` and `rules/seo-and-conversion.md`. Preserve real sources/ranges and distinguish Ads competition from organic difficulty. When data is missing or insufficient to demonstrate a better title, **KEEP CURRENT TITLE**; never force a rewrite or invent metrics. Unfamiliar product semantics enter the review queue rather than being fabricated.
 
@@ -253,16 +267,7 @@ If text is supplier identity, company promotion, phone, URL, contact information
 
 ### 7. Variation image mapping
 
-Map variation images by actual visual match.
-
-Preferred logic:
-
-- Color/pattern image mapping has priority.
-- Different sizes of the same color may share one accurate color image when no size-specific image exists.
-- Never knowingly attach the wrong color image.
-- If no dedicated reliable image exists, record WARNING and leave it unbound; a truthful generic fallback is permissible only when it cannot imply a different color. Never invent a dedicated image or bind another color.
-
-Validate every variation after write.
+Preserve supplier SKU order and source_sku_position, all fastener specification axes, and exact source identifiers. Map only truthful images; missing dedicated image uses the parent Featured fallback or retains the current correct image. Verify nonblank images and menu_order after write.
 
 ### 8. Commercial keyword cluster
 
@@ -338,8 +343,8 @@ Before uploading each product, retrieve the current WooCommerce Product Categori
 - Prefer the most specific suitable child category; include its parent as well only when the store structure or navigation benefits from both.
 - Do not bulk-place unrelated products into a broad default category.
 - Do not classify from noisy 1688 title keywords alone.
-- Do not create categories automatically.
-- If no truthful existing category fits, record `WARNING: category_unresolved`; do not assign a misleading category. Because correct category assignment is a critical publication gate, also record a publication-blocking failure until the category is resolved.
+- May create a verified Fasteners hierarchy as specified in the Fastenhardware product policy; no other site tree is allowed.
+- If no truthful existing category fits, create only an evidence-supported fastener category chain or record `WARNING: category_unresolved`; do not assign a misleading category. Because correct category assignment is a critical publication gate, also record a publication-blocking failure until the category is resolved.
 
 The final audit must record:
 

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "tests": 11,
+  "failures": 0,
+  "errors": 0,
+  "credentials_read": false,
+  "product_operations": 0,
+  "real_http_calls": 0,
+  "paths": [
+    {
+      "site": "mypakg",
+      "site_url": "https://mypakg.com",
+      "skill": "mypakg-1688-product-import",
+      "paths": {
+        "credentials": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\.env",
+        "wordpress_credentials": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\.env",
+        "category_cache": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\data\\category-cache.json",
+        "keyword_cache": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\data\\keyword-cache.json",
+        "keyword_map": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\data\\keyword-map.json",
+        "product_map": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\data\\product-map.json",
+        "offer_product_map": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\data\\offer-product-map.json",
+        "image_cache": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\output\\auto-runner\\cache",
+        "checkpoint": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\output\\auto-runner",
+        "batch_reports": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\reports",
+        "audit": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\audit",
+        "source_url_map": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\data\\source-url-map.json",
+        "raw_evidence": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\output",
+        "google_credentials": "D:\\codex\\新建文件夹\\1688-woocommerce-automation-main\\sites\\mypakg\\private\\google-ads.yaml"
+      },
+      "credentials_loaded": false,
+      "network_calls": 0,
+      "product_operations": 0
+    },
+    {
+      "site": "fastenhardware",
+      "site_url": "https://fastenhardware.com",
+      "skill": "fastenhardware-1688-product-import",
+      "paths": {
+        "credentials": "D:\\codex\\fastener-site\\sites\\fastenhardware\\.env",
+        "wordpress_credentials": "D:\\codex\\fastener-site\\sites\\fastenhardware\\.env",
+        "category_cache": "D:\\codex\\fastener-site\\sites\\fastenhardware\\data\\category-cache.json",
+        "keyword_cache": "D:\\codex\\fastener-site\\sites\\fastenhardware\\data\\keyword-cache.json",
+        "keyword_map": "D:\\codex\\fastener-site\\sites\\fastenhardware\\data\\keyword-map.json",
+        "product_map": "D:\\codex\\fastener-site\\sites\\fastenhardware\\data\\product-map.json",
+        "offer_product_map": "D:\\codex\\fastener-site\\sites\\fastenhardware\\data\\offer-product-map.json",
+        "image_cache": "D:\\codex\\fastener-site\\sites\\fastenhardware\\output\\auto-runner\\cache",
+        "checkpoint": "D:\\codex\\fastener-site\\sites\\fastenhardware\\output\\auto-runner",
+        "batch_reports": "D:\\codex\\fastener-site\\sites\\fastenhardware\\reports",
+        "audit": "D:\\codex\\fastener-site\\sites\\fastenhardware\\audit",
+        "source_url_map": "D:\\codex\\fastener-site\\sites\\fastenhardware\\data\\source-url-map.json",
+        "raw_evidence": "D:\\codex\\fastener-site\\sites\\fastenhardware\\output",
+        "google_credentials": "D:\\codex\\fastener-site\\sites\\fastenhardware\\private\\google-ads.yaml"
+      },
+      "credentials_loaded": false,
+      "network_calls": 0,
+      "product_operations": 0
+    }
+  ]
+}

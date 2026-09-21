@@ -11,3 +11,13 @@ google-ads.yaml
 google-ads.yml
 *.credentials.json
 output/auto-runner/
+
+# Dedicated site runtime private state
+**/sites/*/.env
+**/sites/*/private/
+**/sites/*/data/
+**/sites/*/output/
+**/sites/*/audit/
+**/sites/*/reports/
+**/sites/*/models/
+**/__pycache__/

@@ -1,0 +1,9 @@
+.env
+private/
+data/
+output/
+reports/
+audit/
+models/
+__pycache__/
+*.pyc

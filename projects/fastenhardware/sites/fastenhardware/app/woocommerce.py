@@ -70,15 +70,15 @@ def build_variation_payloads(product: Product) -> list[dict]:
 
 class WooCommerceClient:
     def __init__(self):
-        raise RuntimeError("HARD STOP: LEGACY production client disabled; use site Runner")
-        self.base_url = os.environ["WOOCOMMERCE_URL"].strip().rstrip("/")
-        if not self.base_url.startswith(("http://", "https://")):
-            self.base_url = f"https://{self.base_url}"
+        from .site_guard import load_credentials, DOMAIN
+        load_credentials()
+        self.base_url = DOMAIN
         self.key = os.environ["WOOCOMMERCE_CONSUMER_KEY"]
         self.secret = os.environ["WOOCOMMERCE_CONSUMER_SECRET"]
 
     def _request(self, method: str, path: str, json=None, params=None, timeout=300):
-        raise RuntimeError("HARD STOP: LEGACY production client disabled; use site Runner")
+        from .site_guard import endpoint
+        endpoint(self.base_url, "wc", method, path)
         response = requests.request(
             method,
             f"{self.base_url}/wp-json/wc/v3/{path.lstrip('/')}",
@@ -86,7 +86,10 @@ class WooCommerceClient:
             json=json,
             params=params,
             timeout=timeout,
+            allow_redirects=False,
         )
+        if 300 <= response.status_code < 400:
+            raise ValueError("HARD STOP: STORE_REDIRECT")
         response.raise_for_status()
         return response.json()
 

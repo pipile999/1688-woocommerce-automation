@@ -1,11 +1,11 @@
 ---
-name: 1688-woocommerce-profit-import
-description: LEGACY / DO NOT USE FOR PRODUCTION. Historical rules only; use the dedicated mypakg or fastenhardware product-import Skill.
+name: mypakg-1688-product-import
+description: Import 1688 products exclusively into https://mypakg.com using its independent rules, guarded Runner and site data. Never use for any other website.
 ---
 
-# LEGACY / DO NOT USE FOR PRODUCTION
+## Fixed site boundary
 
-Production invocation is forbidden. Preserved only as historical evidence. Read the current project SITE.md and use its dedicated site Skill and Runner. Never use this Skill to upload or resume products.
+Read project-root SITE.md first. Site URL must equal `https://mypakg.com` exactly, otherwise HARD STOP. Use only `sites/mypakg/runner.py`; site/profile/root overrides are forbidden. Run `--dry-run` without product input for offline isolation preflight. All credentials, caches, maps, images, checkpoints, audits and reports belong exclusively under `sites/mypakg/`. Never read another site or Legacy runtime data. Only code/model binaries may be reused. Read `rules/site-isolation.md` before execution.
 
 
 # 1688 → WooCommerce Profit-Oriented Import
@@ -24,7 +24,7 @@ Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint 
 
 ### Standalone local Runner and data-driven titles — revision 2026-09-18
 
-Use the project's `python auto_import_runner.py <1688_url-or-products.xlsx>` for supported local-first execution; Excel sequence ranges use `--start X --end Y`. `--dry-run` is strictly offline and must not initialize store credentials or write WooCommerce. Read `rules/local-runner.md` for checkpoints, review queues and honest acceptance boundaries. Do not describe an offline replay as live collection, fresh model inference, HTTP acceptance or publication.
+Use the project's `python sites/mypakg/runner.py <1688_url-or-products.xlsx>` for supported local-first execution; Excel sequence ranges use `--start X --end Y`. `--dry-run` is strictly offline and must not initialize store credentials or write WooCommerce. Read `rules/local-runner.md` for checkpoints, review queues and honest acceptance boundaries. Do not describe an offline replay as live collection, fresh model inference, HTTP acceptance or publication.
 
 The default title decision is now `verified product facts → seeds → Google Keyword Planner/Keyword Ideas → US/English historical metrics → Trends assistance → a few SERP checks → local scoring → Primary/Long-tail/B2B → Title`. Read `rules/keyword-research.md` and `rules/seo-and-conversion.md`. Preserve real sources/ranges and distinguish Ads competition from organic difficulty. When data is missing or insufficient to demonstrate a better title, **KEEP CURRENT TITLE**; never force a rewrite or invent metrics. Unfamiliar product semantics enter the review queue rather than being fabricated.
 
