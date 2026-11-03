@@ -14,7 +14,7 @@ Read project-root SITE.md first. Site URL must equal `https://mypakg.com` exactl
 
 ## Image policy — revision 2026-11-03
 
-Read `rules/images.md` as the sole image selection, repair, role and acceptance policy; `rules/woocommerce-safety.md` retains identity/write checks. Prefer clean existing photos, scenes, English/dimension graphics and real multi-color groups. Names or small logos alone are not rejection reasons. Aim for 3–5 useful top images (maximum five); use natural repair and 800×800 cutouts where needed. Preserve all valid links in the completion/repair queue, never silently skip a product because images are difficult. This replaces the former blanket identity ban, main-pool-only/parameter exclusion and 1200-pixel cutout defaults.
+Read `rules/images.md` as the sole image selection, repair, role and acceptance policy; `rules/woocommerce-safety.md` retains identity/write checks. Prefer clean existing photos, scenes, English/dimension graphics and real multi-color groups. Remove all overlaid logos, supplier watermarks, shop links, brand promotion and other supplier-identifying content, regardless of size or language. A brand physically printed, engraved or attached to the actual product may remain; see `rules/images.md`. Aim for 3–5 useful top images (maximum five); use natural repair and 800×800 cutouts where needed. Preserve all valid links in the completion/repair queue, never silently skip a product because images are difficult. This distinguishes product-body branding from removable supplier overlays and replaces the main-pool-only/parameter exclusion and 1200-pixel cutout defaults.
 
 Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint -> uniquely verified WooCommerce ID. Inspect all candidates, never the first fuzzy match. Ambiguity stops only that product with WARNING_DUPLICATE_MAPPING. Every image needs same-offer provenance and target product ID/role. These defaults apply to future imports; updating this Skill never authorizes scanning or modifying existing products. Run retrospective work only when explicitly requested, within that scope, preserving correct identifiers, prices, categories and publish status.
 
@@ -335,7 +335,7 @@ Verify:
 - selected category IDs, names, hierarchy path, and selection reason verified against the current REST category tree
 - authored copy excludes unrelated supplier/contact promotion; image text and names follow `rules/images.md`
 - final images are optimized formats
-- every final image passes the actual visual, provenance and fidelity checks in `rules/images.md`; permitted names and useful graphics are not automatic failures
+- every final image passes the actual visual, provenance and fidelity checks in `rules/images.md`; a brand physically on the actual product and useful English graphics are allowed, but supplier overlays must be removed
 - every edit starts from the highest-resolution saved original and no final image is produced by recompressing an older lossy WebP
 - Long Description uses Media Library full/large assets, responsive `max-width:100%; height:auto;`, and never a thumbnail/small derivative; usable supplier material must not result in a zero-image Long Description
 - WordPress/WooCommerce API GET confirms saved values
