@@ -12,11 +12,9 @@ Read project-root SITE.md first. Site URL must equal `https://mypakg.com` exactl
 
 ## Mission
 
-## Default new-product hard rules — revision 2026-09-16
+## Image policy — revision 2026-11-03
 
-Before every upload/update apply the strict gates in `rules/images.md` and `rules/woocommerce-safety.md`. Ordinary Featured + Gallery <=5; total distinct final images, including variation-only images, <=10 unless documented useful SKU/color coverage requires more. These are upper limits, never quotas. Top images must be high-quality squares from this offer's proven supplier-main pool: native 600×600, 800×800 or higher-quality 1:1 assets. Long/portrait/flat images, parameter cards, dimension diagrams and text-heavy graphics belong only in Description when useful, never Gallery. One or two qualifying main images are sufficient. Never repeat perceptually equivalent top images in Description.
-
-Zero tolerance for logos, supplier/shop identity, contact details and faint/central/edge watermarks. OCR PASS alone is insufficient: enhanced faint-mark detection plus final visual QA are mandatory. Parameter cards become verified HTML facts and a clean useful crop/dimension view, never painted-over text blocks. Never alter product structure to conceal marks.
+Read `rules/images.md` as the sole image selection, repair, role and acceptance policy; `rules/woocommerce-safety.md` retains identity/write checks. Prefer clean existing photos, scenes, English/dimension graphics and real multi-color groups. Names or small logos alone are not rejection reasons. Aim for 3–5 useful top images (maximum five); use natural repair and 800×800 cutouts where needed. Preserve all valid links in the completion/repair queue, never silently skip a product because images are difficult. This replaces the former blanket identity ban, main-pool-only/parameter exclusion and 1200-pixel cutout defaults.
 
 Bind input URL -> canonical Offer ID -> saved source URL -> product fingerprint -> uniquely verified WooCommerce ID. Inspect all candidates, never the first fuzzy match. Ambiguity stops only that product with WARNING_DUPLICATE_MAPPING. Every image needs same-offer provenance and target product ID/role. These defaults apply to future imports; updating this Skill never authorizes scanning or modifying existing products. Run retrospective work only when explicitly requested, within that scope, preserving correct identifiers, prices, categories and publish status.
 
@@ -149,6 +147,8 @@ Never overwrite the only raw copy.
 
 ### 3. Product text cleanup and English conversion
 
+The following removal list concerns authored product copy. Image names/marks follow `rules/images.md`, not a blanket text-cleanup ban.
+
 Create natural English merchandising copy instead of literal machine translation.
 
 Remove or exclude:
@@ -186,70 +186,9 @@ Generate:
 
 Use `rules/seo-and-conversion.md` for keyword and copy decisions.
 
-### 4. Image pipeline
+### 4–6. Image processing, roles and English graphics
 
-Run the actual image pipeline, not placeholder logic:
-
-1. inventory and audit the supplier's actual main, SKU, detail, and sliced-detail assets
-2. exact-content SHA deduplication
-3. PaddleOCR text detection
-4. local content/quality classification, optionally supplemented by OpenCLIP; selective Vision escalation only for important unresolved cases
-5. detect and reconstruct continuous sliced-detail designs when evidence supports it
-6. decide keep / delete / repair / translate from image context and buyer value
-7. choose one evidence-based repair path: precise OpenCV cleanup or mask + real inpainting for light pollution; `rembg` product cutout on a clean neutral background for heavily polluted backgrounds with a clear, complete product; or confirmed OCR facts to HTML plus a clean useful crop for parameter graphics; reject unreliable repairs
-8. translate valuable Chinese product-information graphics into natural English only when the information and layout can be retained faithfully
-9. assign image role according to the available evidence
-10. generate SEO filename/ALT/media title
-11. encode once from the highest-resolution saved original to adaptive quality-first WebP
-12. validate changed/new final bytes with real local OCR, contrast-enhanced faint-mark detection and quality checks; reuse identical valid QA cache entries and escalate to Vision only when important local uncertainty remains
-
-Use `rules/images.md` for the detailed rules.
-
-### 5. Image role assignment
-
-Classify every final image as one or more of:
-
-- `featured`
-- `gallery`
-- `variation`
-- `description`
-- `reject`
-
-Featured image rule:
-
-- Rank candidates in this order: **image quality → resolution → product clarity → composition/click appeal → product relevance → multi-color value**.
-- Multi-color is an optional merchandising advantage, never the first criterion.
-- A sharp, high-resolution, attractive single-product image must beat a blurry, low-resolution, poorly composed, undersized, or badly proportioned multi-color image.
-- When a high-quality multi-color candidate and a high-quality single-product candidate are otherwise close, prefer the multi-color candidate for its commercial display value.
-- A featured candidate must be relevant to the real product, clean of supplier identity/contact details, and suitable for the store's product-card and product-page presentation.
-
-Do not select the featured image merely because it is first in the source list.
-
-Featured + Gallery must not exceed five images. There is no minimum SEO quota; keep only meaningful qualifying images.
-
-### 6. Chinese text inside useful product images
-
-Do **not** delete a useful product-information image just because it contains substantial Chinese text.
-
-If the Chinese text explains:
-
-- dimensions
-- structure
-- materials
-- functions
-- specifications
-- product advantages
-- usage
-
-then use the parameter-to-HTML/crop rules first for parameter/specification graphics. Never paint over dense text or leave white blocks, residual characters or gibberish. For a simple non-parameter graphic that can be faithfully relaid out:
-
-1. OCR the Chinese text.
-2. Translate it into natural buyer-facing English.
-3. Remove the original Chinese text with mask + inpainting/background reconstruction.
-4. Place readable English text in an appropriate layout.
-5. Preserve the real product image as much as possible.
-
-If text is supplier identity, company promotion, phone, URL, contact information or unrelated advertising, remove it rather than translate it.
+Execute the repair ladder and final visual acceptance in `rules/images.md`; do not maintain a second policy here. Inventory same-offer assets and source order, preserve originals, deduplicate, select useful assets, repair/translate/cut out where necessary, assign roles, encode and actually inspect final pixels. OCR flags are not automatic rejections. Record provenance, exact hashes and actual tools. Image failure sends the item back for repair rather than silently dropping the product.
 
 ### 7. Variation image mapping
 
@@ -327,7 +266,7 @@ Goals:
 
 Image clarity takes priority over file size. Do not use one hardcoded quality value as the only rule. Adaptively choose the lowest setting that retains clean product edges, material texture, readable text, smooth gradients, and no visible blocks or artifacts. If no lossy setting passes, use a single lossless WebP encode from the finished master. If the quality comparison fails, raise quality and encode again before upload.
 
-Do not upscale a low-resolution image and call it high resolution. Product cutout images normally use a 1200 × 1200 neutral canvas without stretching; rich higher-resolution sources may remain larger when useful. Detail images retain a readable proportional format rather than being forced square.
+Do not upscale a low-resolution image and call it high resolution. Product cutout deliverables use an 800 × 800 neutral canvas with a prominent complete subject, following `rules/images.md`; retain high-resolution originals. Detail images retain a readable proportional format rather than being forced square.
 
 Record source/final dimensions, source/final bytes, compression ratio, encoder quality, sharpness/quality result, and whether upscaling occurred for every newly generated final asset.
 
@@ -394,9 +333,9 @@ Verify:
 - variation attributes remain correct
 - variation image mapping checked
 - selected category IDs, names, hierarchy path, and selection reason verified against the current REST category tree
-- no supplier/company/contact information remains in public copy/images where detectable
+- authored copy excludes unrelated supplier/contact promotion; image text and names follow `rules/images.md`
 - final images are optimized formats
-- every final image passes a second real OCR/visual QA check with no Chinese supplier promotion, 1688/shop URL, supplier/company identity, contact details, QR code, unauthorized logo, smear, broken edge, fake-looking repair, unreadable text, product deformation, or excessive compression loss
+- every final image passes the actual visual, provenance and fidelity checks in `rules/images.md`; permitted names and useful graphics are not automatic failures
 - every edit starts from the highest-resolution saved original and no final image is produced by recompressing an older lossy WebP
 - Long Description uses Media Library full/large assets, responsive `max-width:100%; height:auto;`, and never a thumbnail/small derivative; usable supplier material must not result in a zero-image Long Description
 - WordPress/WooCommerce API GET confirms saved values
