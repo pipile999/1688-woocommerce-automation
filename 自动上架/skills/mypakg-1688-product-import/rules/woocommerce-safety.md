@@ -79,7 +79,7 @@ Before setting a new product to `publish`, verify all of the following:
 - Variation images contain no false mapping and no Variation-image `FAIL`.
 - Category selection is correct and verified against the current REST category tree.
 - Every final image was produced from the highest-resolution saved original, not a thumbnail or previously compressed WebP, and records dimensions, bytes, compression ratio, selected quality, and sharpness/quality PASS.
-- Final images pass the current `images.md` visual/provenance/repair criteria with actual review evidence or valid identical QA cache. OCR flags alone, permitted names, small logos, scenes and English/dimension graphics are not automatic failures. Unresolved critical defects require repair, not false PASS.
+- Final images pass the current `images.md` visual/provenance/repair criteria with actual review evidence or valid identical QA cache. Scenes, useful English/dimension graphics and a brand physically on the actual product are allowed. All overlaid logos, supplier watermarks, shop links, brand advertising and other supplier-identifying content must be removed, even if small or faint. OCR flags require contextual review to distinguish the product-body exception from overlays. Unresolved critical defects require repair, not false PASS.
 - Long Description uses accessible Media Library full/large images with responsive sizing; thumbnail/small URLs, visibly undersized assets, or zero images despite usable distinct supplier detail material are FAIL. Do not duplicate top images when no distinct detail asset exists; record the documented sparse-material warning.
 
 After publication, GET the parent product and all variations once more and confirm the final `publish` state and stored values.
