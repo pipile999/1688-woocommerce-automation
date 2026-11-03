@@ -68,6 +68,8 @@ Never let a stale intermediate audit override newer verified REST API results. `
 
 ## Publication gate
 
+Exclude supplier factory, office, exhibition, certification/certificate and other supplier-focused promotional images from Featured, Gallery, Description and Variations. Remove them from selection/upload manifests without repairing or uploading them; retain raw audit evidence. Apply the product-image versus supplier-promotion distinction in `images.md`.
+
 Before setting a new product to `publish`, verify all of the following:
 
 - Model is correct and visible where required.
