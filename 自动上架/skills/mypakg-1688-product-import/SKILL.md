@@ -188,6 +188,8 @@ Use `rules/seo-and-conversion.md` for keyword and copy decisions.
 
 ### 4–6. Image processing, roles and English graphics
 
+Directly exclude supplier factory, office, exhibition, certification/certificate and other supplier-focused promotional images from every storefront role and upload manifest. Do not repair or upload these assets; preserve raw files only as evidence. Ordinary product/use-scene/dimension images are not supplier-focused promotion merely because the supplier supplied them. See `rules/images.md`.
+
 Execute the repair ladder and final visual acceptance in `rules/images.md`; do not maintain a second policy here. Inventory same-offer assets and source order, preserve originals, deduplicate, select useful assets, repair/translate/cut out where necessary, assign roles, encode and actually inspect final pixels. OCR flags are not automatic rejections. Record provenance, exact hashes and actual tools. Image failure sends the item back for repair rather than silently dropping the product.
 
 ### 7. Variation image mapping
