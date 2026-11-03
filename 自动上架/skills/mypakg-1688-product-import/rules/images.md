@@ -2,6 +2,8 @@
 Revision: 2026-11-03. Sole image-policy source for this site's Skill and publication checks. Apply only to MyPakg; do not copy other sites' caches or business data.
 
 ## Selection and retention
+
+直接剔除供应商厂房图、办公室图、展会图、认证/证书图，以及其他以供应商公司、人员、实力或宣传为主体的图片：从选图及上传清单删除，不修复、不上传、不展示于主图、详情或变体。原始采集文件仅作为审计证据保留，不作破坏性删除。此规则不包括正常产品图、产品使用场景、尺寸图或产品本体品牌；其中的供应商叠加信息仍按下文清除。
 Prefer existing clear, complete, truthful supplier images before editing. Pure-background photos, usage scenes, English explanation graphics, dimension graphics and real multi-color group photos are eligible. Scenes and useful English text are eligible. Remove ALL image-overlay logos, supplier watermarks (including faint/edge/central marks), shop links, company/shop names, brand advertising, contact details, QR codes and any other supplier-identifying content, regardless of size or language. The sole branding exception is a brand physically printed, engraved, embossed or attached to the actual product: it may remain without forced removal. This exception does not cover an added graphic near or across the product, nor establish brand affiliation. If placement is genuinely ambiguous, review a representative example rather than guessing. Crop or repair supplier overlays rather than reject the product. Concrete serious safety or rights concerns require specific evidence and representative user review, not blanket speculative holds.
 
 Choose sharpness, product clarity, truthful relevance and attractive composition first; favor useful scene/dimension/color coverage among equally good candidates. A group image must not imply that one unit includes every displayed color or accessory.
